@@ -1,0 +1,730 @@
+{
+  "tcp-http": [
+    {
+      "slug": "node-tcp-handshake-check",
+      "title": "节点 TCP 握手测试怎么做：端口、超时与重试口径",
+      "type": "教程",
+      "intent": "给出一次可复现的 TCP 握手测试步骤，说明端口选择、超时阈值与重试次数的记录方式。"
+    },
+    {
+      "slug": "proxy-http-status-codes",
+      "title": "代理返回 403、407、502 分别说明什么",
+      "type": "故障",
+      "intent": "按状态码区分目标侧拒绝、代理认证失败与上游网关异常，避免把所有错误都归因于节点失效。"
+    },
+    {
+      "slug": "curl-verbose-proxy-log",
+      "title": "用 curl 逐行读代理握手日志：CONNECT、TLS 与首字节",
+      "type": "教程",
+      "intent": "解释 curl 详细输出里每一段耗时对应哪个网络阶段，以及哪些字段能作为证据留存。"
+    },
+    {
+      "slug": "port-open-not-usable",
+      "title": "端口连通却上不了网：握手成功与可用性的差距",
+      "type": "解释",
+      "intent": "说明 TCP 连接建立之后仍可能因认证、协议版本或出口故障而不可用，给出三段式判定。"
+    },
+    {
+      "slug": "tcp-probe-timeout-setting",
+      "title": "探测超时设 2 秒还是 5 秒：跨境链路的等待成本",
+      "type": "核验",
+      "intent": "比较不同超时阈值对误判率与检测耗时的影响，给出按链路类型选择阈值的依据。"
+    },
+    {
+      "slug": "batch-node-probe-design",
+      "title": "批量探测几十个节点：并发、顺序与误判控制",
+      "type": "教程",
+      "intent": "设计批量探测的并发度、随机顺序与重试规则，避免同时发起导致本地队列拥塞和假超时。"
+    },
+    {
+      "slug": "proxy-auth-failure-order",
+      "title": "认证失败与订阅过期的识别顺序",
+      "type": "故障",
+      "intent": "按客户端日志、协议返回与账号状态三个层次判断认证失败的真实原因，减少无效换节点。"
+    }
+  ],
+  "end-to-end": [
+    {
+      "slug": "end-to-end-page-fetch",
+      "title": "端到端取回一个页面：状态码、首字节与总耗时",
+      "type": "教程",
+      "intent": "完整演示一次通过代理取回页面的测试，记录状态码、首字节与总耗时并说明各字段含义。"
+    },
+    {
+      "slug": "layer-by-layer-fault-split",
+      "title": "分层定位：本地 DNS、代理握手与目标站点各查一次",
+      "type": "故障",
+      "intent": "用三次独立查询把故障锁定在本地解析、隧道握手或目标服务，避免跨层猜测。"
+    },
+    {
+      "slug": "target-block-vs-node-fail",
+      "title": "目标站点拒绝访问与节点失效怎么区分",
+      "type": "核验",
+      "intent": "通过换目标、换出口、换时段三组对照，判断拒绝来自目标风控还是节点本身。"
+    },
+    {
+      "slug": "ten-target-sample-design",
+      "title": "十个目标站点的抽样设计：地区、CDN 与登录态",
+      "type": "教程",
+      "intent": "给出目标站点的抽样维度与数量，说明为什么单一目标无法代表端到端体验。"
+    },
+    {
+      "slug": "ttfb-vs-full-load",
+      "title": "首字节时间与完整加载时间：哪个更接近体感",
+      "type": "解释",
+      "intent": "拆解首字节与完整加载的组成差异，说明不同使用场景应该看哪一个指标。"
+    },
+    {
+      "slug": "browser-devtools-proxy-proof",
+      "title": "用浏览器开发者工具确认代理真的生效",
+      "type": "教程",
+      "intent": "通过请求头、响应来源与连接信息验证流量确实经过代理，排除系统代理未生效的情况。"
+    },
+    {
+      "slug": "e2e-evidence-package",
+      "title": "端到端证据包：截图、时间戳与命令输出怎么存",
+      "type": "清单",
+      "intent": "列出端到端测试应保存的证据类型、命名规则与脱敏要求，保证他人可以复核。"
+    }
+  ],
+  "ping-tcp": [
+    {
+      "slug": "icmp-ping-limits",
+      "title": "ICMP 延迟能说明什么，不能说明什么",
+      "type": "解释",
+      "intent": "说明 ICMP 由控制面处理带来的限速与优先级差异，界定 ping 结果的适用范围。"
+    },
+    {
+      "slug": "tcp-handshake-vs-icmp",
+      "title": "TCP 握手延迟与 ICMP 往返的偏差来源",
+      "type": "对比",
+      "intent": "对比两种探测方式的处理路径与排队行为，解释同一节点两个数值相差数十毫秒的原因。"
+    },
+    {
+      "slug": "ping-sample-count",
+      "title": "ping 采几次才有意义：10 次、50 次与 200 次的差别",
+      "type": "核验",
+      "intent": "用分位数与样本量关系说明不同采样次数的结论强度，给出延迟测试的最小样本建议。"
+    },
+    {
+      "slug": "rtt-vs-page-latency",
+      "title": "往返时间与页面打开的体感差距在哪",
+      "type": "解释",
+      "intent": "把往返时间放回首字节公式，说明握手次数、目标处理与资源加载如何放大体感差异。"
+    },
+    {
+      "slug": "idle-vs-loaded-latency",
+      "title": "空载延迟与满载延迟：同一节点的两个数字",
+      "type": "核验",
+      "intent": "设计空载与满载两组测量，说明缓冲膨胀与队列延迟如何让延迟在传输时抬升。"
+    },
+    {
+      "slug": "cross-border-rtt-floor",
+      "title": "跨境链路的物理延迟下限怎么估算",
+      "type": "解释",
+      "intent": "用地理距离与光纤传播速度估算往返下限，判断实测延迟是否已经接近物理极限。"
+    },
+    {
+      "slug": "ping-output-fields",
+      "title": "ping 与 tcping 输出字段逐个读",
+      "type": "教程",
+      "intent": "逐项解释丢包统计、最小最大平均与标准差字段，说明哪些字段适合写进报告。"
+    }
+  ],
+  "jitter": [
+    {
+      "slug": "jitter-formula-definition",
+      "title": "抖动怎么算：相邻差值、标准差与两种定义",
+      "type": "解释",
+      "intent": "给出相邻差值均值与标准差的公式，说明两种定义不可混用以及报告应标注哪一种。"
+    },
+    {
+      "slug": "packet-loss-denominator",
+      "title": "丢包率的分母：发了多少、回了多少、丢在哪一段",
+      "type": "核验",
+      "intent": "明确丢包率的分子分母口径，区分本地丢弃、路径丢弃与对端限速造成的计数差异。"
+    },
+    {
+      "slug": "p50-p95-latency-reading",
+      "title": "只看平均值会漏掉什么：P50 与 P95 的读法",
+      "type": "解释",
+      "intent": "用同一组样本演示平均值与分位数的差异，说明尖峰对实时应用的实际影响。"
+    },
+    {
+      "slug": "peak-hour-sampling-window",
+      "title": "晚高峰采样：19 点到 23 点的时间窗设计",
+      "type": "教程",
+      "intent": "给出高峰时段的分段采样方案，说明为什么跨时段取平均会掩盖拥塞。"
+    },
+    {
+      "slug": "loss-vs-jitter-symptom",
+      "title": "丢包与抖动在视频会议里的不同症状",
+      "type": "故障",
+      "intent": "从卡顿、花屏、声音断续等表现反推是丢包还是抖动，并给出对应的测量项。"
+    },
+    {
+      "slug": "wifi-jitter-exclusion",
+      "title": "本地 Wi-Fi 抖动混入测试的排除方法",
+      "type": "故障",
+      "intent": "识别无线重传、信道干扰与省电模式引入的抖动，给出有线对照与信道检查步骤。"
+    },
+    {
+      "slug": "stability-score-design",
+      "title": "稳定性评分：把抖动、丢包与可用率合成一个数",
+      "type": "核验",
+      "intent": "设计一个可解释的稳定性评分，写明权重、归一化方式与不可使用的场景。"
+    }
+  ],
+  "single": [
+    {
+      "slug": "single-stream-baseline",
+      "title": "单线程带宽测试：网页体验的基准线",
+      "type": "解释",
+      "intent": "说明单流吞吐为什么更接近单页面下载与视频播放的体验，以及它与多线程的分工。"
+    },
+    {
+      "slug": "bdp-window-limit",
+      "title": "单流上限：带宽时延积、窗口与往返的三角关系",
+      "type": "解释",
+      "intent": "用带宽时延积公式解释单流吞吐上限，给出窗口、往返与实测速度之间的换算方法。"
+    },
+    {
+      "slug": "iperf3-single-stream",
+      "title": "iperf3 单流参数：并发 1、时长与预热丢弃",
+      "type": "教程",
+      "intent": "说明单流测试的参数组合与预热丢弃原因，给出可直接复制的命令与记录字段。"
+    },
+    {
+      "slug": "speedtest-single-vs-multi",
+      "title": "浏览器测速的单线程与多线程按钮差别",
+      "type": "对比",
+      "intent": "对比浏览器测速工具两种模式的连接数、测试端点与结果差异，说明读数不能混用。"
+    },
+    {
+      "slug": "single-stream-4k-buffer",
+      "title": "单线程看 4K：码率、缓冲与卡顿的换算",
+      "type": "核验",
+      "intent": "用码率与缓冲时长估算单流带宽需求，判断卡顿来自带宽不足还是节点抖动。"
+    },
+    {
+      "slug": "slow-single-fast-multi",
+      "title": "单线程慢多线程快：问题通常在哪一段",
+      "type": "故障",
+      "intent": "按窗口限制、单连接限速与中间设备三个方向排查单流瓶颈，给出对照实验设计。"
+    },
+    {
+      "slug": "upload-single-stream",
+      "title": "上行单线程测试：直播与网盘的瓶颈",
+      "type": "教程",
+      "intent": "说明上行测试的反向参数与常见瓶颈位置，给出上传场景的采样与判定方法。"
+    }
+  ],
+  "multi": [
+    {
+      "slug": "multi-stream-aggregate",
+      "title": "多线程聚合带宽：并发数与总吞吐的关系",
+      "type": "解释",
+      "intent": "解释聚合带宽的增长曲线与饱和点，说明并发数增加何时不再带来收益。"
+    },
+    {
+      "slug": "local-baseline-first",
+      "title": "多线程测速先撞本地带宽：怎么确认天花板",
+      "type": "核验",
+      "intent": "给出直连基线的测法与判定规则，避免把本地接入带宽误记为节点上限。"
+    },
+    {
+      "slug": "concurrency-sweet-spot",
+      "title": "并发 4、8、16：从哪一档开始不再增长",
+      "type": "教程",
+      "intent": "设计并发阶梯测试，记录每档吞吐与 CPU 占用，找出该链路的饱和点。"
+    },
+    {
+      "slug": "download-manager-concurrency",
+      "title": "多线程下载工具与节点并发限制",
+      "type": "教程",
+      "intent": "说明下载工具的分片并发与代理连接数的关系，避免并发过高触发限速或连接失败。"
+    },
+    {
+      "slug": "cpu-encryption-ceiling",
+      "title": "加密与 CPU：高带宽下的单核瓶颈",
+      "type": "解释",
+      "intent": "说明加密算法、单核性能与吞吐上限的关系，给出判断 CPU 成为瓶颈的观测方法。"
+    },
+    {
+      "slug": "multi-stream-fairness",
+      "title": "多流抢占：多人共用同一节点时的分配",
+      "type": "解释",
+      "intent": "解释拥塞控制下的流间公平性，说明为什么多人共用时单流速度会明显下降。"
+    },
+    {
+      "slug": "throughput-report-format",
+      "title": "报告里怎么写：单线程与多线程并列的口径",
+      "type": "清单",
+      "intent": "给出吞吐结果的报告模板，要求同时写明线程数、时长、端点、基线与分位口径。"
+    }
+  ],
+  "exit-ip": [
+    {
+      "slug": "exit-ip-query-methods",
+      "title": "查出口 IP 的三种方法与其偏差",
+      "type": "教程",
+      "intent": "比较网页回显、命令行请求与路由数据三种查询方式，说明结果不一致时的处理顺序。"
+    },
+    {
+      "slug": "asn-and-operator-type",
+      "title": "ASN 怎么看：自治系统号、运营商与机房类型",
+      "type": "解释",
+      "intent": "解释 ASN 的含义与查询方法，说明运营商地址与机房地址在风控中的不同权重。"
+    },
+    {
+      "slug": "residential-vs-hosting-ip",
+      "title": "家宽 IP 与机房 IP 的判定线索",
+      "type": "对比",
+      "intent": "列出反向解析、ASN 类型、地址段归属等判定线索，说明不存在单一可靠指标。"
+    },
+    {
+      "slug": "ip-geolocation-conflict",
+      "title": "数据库说日本、延迟像香港：归属冲突怎么处理",
+      "type": "故障",
+      "intent": "给出地理数据库冲突时的交叉验证方法，用延迟、路由与 ASN 判断真实出口位置。"
+    },
+    {
+      "slug": "ip-reputation-signals",
+      "title": "IP 风险标签：共享地址、代理库与黑名单",
+      "type": "核验",
+      "intent": "说明风险标签的常见来源与局限，给出可复核的记录方式，避免把标签当成结论。"
+    },
+    {
+      "slug": "ipv6-exit-leak",
+      "title": "IPv6 出口检测：双栈下的泄漏与分流",
+      "type": "教程",
+      "intent": "分别检测 IPv4 与 IPv6 出口，识别只代理 IPv4 时出现的部分泄漏。"
+    },
+    {
+      "slug": "exit-ip-change-tracking",
+      "title": "出口 IP 变更追踪：同一订阅多次连接的差异",
+      "type": "核验",
+      "intent": "设计多次连接的出口记录，判断地址池轮换、会话保持与地区漂移的实际表现。"
+    }
+  ],
+  "dns-leak": [
+    {
+      "slug": "dns-query-path-map",
+      "title": "DNS 请求走了哪条路：系统、代理与加密解析",
+      "type": "解释",
+      "intent": "画出系统解析器、客户端内置解析器与加密解析器三条路径，说明各自的可见信息。"
+    },
+    {
+      "slug": "dns-leak-test-false-positive",
+      "title": "DNS 泄漏测试的误报来源与排除",
+      "type": "故障",
+      "intent": "列出分流直连、fake-ip、双栈与缓存造成的误报，给出逐步排除顺序。"
+    },
+    {
+      "slug": "edns-client-subnet-effect",
+      "title": "ECS 与 CDN 就近：DNS 位置如何影响下载速度",
+      "type": "解释",
+      "intent": "解释 EDNS 客户端子网如何影响 CDN 调度，说明解析位置与下载速度的因果关系。"
+    },
+    {
+      "slug": "doh-dot-client-switch",
+      "title": "客户端里的 DoH 与 DoT 开关改变了什么",
+      "type": "解释",
+      "intent": "说明加密 DNS 改变的只是查询传输，不改变解析器选择与结果可信度。"
+    },
+    {
+      "slug": "dns-pollution-symptom",
+      "title": "DNS 污染的典型症状与验证顺序",
+      "type": "故障",
+      "intent": "从解析结果异常、页面跳转与证书错误入手，按解析器对照与 DNSSEC 检查验证污染。"
+    },
+    {
+      "slug": "split-dns-rule-design",
+      "title": "分流 DNS：国内外域名走不同解析器",
+      "type": "教程",
+      "intent": "给出分流 DNS 的规则结构、优先级与验证方法，避免规则互相覆盖。"
+    },
+    {
+      "slug": "dns-cache-ttl-effect",
+      "title": "TTL 与缓存：改了规则为什么没生效",
+      "type": "故障",
+      "intent": "解释系统缓存、客户端缓存与解析器缓存的层次，给出清理与验证顺序。"
+    },
+    {
+      "slug": "dns-test-record-table",
+      "title": "DNS 测试记录表：解析器、域名、结果与时间",
+      "type": "清单",
+      "intent": "提供 DNS 测试记录字段与示例格式，要求记录解析器地址、查询类型、结果与时间。"
+    }
+  ],
+  "streaming": [
+    {
+      "slug": "streaming-test-four-steps",
+      "title": "流媒体可用性测试：从首页到播放 60 秒",
+      "type": "教程",
+      "intent": "给出四步测试流程与每步判定条件，说明只打开首页不能证明可以播放。"
+    },
+    {
+      "slug": "region-library-diff",
+      "title": "地区内容库差异：同一部片在不同区的结果",
+      "type": "解释",
+      "intent": "解释版权分区导致的内容差异，说明地区可用与账号可用是两套判定。"
+    },
+    {
+      "slug": "unlock-failure-three-causes",
+      "title": "解锁失败的三类原因：地区、IP 信誉与账号",
+      "type": "故障",
+      "intent": "按提示原文区分地区限制、地址信誉与账号状态，给出对应的验证动作。"
+    },
+    {
+      "slug": "playback-stats-reading",
+      "title": "播放码率与缓冲：用统计信息判断真实画质",
+      "type": "核验",
+      "intent": "读取播放统计里的分辨率、码率、丢帧与缓冲次数，判断画质是否真的达标。"
+    },
+    {
+      "slug": "streaming-bitrate-budget",
+      "title": "4K 需要多少带宽：码率、冗余与峰值",
+      "type": "解释",
+      "intent": "用码率区间与缓冲冗余估算带宽需求，说明平均带宽达标仍可能卡顿的原因。"
+    },
+    {
+      "slug": "streaming-test-record",
+      "title": "流媒体测试记录：时间、地区、结果与证据",
+      "type": "清单",
+      "intent": "提供流媒体测试记录模板，写明账号状态、地区设置、播放时长与提示原文。"
+    },
+    {
+      "slug": "unlock-label-credibility",
+      "title": "“全解锁”标签的可信度怎么核",
+      "type": "核验",
+      "intent": "拆解全解锁宣传的可验证部分，给出按服务逐项复核的清单与结论边界。"
+    }
+  ],
+  "ai-services": [
+    {
+      "slug": "ai-service-three-layers",
+      "title": "AI 服务地区限制：注册、登录与调用三层",
+      "type": "解释",
+      "intent": "把 AI 服务的地区限制拆成注册资格、登录风控与接口调用三层，说明每层的判定依据。"
+    },
+    {
+      "slug": "captcha-risk-score",
+      "title": "验证码频繁出现：IP 信誉与行为风控",
+      "type": "故障",
+      "intent": "区分地址信誉触发的验证码与行为特征触发的验证码，给出可观测的区分方法。"
+    },
+    {
+      "slug": "web-login-vs-api",
+      "title": "网页登录可用与接口可用是两件事",
+      "type": "对比",
+      "intent": "对比网页端与接口端的鉴权、地区检查与限流策略，说明测试要分别记录。"
+    },
+    {
+      "slug": "ai-payment-region-check",
+      "title": "订阅支付与账单地区的一致性要求",
+      "type": "核验",
+      "intent": "说明支付方式、账单地址与账号地区不一致时的常见结果，给出记录与判断方式。"
+    },
+    {
+      "slug": "ai-latency-composition",
+      "title": "AI 对话的延迟构成：首字与生成速度",
+      "type": "解释",
+      "intent": "拆解首字延迟与每秒生成量的组成，说明网络往返与模型处理各自占比的估算方法。"
+    },
+    {
+      "slug": "ai-test-record",
+      "title": "AI 服务测试记录表与四层判定",
+      "type": "清单",
+      "intent": "提供 AI 服务测试记录模板，按四层判定记录结果、提示原文与时间。"
+    },
+    {
+      "slug": "ai-account-ip-switching",
+      "title": "多 IP 切换登录的账号风险与最小化做法",
+      "type": "核验",
+      "intent": "说明频繁切换出口对账号风控的影响，给出测试账号隔离与操作频率的最小化建议。"
+    }
+  ],
+  "logging": [
+    {
+      "slug": "test-log-nine-fields",
+      "title": "一条测试记录至少要有哪九个字段",
+      "type": "清单",
+      "intent": "给出测试记录的最小字段集，说明缺少任一字段会导致哪种复核失败。"
+    },
+    {
+      "slug": "timestamp-timezone-rule",
+      "title": "时间戳与时区：UTC 与本地时间混用的错误",
+      "type": "教程",
+      "intent": "规定时间戳格式、时区标注与跨时区换算方法，避免同一记录出现两个时间基准。"
+    },
+    {
+      "slug": "raw-evidence-retention",
+      "title": "原始数据留存：命令输出、截图与哈希",
+      "type": "教程",
+      "intent": "说明原始输出的保存格式、截图要求与哈希校验方式，保证证据可追溯。"
+    },
+    {
+      "slug": "node-id-naming",
+      "title": "节点标识怎么命名：地区、入口、序号与版本",
+      "type": "教程",
+      "intent": "设计不含服务商名称的节点标识规则，让历史记录在订阅更新后仍能对应。"
+    },
+    {
+      "slug": "anomaly-note-writing",
+      "title": "异常备注怎么写：现象、假设与下一步",
+      "type": "清单",
+      "intent": "给出异常备注的三段式写法，避免只写“失败”导致后续无法归因。"
+    },
+    {
+      "slug": "json-log-schema",
+      "title": "用 JSON 存测试记录：字段设计与校验",
+      "type": "教程",
+      "intent": "给出测试记录的 JSON 结构、字段类型与校验规则，便于脚本汇总与长期保存。"
+    },
+    {
+      "slug": "monthly-report-structure",
+      "title": "月度检测报告的结构与结论边界",
+      "type": "清单",
+      "intent": "列出月度报告应包含的环境、样本、结果与局限，说明哪些结论不能写。"
+    }
+  ],
+  "zero-result": [
+    {
+      "slug": "zero-result-vs-no-resource",
+      "title": "零结果的含义：没有条目与没有资源的区别",
+      "type": "解释",
+      "intent": "区分收录状态与全网存在性，说明零结果能支持与不能支持的结论。"
+    },
+    {
+      "slug": "when-to-publish-zero",
+      "title": "什么情况下必须发布零结果",
+      "type": "核验",
+      "intent": "给出触发零结果的判定条件，包括证据不足、条款不允引用与复核失败。"
+    },
+    {
+      "slug": "failed-sample-archive",
+      "title": "不合格样本怎么归档而不是删除",
+      "type": "清单",
+      "intent": "说明不合格样本的归档字段与保留期限，让失败记录成为下一次核验的基准。"
+    },
+    {
+      "slug": "zero-result-wording",
+      "title": "零结果文案的写法：可核验、不暗示",
+      "type": "教程",
+      "intent": "给出零结果文案的结构与禁用表述，避免暗示存在但未公开的资源。"
+    },
+    {
+      "slug": "insufficient-sample-conclusion",
+      "title": "样本不足时怎么写结论",
+      "type": "核验",
+      "intent": "规定样本不足时的结论降级方式，用范围与限定语替代点估计。"
+    },
+    {
+      "slug": "zero-result-review-cycle",
+      "title": "零结果的复核周期与再发布条件",
+      "type": "教程",
+      "intent": "设计零结果的复核节奏与重新收录条件，说明日期字段如何随复核更新。"
+    },
+    {
+      "slug": "zero-result-misreading",
+      "title": "读者把零结果读成“全网没有”怎么避免",
+      "type": "解释",
+      "intent": "分析零结果被误读的原因，给出文案、排版与内链上的修正方式。"
+    }
+  ],
+  "environment": [
+    {
+      "slug": "local-bandwidth-baseline",
+      "title": "先测本地带宽基线：没有基线就没有对比",
+      "type": "教程",
+      "intent": "给出直连基线的测试顺序与记录字段，说明基线不达标时隧道数据为何无效。"
+    },
+    {
+      "slug": "device-os-baseline",
+      "title": "设备与系统基线：CPU、网卡与省电模式",
+      "type": "清单",
+      "intent": "列出影响吞吐与延迟的设备因素，说明省电模式与虚拟网卡带来的偏差。"
+    },
+    {
+      "slug": "dns-baseline-check",
+      "title": "测试前的 DNS 基线：解析器、缓存与 hosts",
+      "type": "教程",
+      "intent": "在测试前固定解析器与缓存状态，排除 hosts 文件与本地缓存对结果的干扰。"
+    },
+    {
+      "slug": "client-version-pinning",
+      "title": "客户端与内核版本固定：升级会改变结果",
+      "type": "核验",
+      "intent": "说明客户端与内核版本对协议支持、拥塞控制与性能的影响，要求记录并固定版本。"
+    },
+    {
+      "slug": "test-endpoint-selection",
+      "title": "目标端点怎么选：位置、CDN 与稳定性",
+      "type": "教程",
+      "intent": "给出目标端点的选择标准与备选方案，避免端点自身波动污染节点结论。"
+    },
+    {
+      "slug": "wifi-channel-interference",
+      "title": "Wi-Fi 信道与干扰：本地无线的影响",
+      "type": "故障",
+      "intent": "识别信道拥塞、邻频干扰与无线重传，给出有线对照与信道切换的验证方法。"
+    },
+    {
+      "slug": "background-traffic-cleanup",
+      "title": "后台流量清理：更新、同步与云盘",
+      "type": "清单",
+      "intent": "列出测试前需要关闭的后台任务，说明它们如何占用带宽并抬高延迟。"
+    },
+    {
+      "slug": "environment-record-template",
+      "title": "环境记录模板：十项必填",
+      "type": "清单",
+      "intent": "提供可复制的环境记录模板，覆盖接入、设备、版本、DNS 与目标五类信息。"
+    }
+  ],
+  "reproducibility": [
+    {
+      "slug": "repeat-run-design",
+      "title": "重复测量设计：三次还是三十次",
+      "type": "教程",
+      "intent": "按指标类型给出重复次数与间隔，说明重复测量能消除哪些随机因素。"
+    },
+    {
+      "slug": "same-window-comparison",
+      "title": "同窗口对比：不同节点必须同一时间测",
+      "type": "核验",
+      "intent": "设计交替对照实验，说明跨时段比较会把拥塞差异算成节点差异。"
+    },
+    {
+      "slug": "version-config-snapshot",
+      "title": "版本与配置快照：复现的最小信息集",
+      "type": "清单",
+      "intent": "列出复现所需的最小配置信息，并说明哪些字段必须脱敏后保存。"
+    },
+    {
+      "slug": "command-log-replay",
+      "title": "命令日志重放：把测试写成可执行脚本",
+      "type": "教程",
+      "intent": "把一次测试写成带参数与时间戳的命令序列，让他人可以直接重放。"
+    },
+    {
+      "slug": "observer-difference-cause",
+      "title": "两个人测同一节点结果不同：差异来源清单",
+      "type": "故障",
+      "intent": "列出设备、接入、时段、端点与版本五类差异，给出逐项排除顺序。"
+    },
+    {
+      "slug": "reproduction-failure-rule",
+      "title": "复现失败怎么写：结论降级规则",
+      "type": "核验",
+      "intent": "规定复现失败时的标注方式与结论降级层级，避免把单次观测写成稳定结论。"
+    },
+    {
+      "slug": "publish-reproducibility-checklist",
+      "title": "发布前的复现检查清单",
+      "type": "清单",
+      "intent": "提供发布前逐项检查的清单，覆盖时间、环境、单位、证据与结论边界。"
+    }
+  ],
+  "units": [
+    {
+      "slug": "mbps-vs-mb-per-s",
+      "title": "Mbps 与 MB/s：大小写与除以 8",
+      "type": "解释",
+      "intent": "说明比特与字节的换算关系，给出带宽读数与下载速度之间的换算方法。"
+    },
+    {
+      "slug": "gb-vs-gib",
+      "title": "GB 与 GiB：100 GB 为什么显示成 93 GiB",
+      "type": "解释",
+      "intent": "解释十进制与二进制换算基数，说明系统显示容量与标称容量差异的来源。"
+    },
+    {
+      "slug": "bandwidth-unit-table",
+      "title": "换算表：Gbps、Mbps 与常见文件大小",
+      "type": "清单",
+      "intent": "提供带宽与文件大小的对照表，覆盖常见档位与下载耗时的估算。"
+    },
+    {
+      "slug": "latency-unit-ms",
+      "title": "毫秒口径：往返、单向与时钟精度",
+      "type": "解释",
+      "intent": "区分往返时间与单向延迟，说明时钟精度与测量工具对毫秒级结果的影响。"
+    },
+    {
+      "slug": "average-vs-percentile-unit",
+      "title": "平均值与百分位：单位相同含义不同",
+      "type": "解释",
+      "intent": "用同一组样本对比平均值与分位数的含义，说明报告必须标注统计量类型。"
+    },
+    {
+      "slug": "quota-billing-units",
+      "title": "流量计费单位：上下行合计与倍率",
+      "type": "核验",
+      "intent": "说明流量统计的常见口径差异，给出把名义额度换算成可用额度的公式。"
+    },
+    {
+      "slug": "download-time-estimate",
+      "title": "下载时间估算：带宽、开销与并发",
+      "type": "教程",
+      "intent": "给出下载耗时估算公式，说明协议开销、并发与目标限速对估算的修正。"
+    },
+    {
+      "slug": "unit-error-consequences",
+      "title": "单位错误的后果：十倍与八倍的偏差",
+      "type": "故障",
+      "intent": "用两个典型误用说明单位错误如何放大结论偏差，给出复核清单。"
+    }
+  ],
+  "statistics": [
+    {
+      "slug": "minimum-sample-size",
+      "title": "样本量下限：5 次、20 次与 100 次",
+      "type": "核验",
+      "intent": "按指标类型给出样本量下限，说明少于下限时只能报范围不能报分位。"
+    },
+    {
+      "slug": "p50-p95-p99-uses",
+      "title": "P50、P95、P99：三个分位各自的用途",
+      "type": "解释",
+      "intent": "说明三个分位在典型体验、尖峰与极端情况上的不同解释力，避免只报一个数。"
+    },
+    {
+      "slug": "outlier-handling-rules",
+      "title": "异常值处理：删除、保留与标注",
+      "type": "核验",
+      "intent": "给出异常值判定与处理规则，说明删除前必须记录原因与原始值。"
+    },
+    {
+      "slug": "confidence-interval-basics",
+      "title": "置信区间入门：均值的不确定性",
+      "type": "解释",
+      "intent": "用均值与标准误解释置信区间，说明小样本下区间变宽的原因。"
+    },
+    {
+      "slug": "compare-two-nodes",
+      "title": "两个节点怎么比：差值、波动与重叠",
+      "type": "对比",
+      "intent": "给出两组样本的比较方法，说明差值小于波动时不能宣称优劣。"
+    },
+    {
+      "slug": "time-stratified-stats",
+      "title": "按时段分层统计：白天与晚高峰分开算",
+      "type": "教程",
+      "intent": "设计时段分层方案，说明混合统计如何掩盖高峰期的性能下降。"
+    },
+    {
+      "slug": "availability-rate-definition",
+      "title": "可用率定义：成功次数除以尝试次数",
+      "type": "解释",
+      "intent": "明确可用率的分子分母与观察期，说明探测频率对数值的影响。"
+    },
+    {
+      "slug": "misleading-chart-patterns",
+      "title": "图表误导：截断坐标轴与选择性采样",
+      "type": "故障",
+      "intent": "识别截断坐标轴、挑选时段与样本不均造成的误导，给出复核方法。"
+    }
+  ]
+}

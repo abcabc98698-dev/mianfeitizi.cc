@@ -1,0 +1,124 @@
+[
+  {
+    "slug": "free-vpn-vs-free-airport",
+    "title": "免费梯子和免费机场有什么区别？新手应该先了解哪些限制",
+    "description": "从四层结构、成本承担者、订阅额度、失效方式、隐私与退出成本拆解免费梯子与免费机场的区别。",
+    "topic": "free-vpn",
+    "topicLabel": "免费梯子",
+    "reading": "24 分钟",
+    "lastReviewed": "2026-10-24",
+    "keywords": [
+      "免费梯子",
+      "免费机场",
+      "区别",
+      "限制"
+    ]
+  },
+  {
+    "slug": "free-open-source-clients",
+    "title": "免费科学上网软件有哪些？开源客户端与免费服务器不是一回事",
+    "description": "解释客户端、内核、协议与服务端的角色分工，并给出官方来源核验清单。",
+    "topic": "proxy-software",
+    "topicLabel": "免费代理软件",
+    "reading": "23 分钟",
+    "lastReviewed": "2026-10-24",
+    "keywords": [
+      "免费科学上网软件",
+      "开源客户端",
+      "Mihomo",
+      "Xray",
+      "v2rayNG"
+    ]
+  },
+  {
+    "slug": "trial-verification",
+    "title": "免费机场试用怎么判断是否真实可用？流量、期限与节点核验方法",
+    "description": "把试用拆成资格、额度、期限、线路与可复现测试，给出一份不依赖商家截图的验收流程。",
+    "topic": "free-trial",
+    "topicLabel": "免费试用",
+    "reading": "24 分钟",
+    "lastReviewed": "2026-10-24",
+    "keywords": [
+      "免费机场试用",
+      "试用流量",
+      "试用期限",
+      "节点核验"
+    ]
+  },
+  {
+    "slug": "why-free-nodes-fail",
+    "title": "免费节点为什么经常失效？服务成本、限流和连接稳定性分析",
+    "description": "从带宽成本、滥用、IP 封禁、订阅更新和客户端配置解释免费节点短命的工程原因。",
+    "topic": "resource-check",
+    "topicLabel": "资源检测",
+    "reading": "23 分钟",
+    "lastReviewed": "2026-10-24",
+    "keywords": [
+      "免费节点失效",
+      "免费机场",
+      "限流",
+      "连接稳定性"
+    ]
+  },
+  {
+    "slug": "is-10-yuan-airport-worth-it",
+    "title": "每月10元左右的机场值得买吗？低预算套餐和使用限制比较",
+    "description": "用单位流量成本、设备数、峰值带宽和退出成本，算清 10 元档套餐到底便宜在哪里。",
+    "topic": "budget-vpn",
+    "topicLabel": "便宜梯子",
+    "reading": "23 分钟",
+    "lastReviewed": "2026-10-24",
+    "keywords": [
+      "10元机场",
+      "便宜机场",
+      "低预算套餐",
+      "机场价格"
+    ]
+  },
+  {
+    "slug": "is-free-proxy-software-safe",
+    "title": "免费代理软件是否安全？官方安装包、权限与隐私问题说明",
+    "description": "区分软件风险与服务风险，讲清 VPN 权限、TUN、系统代理、签名校验和恶意安装包识别。",
+    "topic": "proxy-software",
+    "topicLabel": "免费代理软件",
+    "reading": "24 分钟",
+    "lastReviewed": "2026-10-24",
+    "keywords": [
+      "免费代理软件安全",
+      "安装包",
+      "权限",
+      "隐私",
+      "签名"
+    ]
+  },
+  {
+    "slug": "one-time-data-pack",
+    "title": "一次性流量包适合什么人？与月付订阅的成本对比",
+    "description": "用有效期、实际用量、峰值需求和机会成本四个变量，判断流量包是不是更划算。",
+    "topic": "budget-vpn",
+    "topicLabel": "便宜梯子",
+    "reading": "23 分钟",
+    "lastReviewed": "2026-10-24",
+    "keywords": [
+      "一次性流量包",
+      "月付订阅",
+      "流量成本",
+      "便宜机场"
+    ]
+  },
+  {
+    "slug": "free-airport-not-working",
+    "title": "免费机场无法使用时怎么办？排查流程与低成本替代方案",
+    "description": "按设备、客户端、订阅、DNS、TCP、TLS、线路、出口、目标站点与账号权限十层排查，并给出可复现的记录模板与低成本替代方法。",
+    "topic": "beginner",
+    "topicLabel": "新手帮助",
+    "reading": "24 分钟",
+    "lastReviewed": "2026-10-24",
+    "keywords": [
+      "免费机场无法使用",
+      "连接失败",
+      "排查",
+      "替代方案"
+    ]
+  }
+]

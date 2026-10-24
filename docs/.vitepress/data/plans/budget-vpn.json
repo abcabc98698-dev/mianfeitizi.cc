@@ -1,0 +1,706 @@
+{
+  "plans": [
+    {
+      "slug": "under10-plan-structures",
+      "title": "10 元以内套餐的四种结构：周付、月付、体验包与限时包",
+      "type": "解释",
+      "intent": "分清四种售卖结构各自的时间单位、起算点和续费方式，避免把体验价当成长期价。"
+    },
+    {
+      "slug": "under10-weekly-vs-monthly",
+      "title": "周付与月付的单位成本差多少",
+      "type": "成本",
+      "intent": "用同一流量口径折算周付和月付，算出周付溢价对应的灵活性价值。"
+    },
+    {
+      "slug": "under10-trial-pack-billing",
+      "title": "体验包为什么常按天计费",
+      "type": "解释",
+      "intent": "解释按天计费的起算、到期与流量清零规则，以及短期单价偏高的原因。"
+    },
+    {
+      "slug": "under10-plan-combos",
+      "title": "9.9 元档常见的流量与设备组合",
+      "type": "清单",
+      "intent": "列出低月费套餐在流量、设备数和限速上的典型组合，便于逐项对照。"
+    },
+    {
+      "slug": "under10-billing-start",
+      "title": "低月费套餐的起算日与到期规则怎么核验",
+      "type": "核验",
+      "intent": "给出购买页、账单页和条款页三处需要核对的起算与到期证据。"
+    },
+    {
+      "slug": "under10-renewal-price",
+      "title": "10 元以内套餐续费时价格会怎么变",
+      "type": "核验",
+      "intent": "区分首购价、续费价和自动续费价，说明在哪里核对价格有效期。"
+    },
+    {
+      "slug": "under10-promo-expiry",
+      "title": "限时低价套餐到期后会自动续费吗",
+      "type": "故障",
+      "intent": "整理限时套餐到期前后的扣费、降级与退款路径，避免被动续费。"
+    }
+  ],
+  "limits": [
+    {
+      "slug": "under10-speed-cap-location",
+      "title": "10 元档的限速条款通常写在哪里",
+      "type": "核验",
+      "intent": "指出服务页面、常见问题与可接受使用政策中限速条款的常见位置。"
+    },
+    {
+      "slug": "under10-single-device-cost",
+      "title": "单设备限制如何改变单位成本",
+      "type": "成本",
+      "intent": "把设备数上限代入单位成本公式，算出单人使用与多人分摊的真实差距。"
+    },
+    {
+      "slug": "under10-region-limit",
+      "title": "低价套餐的地区限制与出口选择",
+      "type": "解释",
+      "intent": "说明地区限制影响的是节点选择、目标服务可用性还是计费，并给出核对顺序。"
+    },
+    {
+      "slug": "under10-oversubscription",
+      "title": "超售比与晚高峰体验的关系",
+      "type": "解释",
+      "intent": "用并发用户数与出口带宽的比值解释晚高峰掉速，不依赖单次测速。"
+    },
+    {
+      "slug": "under10-connection-limit",
+      "title": "低价套餐的并发连接数限制是什么",
+      "type": "解释",
+      "intent": "区分并发设备、并发 IP 与并发连接，说明连接数限制在什么场景下暴露。"
+    },
+    {
+      "slug": "under10-10mbps-tasks",
+      "title": "限速 10 Mbps 能完成哪些日常任务",
+      "type": "清单",
+      "intent": "按网页、会议、视频与下载四类任务估算 10 Mbps 的时间成本与可行性。"
+    },
+    {
+      "slug": "under10-aup-reading",
+      "title": "低价套餐的合理使用政策怎么读",
+      "type": "核验",
+      "intent": "从流量滥用、共享、商业用途三类条款判断哪些行为会触发限速或停机。"
+    }
+  ],
+  "under20-plans": [
+    {
+      "slug": "under20-five-dimensions",
+      "title": "20 元以内套餐的五个比较维度",
+      "type": "清单",
+      "intent": "用流量、倍率、带宽、设备数和可用率五个维度建立同口径比较表。"
+    },
+    {
+      "slug": "under20-15-vs-20",
+      "title": "15 元档与 20 元档的差价买到了什么",
+      "type": "对比",
+      "intent": "把 5 元差价拆成流量、带宽、设备数和线路四项，判断增量是否可验证。"
+    },
+    {
+      "slug": "under20-reset-rules",
+      "title": "20 元档的流量重置规则怎么对比",
+      "type": "对比",
+      "intent": "比较自然月、购买日滚动与 30 天周期的重置差异对可用流量的影响。"
+    },
+    {
+      "slug": "under20-quarterly",
+      "title": "月付 20 元以内要不要改选季付",
+      "type": "成本",
+      "intent": "计算季付折扣的盈亏平衡点，并纳入服务变更与退款条件。"
+    },
+    {
+      "slug": "under20-route-cost",
+      "title": "20 元档的线路类型与成本对应关系",
+      "type": "解释",
+      "intent": "解释直连、中转与专线在低价档的成本结构差异，以及宣传名称的核验方法。"
+    },
+    {
+      "slug": "under20-backup-nodes",
+      "title": "低价档的备用节点数量怎么核实",
+      "type": "核验",
+      "intent": "给出订阅条目、节点列表与连通性三处交叉核对备用节点的方法。"
+    },
+    {
+      "slug": "under20-hidden-thresholds",
+      "title": "20 元以内套餐的隐藏门槛清单",
+      "type": "清单",
+      "intent": "汇总年龄、地区、支付方式、实名与设备绑定等容易被忽略的购买门槛。"
+    }
+  ],
+  "use-cases": [
+    {
+      "slug": "under20-office-traffic",
+      "title": "网页与办公场景每月需要多少流量",
+      "type": "成本",
+      "intent": "按页面体积、会议时长与同步文件量估算办公场景的月度流量区间。"
+    },
+    {
+      "slug": "under20-video-1080p",
+      "title": "1080p 视频每月消耗多少流量",
+      "type": "成本",
+      "intent": "用码率与观看时长计算 1080p 流量，并折算到 20 元档的可用天数。"
+    },
+    {
+      "slug": "under20-4k-bandwidth",
+      "title": "4K 视频与低价档带宽的匹配",
+      "type": "对比",
+      "intent": "把 4K 码率需求与低价档峰值带宽对照，判断瓶颈在带宽还是流量。"
+    },
+    {
+      "slug": "under20-gaming",
+      "title": "游戏加速与代理线路的差别",
+      "type": "解释",
+      "intent": "区分游戏加速器与通用代理在路由、UDP 和延迟上的不同目标。"
+    },
+    {
+      "slug": "under20-large-download",
+      "title": "大文件下载在 20 元档的时间成本",
+      "type": "成本",
+      "intent": "按峰值带宽与可用率估算下载耗时，并折算成等待时间的机会成本。"
+    },
+    {
+      "slug": "under20-family-allocation",
+      "title": "多设备家庭在 20 元档的分配方案",
+      "type": "教程",
+      "intent": "给出按设备优先级分配流量与带宽的步骤，附每日用量记录模板。"
+    },
+    {
+      "slug": "under20-outside-use",
+      "title": "只在大陆以外使用时的套餐选择",
+      "type": "解释",
+      "intent": "说明境外使用时的入口位置、计费与节点选择差异，避免按境内习惯买套餐。"
+    }
+  ],
+  "unit-cost": [
+    {
+      "slug": "annual-unit-cost-formula",
+      "title": "年付单位成本的完整公式",
+      "type": "成本",
+      "intent": "把年付总价、每月流量、倍率、可用率与实际使用月数合成一条可复算公式。"
+    },
+    {
+      "slug": "annual-breakeven-months",
+      "title": "年付与月付的盈亏平衡月数",
+      "type": "成本",
+      "intent": "用年付总价除以月付价格，算出需要连续使用多少个月才回本。"
+    },
+    {
+      "slug": "annual-actual-months",
+      "title": "年付套餐按实际使用月数折算",
+      "type": "成本",
+      "intent": "把出差、闲置和线路故障月份计入实际使用月数，重算单位成本。"
+    },
+    {
+      "slug": "annual-discount-risk-premium",
+      "title": "年付五折对应的风险溢价",
+      "type": "成本",
+      "intent": "把折扣换算成可承受的服务中断月数，判断低价年付的风险是否被定价。"
+    },
+    {
+      "slug": "annual-quota-delivery",
+      "title": "年付流量按月发放与一次性发放的差别",
+      "type": "对比",
+      "intent": "比较两种发放方式在闲置、结转和超额时的可用流量差异。"
+    },
+    {
+      "slug": "annual-rollover",
+      "title": "年付套餐的流量结转规则怎么核验",
+      "type": "核验",
+      "intent": "从账单、条款和客服答复三处确认未用流量是否结转及结转上限。"
+    },
+    {
+      "slug": "annual-missing-costs",
+      "title": "年付总价里容易漏算的三项支出",
+      "type": "清单",
+      "intent": "列出支付手续费、设备附加费与迁移时间成本，并给出估算方法。"
+    }
+  ],
+  "risk": [
+    {
+      "slug": "annual-termination-value",
+      "title": "年付服务终止后的剩余价值怎么估",
+      "type": "成本",
+      "intent": "用剩余天数、已用流量和退款比例估算服务终止时的可回收价值。"
+    },
+    {
+      "slug": "annual-degradation-cost",
+      "title": "线路降级在年付中的成本影响",
+      "type": "成本",
+      "intent": "把可用率与带宽下降折算成等效涨价，比较降级前后的单位成本。"
+    },
+    {
+      "slug": "annual-terms-change",
+      "title": "年付条款变更的常见触发点",
+      "type": "核验",
+      "intent": "列出续费、节点调整、支付渠道变更等条款变动信号及核对位置。"
+    },
+    {
+      "slug": "annual-refund-window",
+      "title": "年付退款窗口与已用流量扣减",
+      "type": "核验",
+      "intent": "说明退款窗口、按比例扣减和手续费三类条款如何影响实际退款额。"
+    },
+    {
+      "slug": "annual-vanish-signals",
+      "title": "年付服务跑路前的可观察信号",
+      "type": "清单",
+      "intent": "汇总域名、支付、公告、客服与节点更新五类可观察信号，不依赖传闻。"
+    },
+    {
+      "slug": "annual-evidence",
+      "title": "年付前应保存哪些证据",
+      "type": "清单",
+      "intent": "给出购买页、条款、账单、支付凭证与节点列表的保存清单和命名方式。"
+    },
+    {
+      "slug": "annual-migration-exit",
+      "title": "年付中途迁移的退出成本",
+      "type": "成本",
+      "intent": "把订阅备份、客户端切换、余额损失与学习时间计入退出成本。"
+    }
+  ],
+  "pricing": [
+    {
+      "slug": "pack-unit-price-methods",
+      "title": "流量包按 GB 单价的三种算法",
+      "type": "成本",
+      "intent": "区分标称容量、可用容量与实际用量三种分母，说明单价差异来源。"
+    },
+    {
+      "slug": "pack-vs-monthly-cross",
+      "title": "一次性流量包与月付的成本交叉点",
+      "type": "成本",
+      "intent": "建立流量包与月付的交叉点公式，算出在什么用量下两者相等。"
+    },
+    {
+      "slug": "pack-expiry-cost",
+      "title": "流量包有效期对单价的影响",
+      "type": "成本",
+      "intent": "把到期作废的流量计入分母，计算不同使用进度下的有效单价。"
+    },
+    {
+      "slug": "pack-speed-time",
+      "title": "流量包速度限制怎么折算成时间",
+      "type": "成本",
+      "intent": "按限速与包内流量估算用完所需小时数，判断有效期是否够用。"
+    },
+    {
+      "slug": "pack-stacking",
+      "title": "流量包能否叠加与结转",
+      "type": "核验",
+      "intent": "核对叠加顺序、有效期顺延和剩余流量处理三项规则。"
+    },
+    {
+      "slug": "pack-size-marginal",
+      "title": "大流量包与小流量包的边际价格",
+      "type": "对比",
+      "intent": "比较不同容量档的每 GB 价格，识别大包不便宜的价格结构。"
+    },
+    {
+      "slug": "pack-gib-gb",
+      "title": "流量包计价里的 GiB 与 GB 差异",
+      "type": "核验",
+      "intent": "用换算系数核对标称单位与账单单位，估算百分之七左右的容量差。"
+    }
+  ],
+  "fit": [
+    {
+      "slug": "pack-two-months-user",
+      "title": "一年只用两个月的用户该买什么",
+      "type": "清单",
+      "intent": "比较流量包、月付与短期套餐在低频使用下的年度总支出。"
+    },
+    {
+      "slug": "pack-travel-sizing",
+      "title": "旅行期间的一次性流量包怎么估量",
+      "type": "教程",
+      "intent": "按行程天数、地图与视频用量估算流量，给出留余量的计算步骤。"
+    },
+    {
+      "slug": "pack-backup-choice",
+      "title": "备用线路用流量包还是月付",
+      "type": "对比",
+      "intent": "从闲置成本、失效风险和恢复时间三方面比较两种备用方案。"
+    },
+    {
+      "slug": "pack-project-procurement",
+      "title": "项目制使用的流量包采购流程",
+      "type": "教程",
+      "intent": "给出按项目周期、参与人数和交付物估算流量并留出复核点的流程。"
+    },
+    {
+      "slug": "pack-lowfreq-waste",
+      "title": "低频用户买大流量包的浪费比例",
+      "type": "成本",
+      "intent": "用实际用量除以包内流量，算出为未使用容量支付的金额。"
+    },
+    {
+      "slug": "pack-expiry-handling",
+      "title": "流量包到期前的余额处理",
+      "type": "清单",
+      "intent": "列出到期提醒、转赠限制、退款条件和替代用途的核对顺序。"
+    },
+    {
+      "slug": "pack-who-fits",
+      "title": "流量包适合与不适合的四类人",
+      "type": "清单",
+      "intent": "按使用频率、设备数、流量波动和预算约束划分适配人群。"
+    }
+  ],
+  "units": [
+    {
+      "slug": "billing-gb-gib",
+      "title": "GB 与 GiB 的换算如何影响账单",
+      "type": "解释",
+      "intent": "用 1 GiB 等于 1.073741824 GB 的换算，说明标称容量与实际可用量的差额。"
+    },
+    {
+      "slug": "billing-updown",
+      "title": "上下行合计计费的三种口径",
+      "type": "解释",
+      "intent": "区分只计下行、上下行合计与加权计费，估算上传占比对可用流量的影响。"
+    },
+    {
+      "slug": "billing-multiplier",
+      "title": "倍率 1x、2x、5x 的实际成本",
+      "type": "成本",
+      "intent": "把节点倍率代入流量折算公式，算出不同倍率下的每 GB 成本。"
+    },
+    {
+      "slug": "billing-cycle-types",
+      "title": "自然月、30 天与滚动 30 天的差别",
+      "type": "解释",
+      "intent": "比较三种结算周期的重置日期与年度总配额，指出短月份与长月份造成的偏差。"
+    },
+    {
+      "slug": "billing-timezone-reset",
+      "title": "结算时区与重置时刻的影响",
+      "type": "核验",
+      "intent": "说明时区差异如何造成提前或延后重置，并给出核对账单的方法。"
+    },
+    {
+      "slug": "billing-rounding",
+      "title": "流量统计的采样与四舍五入误差",
+      "type": "解释",
+      "intent": "解释采样间隔、单位取整和分段计费产生的误差范围。"
+    },
+    {
+      "slug": "billing-usage-scope",
+      "title": "账单里的已用流量包含哪些部分",
+      "type": "核验",
+      "intent": "拆分代理流量、直连流量、重试流量与协议开销，确认统计边界。"
+    }
+  ],
+  "hidden-cost": [
+    {
+      "slug": "hidden-payment-fee",
+      "title": "支付手续费与汇率加价怎么算",
+      "type": "成本",
+      "intent": "把百分比手续费、固定手续费和汇率点差合成实际支付成本。"
+    },
+    {
+      "slug": "hidden-device-fee",
+      "title": "设备附加费如何叠加到月成本",
+      "type": "成本",
+      "intent": "按每台每月加价与一次性配置费两种模式计算多设备总成本。"
+    },
+    {
+      "slug": "hidden-renewal-hike",
+      "title": "续费涨价的三年成本模拟",
+      "type": "成本",
+      "intent": "用三种涨幅假设模拟三年总支出，比较首年低价与长期均价。"
+    },
+    {
+      "slug": "hidden-time-cost",
+      "title": "低价套餐的时间成本怎么货币化",
+      "type": "成本",
+      "intent": "把排查、配置和切换耗时乘以时间价值，计入月度总成本。"
+    },
+    {
+      "slug": "hidden-refund-fee",
+      "title": "退款手续费与提现成本",
+      "type": "成本",
+      "intent": "计算退款比例、手续费与到账周期对实际回收金额的影响。"
+    },
+    {
+      "slug": "hidden-downgrade-loss",
+      "title": "套餐降级的差价损失",
+      "type": "解释",
+      "intent": "说明降级后剩余流量、有效期与已付差价的处理方式。"
+    },
+    {
+      "slug": "hidden-cost-checklist",
+      "title": "隐藏成本自查表的八个字段",
+      "type": "清单",
+      "intent": "给出可直接填写的八项成本字段与计算顺序。"
+    }
+  ],
+  "metrics": [
+    {
+      "slug": "quality-availability-sampling",
+      "title": "低价线路的可用率怎么定义与采样",
+      "type": "核验",
+      "intent": "给出可用率的分子分母、采样频率与最短观察窗口。"
+    },
+    {
+      "slug": "quality-p50-p95",
+      "title": "P50 与 P95 延迟分别在说什么",
+      "type": "解释",
+      "intent": "区分典型延迟与尾部延迟，说明低价线路为何 P95 更关键。"
+    },
+    {
+      "slug": "quality-jitter-loss",
+      "title": "抖动与丢包对视频会议的影响",
+      "type": "解释",
+      "intent": "用抖动缓冲与重传成本解释丢包率对实时通话的实际影响。"
+    },
+    {
+      "slug": "quality-single-multi",
+      "title": "单线程与多线程测速的差异",
+      "type": "对比",
+      "intent": "说明两种测速各自暴露的瓶颈，以及低价线路常见的差距方向。"
+    },
+    {
+      "slug": "quality-peak-sustained",
+      "title": "峰值带宽与持续带宽的区别",
+      "type": "解释",
+      "intent": "区分短时突发与长时间稳定吞吐，给出持续观测的采样方法。"
+    },
+    {
+      "slug": "quality-ip-reputation",
+      "title": "出口 IP 信誉与可用性的关系",
+      "type": "解释",
+      "intent": "解释共享 IP 的信誉标签如何影响目标站点访问与验证码频率。"
+    },
+    {
+      "slug": "quality-acceptance-sheet",
+      "title": "低价线路质量验收表",
+      "type": "清单",
+      "intent": "给出七日验收的记录字段、判定阈值与复测条件。"
+    }
+  ],
+  "red-flags": [
+    {
+      "slug": "redflag-node-count",
+      "title": "无法验证的节点数量宣传",
+      "type": "核验",
+      "intent": "说明节点数量的统计口径差异，以及如何用订阅条目交叉核对。"
+    },
+    {
+      "slug": "redflag-route-naming",
+      "title": "线路名称与工程类型对不上",
+      "type": "核验",
+      "intent": "列出直连、中转、专线等名称与实际路由不符时的核对方法。"
+    },
+    {
+      "slug": "redflag-too-cheap-window",
+      "title": "异常低价的时间窗口",
+      "type": "解释",
+      "intent": "解释首月价、限时价与长期价的时间边界，避免按短期价格做长期预算。"
+    },
+    {
+      "slug": "redflag-speed-screenshot",
+      "title": "只展示测速截图不展示条件",
+      "type": "核验",
+      "intent": "指出截图缺失的时间、节点、线程数与目标端点，说明为什么无法复现。"
+    },
+    {
+      "slug": "redflag-liability",
+      "title": "条款里排除全部责任的写法",
+      "type": "核验",
+      "intent": "识别可用性、退款与数据责任三类免责条款的具体表述。"
+    },
+    {
+      "slug": "redflag-payment-entity",
+      "title": "支付方式与经营主体不一致",
+      "type": "核验",
+      "intent": "核对收款方、页面主体与条款主体，判断付款后的追索难度。"
+    },
+    {
+      "slug": "redflag-scorecard",
+      "title": "低价套餐的风险信号打分表",
+      "type": "清单",
+      "intent": "用七项可观察信号建立 0 到 14 分的风险评分与处置建议。"
+    }
+  ],
+  "device-cost": [
+    {
+      "slug": "device-pricing-models",
+      "title": "按设备加价的三种计费方式",
+      "type": "解释",
+      "intent": "区分按并发设备、按绑定设备与按 IP 计费，说明各自的成本边界。"
+    },
+    {
+      "slug": "device-three-cost",
+      "title": "三台设备的单位成本怎么算",
+      "type": "成本",
+      "intent": "把套餐价、设备上限与流量分摊到每台设备，算出单设备成本。"
+    },
+    {
+      "slug": "device-router-count",
+      "title": "路由器共享算几台设备",
+      "type": "解释",
+      "intent": "解释 NAT 后的设备识别方式，以及路由器共享在条款中的常见归类。"
+    },
+    {
+      "slug": "device-ip-vs-device",
+      "title": "并发 IP 与并发设备的区别",
+      "type": "解释",
+      "intent": "说明出口 IP、局域网设备与同时在线数的统计差异。"
+    },
+    {
+      "slug": "device-family-budget",
+      "title": "家庭五台设备的预算分配",
+      "type": "成本",
+      "intent": "按设备用途分配流量与带宽，给出 20 元以内预算的分配表。"
+    },
+    {
+      "slug": "device-rotation",
+      "title": "设备数限制下的使用顺序安排",
+      "type": "教程",
+      "intent": "给出多设备场景下的使用优先级与记录方式，并标明条款允许的边界。"
+    },
+    {
+      "slug": "device-breakeven",
+      "title": "多设备套餐的盈亏平衡点",
+      "type": "成本",
+      "intent": "比较单设备套餐加购与多设备套餐的总价，算出平衡设备数。"
+    }
+  ],
+  "sharing": [
+    {
+      "slug": "sharing-risk-triggers",
+      "title": "同账号多设备登录的风控触发条件",
+      "type": "解释",
+      "intent": "解释同 IP、跨地区与高频切换三类信号，以及服务方可能采取的措施。"
+    },
+    {
+      "slug": "sharing-family-boundary",
+      "title": "家庭共享与账号转借的边界",
+      "type": "解释",
+      "intent": "按同住、异地与付费分摊三种情形说明条款差异与风险归属。"
+    },
+    {
+      "slug": "sharing-throttle",
+      "title": "共享导致的限速与降级",
+      "type": "故障",
+      "intent": "列出共享后出现限速时的排查顺序与证据，不预设服务方必然限速。"
+    },
+    {
+      "slug": "sharing-same-ip",
+      "title": "多设备同 IP 的识别方式",
+      "type": "解释",
+      "intent": "说明 NAT、IPv6 与出口 IP 复用如何影响设备识别。"
+    },
+    {
+      "slug": "sharing-recovery",
+      "title": "共享被封后的恢复路径",
+      "type": "故障",
+      "intent": "给出申诉、退款与迁移三条路径的先后顺序和材料清单。"
+    },
+    {
+      "slug": "sharing-cost-split",
+      "title": "合租成本分摊与责任划分",
+      "type": "成本",
+      "intent": "按设备数、流量占比与付款责任设计分摊公式，写明违约处理。"
+    },
+    {
+      "slug": "sharing-terms-checklist",
+      "title": "多设备共享前的条款核对清单",
+      "type": "清单",
+      "intent": "列出设备数、IP、转借、退款与连带责任五项核对点。"
+    }
+  ],
+  "free-vs-cheap": [
+    {
+      "slug": "free-vs-cheap-cash",
+      "title": "免费方案与 10 元档的现金成本对比",
+      "type": "对比",
+      "intent": "把零现金支出与年度 120 元支出放在同一张表里比较。"
+    },
+    {
+      "slug": "free-vs-cheap-time",
+      "title": "免费方案的时间成本与低价套餐",
+      "type": "成本",
+      "intent": "把找节点、换订阅和排查耗时折算成金额，与低价套餐月费对照。"
+    },
+    {
+      "slug": "free-vs-cheap-availability",
+      "title": "免费节点失效频率与低价可用率",
+      "type": "对比",
+      "intent": "用失效次数与恢复时间两个指标比较两类方案的稳定性。"
+    },
+    {
+      "slug": "free-vs-cheap-privacy",
+      "title": "隐私代价在免费与低价间的差别",
+      "type": "解释",
+      "intent": "从日志、支付身份与运营持续性三方面比较两种模式的信任成本。"
+    },
+    {
+      "slug": "free-vs-cheap-zero-cash",
+      "title": "零现金支出适合的五种情况",
+      "type": "清单",
+      "intent": "列出短期、低频、可中断等适合继续使用免费方案的场景。"
+    },
+    {
+      "slug": "free-vs-cheap-trigger",
+      "title": "从免费迁到低价的触发条件",
+      "type": "清单",
+      "intent": "给出可用率、时间成本与需求增长三类可量化触发条件。"
+    },
+    {
+      "slug": "free-vs-cheap-combo",
+      "title": "免费加低价组合的预算模型",
+      "type": "成本",
+      "intent": "用主线路加备用免费线路的组合计算月度预算与失效切换成本。"
+    }
+  ],
+  "short-term": [
+    {
+      "slug": "shortterm-daily-weekly",
+      "title": "按天计费与按周计费怎么选",
+      "type": "对比",
+      "intent": "比较两种短期计费在 3 天、7 天与 14 天使用时长下的总价。"
+    },
+    {
+      "slug": "shortterm-three-day",
+      "title": "三天应急访问的最小支出",
+      "type": "成本",
+      "intent": "按最小可行流量与最短时长估算应急场景的最低预算。"
+    },
+    {
+      "slug": "shortterm-window",
+      "title": "短期套餐的起止时间怎么算",
+      "type": "核验",
+      "intent": "核对购买时刻、激活时刻与到期时刻三个时间点的差异。"
+    },
+    {
+      "slug": "shortterm-project",
+      "title": "项目制两个月的采购方案",
+      "type": "教程",
+      "intent": "给出两个月项目的套餐组合、流量预留与验收节点。"
+    },
+    {
+      "slug": "shortterm-cleanup",
+      "title": "短期套餐到期后的数据清理",
+      "type": "教程",
+      "intent": "列出订阅删除、客户端配置清理与账号解绑的操作顺序。"
+    },
+    {
+      "slug": "shortterm-unit-price",
+      "title": "短期套餐的高单价是否合理",
+      "type": "成本",
+      "intent": "把短期套餐单价与月付折算单价对比，判断溢价对应的服务成本。"
+    },
+    {
+      "slug": "shortterm-with-pack",
+      "title": "短期方案与流量包的组合",
+      "type": "清单",
+      "intent": "给出短期线路加流量包的组合方式与适用条件。"
+    }
+  ]
+}

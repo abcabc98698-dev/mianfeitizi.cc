@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="免梯指数">
+  <rect x="1" y="1" width="30" height="30" rx="5" fill="#07110e" stroke="#5eead4" stroke-width="1.5"/>
+  <path d="M8 23V12" stroke="#5eead4" stroke-width="2.2" stroke-linecap="square"/>
+  <path d="M14.5 23V16.5" stroke="#5eead4" stroke-width="2.2" stroke-linecap="square"/>
+  <path d="M21 23V8" stroke="#5eead4" stroke-width="2.2" stroke-linecap="square"/>
+  <circle cx="25.2" cy="9" r="1.5" fill="#fbbf24"/>
+</svg>

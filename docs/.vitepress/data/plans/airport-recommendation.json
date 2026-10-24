@@ -1,0 +1,706 @@
+{
+  "hard-filters": [
+    {
+      "slug": "airport-terms-clause-checklist",
+      "title": "机场服务条款要读哪几段：停权、限速与退款免责的判定位置",
+      "type": "解释",
+      "intent": "让读者在付款前定位条款里真正会影响使用的四类句子，而不是从头读到尾。"
+    },
+    {
+      "slug": "payment-channel-and-billing-entity",
+      "title": "买机场前先看支付通道：账单主体、币种与拒付路径",
+      "type": "核验",
+      "intent": "从付款页面反查收款主体与争议处理路径，判断出问题时有没有可用的申诉对象。"
+    },
+    {
+      "slug": "refund-window-and-exceptions",
+      "title": "机场退款条款怎么读：冷静期、已用流量与例外清单",
+      "type": "核验",
+      "intent": "把退款承诺拆成时间窗口、用量门槛和例外条件三项可核对的事实。"
+    },
+    {
+      "slug": "privacy-policy-log-scope",
+      "title": "机场隐私政策写了什么才算有效承诺：日志、留存期与第三方",
+      "type": "解释",
+      "intent": "区分可核查的日志范围声明与无法验证的笼统承诺，给出阅读顺序。"
+    },
+    {
+      "slug": "client-support-as-gate",
+      "title": "订阅能不能进你的客户端：把客户端支持当硬门槛来验",
+      "type": "核验",
+      "intent": "用订阅格式、协议和系统权限三项确认自己的设备能否真正用上。"
+    },
+    {
+      "slug": "concurrency-and-device-terms",
+      "title": "并发设备数写在条款哪一行：同时在线、IP 绑定与共享判定",
+      "type": "解释",
+      "intent": "解释并发限制的三种实现方式，说明家庭共享在什么条件下会触发限制。"
+    },
+    {
+      "slug": "hard-filter-scorecard",
+      "title": "硬性门槛打分卡：八项否决条件与三项观察条件",
+      "type": "清单",
+      "intent": "给出一张可以逐项勾选的排除表，把不合格候选在比较之前剔掉。"
+    }
+  ],
+  "soft-filters": [
+    {
+      "slug": "latency-budget-per-page",
+      "title": "延迟预算怎么算：一次网页加载能容忍多少个 RTT",
+      "type": "解释",
+      "intent": "用往返次数而不是单个 ping 值估算页面打开的等待时间。"
+    },
+    {
+      "slug": "peak-vs-sustained-bandwidth",
+      "title": "峰值带宽和持续带宽的差别：为什么测速好看、下载仍慢",
+      "type": "对比",
+      "intent": "说明短时突发与长时间传输的瓶颈位置，给出两种口径的测量条件。"
+    },
+    {
+      "slug": "route-diversity-failure-radius",
+      "title": "线路多样性值多少钱：单线、双线、多入口的失效半径",
+      "type": "解释",
+      "intent": "把线路数量换算成同时失效的概率与影响范围。"
+    },
+    {
+      "slug": "subscription-update-cadence",
+      "title": "订阅多久更新一次才算正常：从更新时间戳判断维护强度",
+      "type": "核验",
+      "intent": "用订阅文件的时间戳与内容变化判断服务方是否真的在维护节点。"
+    },
+    {
+      "slug": "support-response-window",
+      "title": "客服响应时间怎么测：三条工单与两个时间戳",
+      "type": "核验",
+      "intent": "设计一次低成本的支持能力测试，得到可比较的响应时长。"
+    },
+    {
+      "slug": "jitter-loss-threshold",
+      "title": "抖动和丢包的容忍线：语音、会议、游戏的不同要求",
+      "type": "解释",
+      "intent": "按用途给出抖动与丢包的判断区间，避免用一条标准衡量所有场景。"
+    },
+    {
+      "slug": "soft-metric-weighting",
+      "title": "体验指标怎么加权：把六项软指标折成一个可比较的分数",
+      "type": "成本",
+      "intent": "提供一套权重分配与归一化方法，让不同候选的体验差异可计算。"
+    }
+  ],
+  "evaluation": [
+    {
+      "slug": "new-airport-due-diligence",
+      "title": "新开的机场怎么尽调：域名、主体、支付与公告四条证据链",
+      "type": "核验",
+      "intent": "给新服务一套可执行的背景核查顺序，避免只看宣传页就付款。"
+    },
+    {
+      "slug": "domain-age-and-history",
+      "title": "域名年龄与历史怎么查：WHOIS、证书透明日志与历史快照",
+      "type": "教程",
+      "intent": "用公开记录判断域名是长期运营还是刚注册，识别换壳重开。"
+    },
+    {
+      "slug": "minimum-unit-first-purchase",
+      "title": "新服务先买最小单位：试用、周付与单月套餐的验证顺序",
+      "type": "教程",
+      "intent": "按风险从低到高安排第一次付费，控制最坏损失。"
+    },
+    {
+      "slug": "community-signal-quality",
+      "title": "社区评价怎么读：返佣、水军与真实故障帖的区分方法",
+      "type": "解释",
+      "intent": "给出识别利益相关发言的线索，把评价当证据而不是结论。"
+    },
+    {
+      "slug": "operator-transparency-signals",
+      "title": "运营透明度看什么：公告频率、故障说明与线路变更记录",
+      "type": "解释",
+      "intent": "用服务方自己发布的信息密度判断其运维成熟度。"
+    },
+    {
+      "slug": "new-vs-established-tradeoff",
+      "title": "新服务与老服务的风险差异：价格、容量与终止概率的取舍",
+      "type": "对比",
+      "intent": "把新服务的低价与老服务的稳定放在同一张风险收益表上比较。"
+    },
+    {
+      "slug": "shutdown-warning-signals",
+      "title": "服务终止前的信号：续费催促、工单失联与节点批量下线",
+      "type": "核验",
+      "intent": "列出可观察的终止前兆，并给出触发迁移的判断条件。"
+    }
+  ],
+  "client-support": [
+    {
+      "slug": "subscription-format-compatibility",
+      "title": "订阅格式与客户端匹配：Base64、Clash YAML 与 sing-box JSON",
+      "type": "教程",
+      "intent": "说明三种常见订阅格式的差异与各自对应的客户端类型。"
+    },
+    {
+      "slug": "protocol-coverage-check",
+      "title": "协议覆盖怎么核验：从节点列表反推客户端要求",
+      "type": "核验",
+      "intent": "教读者从节点命名与参数反推所需内核版本，避免导入后无法连接。"
+    },
+    {
+      "slug": "when-tun-is-required",
+      "title": "什么时候必须要 TUN：全局接管、UDP 与分应用代理的差别",
+      "type": "解释",
+      "intent": "按应用类型判断系统代理是否够用，说明 TUN 的权限与开销。"
+    },
+    {
+      "slug": "router-and-tv-client-import",
+      "title": "路由器和电视盒子怎么接：订阅导入的三种落地方式",
+      "type": "教程",
+      "intent": "给出在非桌面设备上导入订阅的可选路径与各自的限制。"
+    },
+    {
+      "slug": "client-kernel-version-mismatch",
+      "title": "客户端与内核版本错配的典型报错与处理顺序",
+      "type": "故障",
+      "intent": "按报错文本定位是配置字段不识别还是内核过旧，减少盲目重装。"
+    },
+    {
+      "slug": "one-subscription-three-devices",
+      "title": "同一份订阅放进三台设备：配置隔离与规则同步的做法",
+      "type": "教程",
+      "intent": "让多设备共用一份订阅时不互相覆盖规则与 DNS 设置。"
+    },
+    {
+      "slug": "client-lock-in-cost",
+      "title": "被客户端锁定的代价：换服务时要重配多少东西",
+      "type": "成本",
+      "intent": "估算客户端与规则强绑定后的迁移工作量，作为选型的一项成本。"
+    }
+  ],
+  "ipepl": [
+    {
+      "slug": "iplc-vs-iepl",
+      "title": "IPLC 与 IEPL 的区别：电路类型、计费方式和适用场景",
+      "type": "对比",
+      "intent": "把两个常被混用的专线名词还原成电路与计费上的具体差异。"
+    },
+    {
+      "slug": "dedicated-line-cost-structure",
+      "title": "专线成本结构拆解：为什么按带宽计费的产品不会便宜",
+      "type": "成本",
+      "intent": "用带宽单价与固定成本解释专线价格的下限，识别不可能的报价。"
+    },
+    {
+      "slug": "half-dedicated-line",
+      "title": "半专线是什么：共享带宽、承诺速率与超售的关系",
+      "type": "解释",
+      "intent": "说明半专线在高峰期的实际表现取决于哪几个参数。"
+    },
+    {
+      "slug": "bgp-transit-meaning",
+      "title": "BGP 中转的实际含义：多线接入、回程路径与清洗能力",
+      "type": "解释",
+      "intent": "拆开 BGP 这个词在市场宣传与网络工程里的两种用法。"
+    },
+    {
+      "slug": "direct-connect-boundary",
+      "title": "直连线路的能力边界：什么时候直连比中转更稳",
+      "type": "解释",
+      "intent": "给出直连适用与不适用条件，避免把直连当默认优选。"
+    },
+    {
+      "slug": "line-label-verification",
+      "title": "线路标签怎么验证：traceroute、ASN 与延迟基线的交叉检查",
+      "type": "核验",
+      "intent": "用三项公开可采集的数据交叉验证线路宣传是否站得住。"
+    },
+    {
+      "slug": "dedicated-line-failure-modes",
+      "title": "专线也会出问题：割接、绕路与清洗触发的三类中断",
+      "type": "故障",
+      "intent": "说明专线故障的典型成因与恢复时间的不确定性。"
+    }
+  ],
+  "transit": [
+    {
+      "slug": "entry-transit-exit-roles",
+      "title": "入口、中转、出口三段链路分别影响什么",
+      "type": "解释",
+      "intent": "把一次连接的三个节点拆开，说明各自的指标与故障表现。"
+    },
+    {
+      "slug": "transit-and-exit-location",
+      "title": "中转落地选哪里：地理距离、海缆与运营商互联的实际影响",
+      "type": "解释",
+      "intent": "说明落地地区选择如何影响延迟与目标服务的地区判定。"
+    },
+    {
+      "slug": "residential-vs-datacenter-ip",
+      "title": "家宽 IP 与机房 IP 的差别：风控、解锁与稳定性代价",
+      "type": "对比",
+      "intent": "比较两类出口 IP 在可用性和稳定性上的取舍。"
+    },
+    {
+      "slug": "exit-ip-reputation-check",
+      "title": "出口 IP 信誉怎么查：ASN、黑名单与历史用途",
+      "type": "核验",
+      "intent": "给出查询出口 IP 归属与历史用途的公开途径。"
+    },
+    {
+      "slug": "multi-entry-failover",
+      "title": "多入口负载与故障切换：客户端层面的容错能做到什么",
+      "type": "解释",
+      "intent": "说明客户端自动切换的判定条件与切换失败的常见原因。"
+    },
+    {
+      "slug": "route-change-detection",
+      "title": "路由变了怎么发现：用延迟基线和跳数变化做监测",
+      "type": "核验",
+      "intent": "建立简单的基线记录，让绕路在影响使用前被发现。"
+    },
+    {
+      "slug": "three-segment-bottleneck-locating",
+      "title": "速度掉下来先查哪一段：三段链路的逐个排除顺序",
+      "type": "故障",
+      "intent": "给出从本地到出口的排查顺序，避免一上来就换节点。"
+    }
+  ],
+  "small-plans": [
+    {
+      "slug": "small-plan-unit-cost",
+      "title": "小流量套餐的单位成本：把月费摊到每 GB 的算法",
+      "type": "成本",
+      "intent": "用统一公式算出每 GB 支出，识别流量小但单价高的套餐。"
+    },
+    {
+      "slug": "monthly-traffic-estimation",
+      "title": "先算自己每月用多少流量：四类场景的估算表",
+      "type": "教程",
+      "intent": "按网页、会议、视频与下载四类场景给出可复算的流量估算。"
+    },
+    {
+      "slug": "small-monthly-vs-data-pack",
+      "title": "小流量月付与一次性流量包：哪一种更适合低频使用",
+      "type": "对比",
+      "intent": "用使用月数与有效期两个变量判断哪种形态更省钱。"
+    },
+    {
+      "slug": "small-plan-priority-throttling",
+      "title": "小套餐的隐性限速：低优先级队列在高峰期的表现",
+      "type": "解释",
+      "intent": "解释套餐档位如何影响拥塞时的调度优先级。"
+    },
+    {
+      "slug": "light-user-definition",
+      "title": "轻度用户的判断标准：每天多少分钟、多少页面、多少视频",
+      "type": "解释",
+      "intent": "把轻度使用量化成可对照的用量区间，避免按感觉买套餐。"
+    },
+    {
+      "slug": "overage-and-reset-rules",
+      "title": "流量用超之后：断流、降速与按量计费三种处理",
+      "type": "解释",
+      "intent": "说明超额后的三种处置方式及其对连续使用的影响。"
+    },
+    {
+      "slug": "small-plan-acceptance-list",
+      "title": "小流量套餐验收清单：十项检查与两周观察期",
+      "type": "清单",
+      "intent": "给低预算买家一份能在一周内跑完的验收流程。"
+    }
+  ],
+  "monthly": [
+    {
+      "slug": "monthly-price-anatomy",
+      "title": "月付价格里包含什么：带宽、流量、设备与客服的成本拆分",
+      "type": "解释",
+      "intent": "把月费拆成四项成本，解释同价位套餐的能力差异来源。"
+    },
+    {
+      "slug": "monthly-vs-quarterly-payment",
+      "title": "月付、季付、半年付：折扣背后的现金流与风险转移",
+      "type": "对比",
+      "intent": "用实际使用月数计算长周期折扣的真实收益率。"
+    },
+    {
+      "slug": "auto-renew-cancellation",
+      "title": "自动续费在哪里关：订阅入口、扣款周期与取消凭证",
+      "type": "核验",
+      "intent": "给出关闭自动续费的检查点与需要保留的凭证。"
+    },
+    {
+      "slug": "renewal-price-increase",
+      "title": "续费涨价怎么处理：比价、降档与换服务的决策顺序",
+      "type": "解释",
+      "intent": "按涨幅与替代成本给出三步应对，避免被动接受新价格。"
+    },
+    {
+      "slug": "bandwidth-tier-by-use",
+      "title": "按用途选带宽档位：网页、会议、4K 与下载的需求下限",
+      "type": "教程",
+      "intent": "按实际码率推算所需带宽，避免为用不到的上限付费。"
+    },
+    {
+      "slug": "monthly-cancel-timing",
+      "title": "什么时候取消月付最划算：账单周期与已用天数的关系",
+      "type": "教程",
+      "intent": "用账单周期与使用天数算出取消的时间点。"
+    },
+    {
+      "slug": "monthly-total-ownership-cost",
+      "title": "月付的总拥有成本：订阅费之外的排障与迁移支出",
+      "type": "成本",
+      "intent": "把排障工时与迁移成本计入月付的真实支出。"
+    }
+  ],
+  "usage": [
+    {
+      "slug": "short-term-plan-billing-types",
+      "title": "按天、按周、按月：短期套餐的计费方式与起算点",
+      "type": "解释",
+      "intent": "说明短期产品的三种计时方式与到期判定规则。"
+    },
+    {
+      "slug": "travel-traffic-planning",
+      "title": "出行两周的流量怎么估：地图、支付、视频与热点的消耗",
+      "type": "教程",
+      "intent": "按出行场景给出流量估算表，避免中途加购。"
+    },
+    {
+      "slug": "day-pass-real-unit-price",
+      "title": "日包的真实单价：按天计费与按流量计费的交叉点",
+      "type": "成本",
+      "intent": "用日用量算出日包与流量包的成本交叉点。"
+    },
+    {
+      "slug": "activation-clock-rules",
+      "title": "套餐从哪一刻开始计时：购买、激活与首次连接的差别",
+      "type": "核验",
+      "intent": "确认到期时间的起算依据，避免提前购买造成浪费。"
+    },
+    {
+      "slug": "short-term-payment-privacy",
+      "title": "短期套餐的支付选择：一次性通道与最小化信息",
+      "type": "解释",
+      "intent": "说明短期购买时如何减少支付信息的留存。"
+    },
+    {
+      "slug": "overlapping-short-plans",
+      "title": "两份短期套餐怎么衔接：避免断档与重复付费",
+      "type": "教程",
+      "intent": "给出重叠期设置与切换顺序，保证不断线。"
+    },
+    {
+      "slug": "short-term-acceptance-list",
+      "title": "临时线路的验收清单：到达当天要完成的六项检查",
+      "type": "清单",
+      "intent": "在异地当天完成可用性验证，留出补救时间。"
+    }
+  ],
+  "renewal": [
+    {
+      "slug": "renewal-notice-and-grace",
+      "title": "续费提醒什么时候发：到期通知、宽限期与停服顺序",
+      "type": "核验",
+      "intent": "说明到期前后的时间节点，帮助安排备份与迁移。"
+    },
+    {
+      "slug": "data-retention-after-expiry",
+      "title": "套餐到期后还留什么：配置、账单与账号数据的保留期",
+      "type": "解释",
+      "intent": "列出到期后仍可访问的内容与可能被清理的内容。"
+    },
+    {
+      "slug": "switch-cost-work-hours",
+      "title": "换一家要花多少时间：订阅、规则与设备重配的工时估算",
+      "type": "成本",
+      "intent": "把迁移拆成六步并给出每步的工时区间。"
+    },
+    {
+      "slug": "prorated-refund-check",
+      "title": "剩余天数能不能退：按比例退款的计算与常见拒绝理由",
+      "type": "核验",
+      "intent": "给出按比例退款的计算式与常见的排除条款。"
+    },
+    {
+      "slug": "subscription-export-backup",
+      "title": "订阅与规则怎么备份：换客户端前要导出的四类文件",
+      "type": "教程",
+      "intent": "列出可移植的四类文件与各自的导出位置。"
+    },
+    {
+      "slug": "service-shutdown-playbook",
+      "title": "服务突然停掉怎么处理：48 小时应急顺序",
+      "type": "故障",
+      "intent": "给出停服后的应急顺序，先保住连接再处理退款。"
+    },
+    {
+      "slug": "exit-cost-checklist",
+      "title": "退出成本清单：付款前就该写好的四条退路",
+      "type": "清单",
+      "intent": "在购买时就把退出路径写清楚，降低被锁定的概率。"
+    }
+  ],
+  "diy-vps": [
+    {
+      "slug": "vps-selfhost-tco",
+      "title": "自建 VPS 的总成本：机房、流量、IP 与维护工时",
+      "type": "成本",
+      "intent": "把自建的现金支出与时间支出放在一起算。"
+    },
+    {
+      "slug": "selfhost-vs-airport",
+      "title": "自建与机场的能力边界：IP 数量、线路质量与故障响应",
+      "type": "对比",
+      "intent": "说明两条路径在哪些需求上互不可替代。"
+    },
+    {
+      "slug": "new-vps-ip-reputation",
+      "title": "新买 VPS 的 IP 能不能用：先查信誉与端口连通",
+      "type": "核验",
+      "intent": "给出开机后的第一轮检查项，尽早发现 IP 不可用。"
+    },
+    {
+      "slug": "selfhost-stack-minimum",
+      "title": "自建用什么栈：内核、面板与 TLS 证书的最小组合",
+      "type": "教程",
+      "intent": "给出能跑起来的最小软件组合与各自的作用。"
+    },
+    {
+      "slug": "vps-blocked-and-rebuild",
+      "title": "IP 被封之后：换 IP、换机房与重建的成本对比",
+      "type": "故障",
+      "intent": "比较三种处置方式的费用与停机时间。"
+    },
+    {
+      "slug": "selfhost-compliance-boundary",
+      "title": "自建服务器的合规边界：服务条款、滥用投诉与日志",
+      "type": "解释",
+      "intent": "说明自建时容易被忽略的供应商条款与投诉处理。"
+    },
+    {
+      "slug": "selfhost-maintenance-load",
+      "title": "自建要花多少维护时间：每周、每月与故障时的工作量",
+      "type": "解释",
+      "intent": "把维护工作量化成小时数，作为选择自建的依据。"
+    }
+  ],
+  "commercial-vpn": [
+    {
+      "slug": "commercial-vpn-pricing-model",
+      "title": "商业 VPN 的定价结构：多年预付、设备数与功能分层",
+      "type": "解释",
+      "intent": "拆解商业 VPN 的定价方式，说明低价首年的条件。"
+    },
+    {
+      "slug": "vpn-vs-airport-protocol",
+      "title": "商业 VPN 与机场的技术差异：协议、路由与分流能力",
+      "type": "对比",
+      "intent": "从协议与分流能力说明两类产品适用的场景。"
+    },
+    {
+      "slug": "vpn-privacy-claim-audit",
+      "title": "商业 VPN 的隐私承诺怎么核验：管辖地、日志与审计报告",
+      "type": "核验",
+      "intent": "给出三项可查的隐私证据，区分营销表述与可验证声明。"
+    },
+    {
+      "slug": "vpn-streaming-limits",
+      "title": "商业 VPN 看流媒体的实际限制：IP 池、并发与风控",
+      "type": "解释",
+      "intent": "说明共享 IP 池对目标服务风控的影响。"
+    },
+    {
+      "slug": "vpn-refund-window",
+      "title": "商业 VPN 的退款窗口：30 天承诺的执行条件",
+      "type": "核验",
+      "intent": "列出退款申请需要满足的条件与常见驳回原因。"
+    },
+    {
+      "slug": "vpn-multidevice-and-router",
+      "title": "商业 VPN 上路由器：设备数限制与同时在线",
+      "type": "教程",
+      "intent": "说明在路由器上使用时设备数如何计数。"
+    },
+    {
+      "slug": "three-year-tco-comparison",
+      "title": "三年期的成本对比：商业 VPN、机场与自建的支出曲线",
+      "type": "成本",
+      "intent": "用三年时间尺度比较三种路径的累计支出与风险。"
+    }
+  ],
+  "decision-tree": [
+    {
+      "slug": "needs-to-spec",
+      "title": "把需求写成规格：流量、设备、时段与稳定性四栏",
+      "type": "教程",
+      "intent": "把模糊需求转成四项可填写的参数，作为筛选输入。"
+    },
+    {
+      "slug": "budget-first-selection",
+      "title": "预算优先的筛选顺序：先卡上限再谈线路",
+      "type": "教程",
+      "intent": "给出预算受限时的排除顺序，避免反复比较。"
+    },
+    {
+      "slug": "stability-first-selection",
+      "title": "稳定优先怎么选：双线、备用与切换成本",
+      "type": "教程",
+      "intent": "以可用性为目标时的组合方案与验证方式。"
+    },
+    {
+      "slug": "device-count-branch",
+      "title": "设备数如何改变选择：一台、三台与全家共享",
+      "type": "解释",
+      "intent": "说明并发限制如何改变套餐与方案的优先级。"
+    },
+    {
+      "slug": "region-branch",
+      "title": "落地地区怎么定：目标服务、语言与支付的地域约束",
+      "type": "解释",
+      "intent": "按目标服务的地域要求确定出口地区范围。"
+    },
+    {
+      "slug": "build-your-own-decision-tree",
+      "title": "给自己画一棵决策树：五层分支与终止条件",
+      "type": "教程",
+      "intent": "让读者用五层分支把选择过程写成可复用的流程。"
+    },
+    {
+      "slug": "selection-review-cycle",
+      "title": "选型多久复评一次：季度、半年与触发式复评",
+      "type": "清单",
+      "intent": "给出复评周期与触发条件，避免一次决定用到底。"
+    }
+  ],
+  "comparison": [
+    {
+      "slug": "comparison-matrix-design",
+      "title": "对比矩阵怎么设计：列选指标、行选候选、单元格写口径",
+      "type": "教程",
+      "intent": "给出矩阵结构与填写规则，避免把不同口径的数字并排。"
+    },
+    {
+      "slug": "normalize-advertised-units",
+      "title": "把宣传数字统一单位：Mbps、MB/s、GB 与 GiB 的换算",
+      "type": "解释",
+      "intent": "提供换算表，消除单位混用造成的错误比较。"
+    },
+    {
+      "slug": "same-condition-comparison",
+      "title": "同条件对比怎么做：同一时段、同一端点、同一客户端",
+      "type": "核验",
+      "intent": "规定对比时必须固定的五项条件。"
+    },
+    {
+      "slug": "weighted-scorecard",
+      "title": "加权评分表怎么定权重：把偏好变成数字",
+      "type": "成本",
+      "intent": "用成对比较法确定权重，减少拍脑袋打分。"
+    },
+    {
+      "slug": "review-bias-sources",
+      "title": "第三方评测的偏差来源：返佣、样本量与测试条件缺失",
+      "type": "解释",
+      "intent": "列出评测可被扭曲的四个环节，给出阅读时的核查点。"
+    },
+    {
+      "slug": "two-week-ab-comparison",
+      "title": "两家服务并行两周：A/B 对比的记录表设计",
+      "type": "教程",
+      "intent": "给出并行测试的记录表字段与判定规则。"
+    },
+    {
+      "slug": "conclusion-thresholds",
+      "title": "什么情况下可以下结论：样本、时段与差异阈值",
+      "type": "清单",
+      "intent": "给出可以结束比较的三项门槛，避免无限测试。"
+    }
+  ],
+  "due-diligence": [
+    {
+      "slug": "pre-payment-checklist",
+      "title": "付款前十分钟的检查清单：十二项逐条过",
+      "type": "清单",
+      "intent": "给出一份按页面顺序执行的付款前检查表。"
+    },
+    {
+      "slug": "entity-and-jurisdiction",
+      "title": "服务主体在哪：付款页面、条款页与域名注册信息",
+      "type": "核验",
+      "intent": "从三处信息交叉确认收款方与责任主体。"
+    },
+    {
+      "slug": "terms-change-history",
+      "title": "条款改过几次：用历史快照看服务规则变动",
+      "type": "核验",
+      "intent": "用快照对比判断规则是否在收紧。"
+    },
+    {
+      "slug": "payment-evidence-keeping",
+      "title": "付款要留哪些凭证：订单号、币种、时间与退款条款截图",
+      "type": "教程",
+      "intent": "列出争议发生前应保存的四类凭证。"
+    },
+    {
+      "slug": "trial-to-paid-gate",
+      "title": "试用转付费前的四个确认：额度、期限、扣款与取消",
+      "type": "核验",
+      "intent": "把试用转付费的四个风险点逐项确认。"
+    },
+    {
+      "slug": "reputation-evidence-levels",
+      "title": "口碑证据怎么分级：公告、工单记录与第三方复现",
+      "type": "核验",
+      "intent": "把口碑分成三级证据，说明各级能支撑什么结论。"
+    },
+    {
+      "slug": "red-flag-list",
+      "title": "付款前的红旗清单：十条必须停手的信号",
+      "type": "清单",
+      "intent": "列出出现即停止付款的十条具体信号。"
+    }
+  ],
+  "exit": [
+    {
+      "slug": "subscription-migration-steps",
+      "title": "订阅迁移的完整步骤：导出、换算与灰度切换",
+      "type": "教程",
+      "intent": "给出迁移的六步顺序与每一步的检查点。"
+    },
+    {
+      "slug": "config-backup-strategy",
+      "title": "配置备份放在哪：可移植文件与版本管理",
+      "type": "教程",
+      "intent": "说明哪些配置需要备份、备份到哪里、如何避免泄露。"
+    },
+    {
+      "slug": "dns-rules-migration",
+      "title": "换服务时 DNS 和规则怎么办：三份清单逐项迁",
+      "type": "解释",
+      "intent": "说明 DNS 与分流规则迁移时的冲突来源。"
+    },
+    {
+      "slug": "account-payment-cleanup",
+      "title": "退出前要清理什么：自动续费、支付绑定与账号数据",
+      "type": "核验",
+      "intent": "给出退出时的清理顺序，先断扣款再删数据。"
+    },
+    {
+      "slug": "exit-cost-model",
+      "title": "退出成本怎么算：剩余价值、迁移工时与断档风险",
+      "type": "成本",
+      "intent": "把退出成本量化，作为是否继续续费的输入。"
+    },
+    {
+      "slug": "rollback-plan",
+      "title": "换回去的预案：保留旧订阅两周的具体做法",
+      "type": "教程",
+      "intent": "说明并行期的资源安排与回滚触发条件。"
+    },
+    {
+      "slug": "migration-failure-cases",
+      "title": "迁移常见的四类失败：规则丢失、DNS 冲突与设备漏配",
+      "type": "故障",
+      "intent": "按症状定位迁移失败原因，缩短恢复时间。"
+    }
+  ]
+}

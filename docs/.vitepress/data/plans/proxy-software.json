@@ -1,0 +1,724 @@
+{
+  "mihomo-clients": [
+    {
+      "slug": "mihomo-core-vs-gui",
+      "title": "Mihomo 内核和图形客户端各自负责什么，配置、规则与系统代理的分工",
+      "type": "解释",
+      "intent": "分清内核进程与 GUI 的职责边界，避免把界面问题误判成节点问题"
+    },
+    {
+      "slug": "clash-verge-rev-first-run",
+      "title": "Clash Verge Rev 首次启动要检查的设置，内核、配置目录与开机自启",
+      "type": "教程",
+      "intent": "走完第一次启动的最小检查清单，确认内核已就位再导入订阅"
+    },
+    {
+      "slug": "mihomo-party-multi-profile",
+      "title": "Mihomo Party 的多配置切换怎么整理，避免订阅互相覆盖",
+      "type": "教程",
+      "intent": "用配置分组管理多份订阅，明确哪一份是当前生效文件"
+    },
+    {
+      "slug": "mihomo-yaml-four-sections",
+      "title": "Mihomo 配置里的 proxies、proxy-groups、rules 与 dns 各控制什么",
+      "type": "解释",
+      "intent": "读懂 Clash 风格 YAML 的四个主段落，知道改哪一段会产生什么后果"
+    },
+    {
+      "slug": "mihomo-gui-core-mismatch",
+      "title": "GUI 升级后内核没跟着更新，Mihomo 版本错配会出现哪些现象",
+      "type": "故障",
+      "intent": "识别界面正常但内核启动失败、字段报错的版本错配症状"
+    },
+    {
+      "slug": "mihomo-admin-permission-check",
+      "title": "Mihomo 系客户端索要管理员权限时，先确认它要开 TUN 还是改系统代理",
+      "type": "核验",
+      "intent": "判断提权请求对应的功能，决定给权限还是改用系统代理模式"
+    },
+    {
+      "slug": "mihomo-windows-download-source",
+      "title": "Windows 上 Mihomo 客户端安装包该从哪里下载，Release 页面怎么读",
+      "type": "核验",
+      "intent": "从官方仓库定位安装资产，排除第三方下载站与改名安装包"
+    },
+    {
+      "slug": "clash-config-migrate-to-mihomo",
+      "title": "旧 Clash 配置迁到 Mihomo 时哪些字段已废弃，迁移前先做哪几步",
+      "type": "对比",
+      "intent": "区分仍可解析、已改名与已移除的字段，降低迁移后的隐性故障"
+    }
+  ],
+  "xray-clients": [
+    {
+      "slug": "v2rayn-core-pairing",
+      "title": "v2rayN 与 Xray-core 的版本对应关系，内核缺失时界面为什么只显示灰色",
+      "type": "解释",
+      "intent": "理解 GUI 与内核分离部署时，哪一层决定连接能否建立"
+    },
+    {
+      "slug": "v2rayn-install-steps",
+      "title": "v2rayN 从官方 Release 到可用，解压、内核、语言与开机启动",
+      "type": "教程",
+      "intent": "按官方发布包完成一次可回退的安装，不依赖第三方整合包"
+    },
+    {
+      "slug": "v2rayn-routing-edit",
+      "title": "v2rayN 的路由规则怎么改，域名、IP、端口与应用分流",
+      "type": "教程",
+      "intent": "用路由条目控制哪些流量走代理，并验证规则真的命中"
+    },
+    {
+      "slug": "xray-core-windows-cli",
+      "title": "在 Windows 上直接跑 Xray-core，配置文件、日志与本地监听端口",
+      "type": "教程",
+      "intent": "脱离 GUI 启动内核，掌握配置文件校验与日志定位方法"
+    },
+    {
+      "slug": "v2rayn-vs-mihomo-gui",
+      "title": "Windows 上 v2rayN 与 Mihomo 系客户端怎么选，协议支持与规则生态差异",
+      "type": "对比",
+      "intent": "按协议需求与规则写法选择客户端，避免装两套互相抢端口"
+    },
+    {
+      "slug": "xray-reality-client-fields",
+      "title": "客户端配置 REALITY 要核对哪些字段，SNI、公钥与短 ID 分别从哪来",
+      "type": "核验",
+      "intent": "逐字段确认 REALITY 参数来源，排除抄错与服务端不匹配"
+    },
+    {
+      "slug": "v2rayn-core-missing",
+      "title": "v2rayN 提示找不到内核或缺少 DLL，按这三处顺序排查",
+      "type": "故障",
+      "intent": "定位内核路径、运行库与解压完整性问题，缩短启动失败的处理时间"
+    }
+  ],
+  "v2rayng": [
+    {
+      "slug": "v2rayng-apk-source",
+      "title": "v2rayNG 的 APK 只该从哪里下载，资产名与签名指纹怎么核对",
+      "type": "核验",
+      "intent": "从官方 Release 选对架构安装包，并核对签名指纹"
+    },
+    {
+      "slug": "v2rayng-subscription-missing",
+      "title": "v2rayNG 导入订阅后节点列表为空，链接、格式与更新时间逐项检查",
+      "type": "故障",
+      "intent": "区分链接失效、格式不识别与更新时间未触发三种空列表原因"
+    },
+    {
+      "slug": "v2rayng-per-app-proxy",
+      "title": "v2rayNG 分应用代理怎么设，哪些应用应该走直连",
+      "type": "教程",
+      "intent": "用允许与排除清单控制应用范围，减少支付与银行类应用的异常"
+    },
+    {
+      "slug": "v2rayng-routing-presets",
+      "title": "v2rayNG 的路由方案预设有什么区别，全局、绕过大陆与自定义",
+      "type": "解释",
+      "intent": "理解三种预设的实际匹配范围，判断是否需要自建规则"
+    },
+    {
+      "slug": "v2rayng-background-kill",
+      "title": "安卓后台清理导致 v2rayNG 断流，电池优化与前台服务怎么设",
+      "type": "故障",
+      "intent": "按系统限制类型调整后台策略，减少锁屏后连接中断"
+    },
+    {
+      "slug": "v2rayng-vpnservice",
+      "title": "v2rayNG 的 VPN 服务怎样接管流量，与桌面 TUN 的权限模型差异",
+      "type": "解释",
+      "intent": "理解 Android VpnService 的授权、生命周期与单实例限制"
+    },
+    {
+      "slug": "v2rayng-old-version-risk",
+      "title": "v2rayNG 长期不更新还能不能用，内核版本决定哪些协议不可用",
+      "type": "核验",
+      "intent": "判断旧安装包的风险边界，决定是否迁移到新版本"
+    }
+  ],
+  "flclash": [
+    {
+      "slug": "flclash-first-setup",
+      "title": "FlClash 在 Android 上的首次配置，内核、配置导入与 VPN 授权",
+      "type": "教程",
+      "intent": "完成一次从安装到可用的配置，确认内核与规则都已加载"
+    },
+    {
+      "slug": "flclash-vs-v2rayng",
+      "title": "FlClash 与 v2rayNG 的定位差异，规则分流、订阅格式与资源占用",
+      "type": "对比",
+      "intent": "按规则文件格式与分流需求选择，不把两个客户端同时开"
+    },
+    {
+      "slug": "nekobox-singbox-status",
+      "title": "NekoBox 与 sing-box 生态的关系，客户端停更后配置怎么迁移",
+      "type": "核验",
+      "intent": "确认客户端与内核的维护状态，规划配置格式的迁移路径"
+    },
+    {
+      "slug": "hiddify-cross-platform",
+      "title": "Hiddify 支持哪些平台，跨平台客户端在规则与订阅格式上的取舍",
+      "type": "对比",
+      "intent": "判断跨平台客户端能否覆盖多设备，以及规则写法的迁移成本"
+    },
+    {
+      "slug": "android-apk-signature-check",
+      "title": "安卓代理客户端的签名怎么校验，apksigner 输出里看哪几行",
+      "type": "教程",
+      "intent": "用官方工具核对签名证书摘要，识别重签名的改包"
+    },
+    {
+      "slug": "flclash-rules-not-working",
+      "title": "FlClash 导入 Clash 配置后规则不生效，覆盖项与字段兼容排查",
+      "type": "故障",
+      "intent": "定位规则被覆盖、字段不支持与 DNS 未生效三类原因"
+    },
+    {
+      "slug": "android-vpn-consent",
+      "title": "Android 的 VPN 权限弹窗代表什么，为什么重启后还要再确认",
+      "type": "解释",
+      "intent": "理解系统级授权与单 VPN 实例限制，避免误以为客户端有后台特权"
+    }
+  ],
+  "ios-free": [
+    {
+      "slug": "ios-store-region-limit",
+      "title": "iOS 代理客户端为什么只在部分地区上架，账号地区与下载权的关系",
+      "type": "解释",
+      "intent": "理解商店地区、支付方式与下载权之间的机制，不涉及具体购买建议"
+    },
+    {
+      "slug": "testflight-mechanism",
+      "title": "TestFlight 分发是什么机制，名额、有效期与版本回退的限制",
+      "type": "解释",
+      "intent": "说明测试分发的时间与名额约束，判断它是否适合长期使用"
+    },
+    {
+      "slug": "ios-free-vs-paid",
+      "title": "iOS 上免费客户端与付费客户端差在哪，内购、功能与更新节奏",
+      "type": "对比",
+      "intent": "从分发方式与维护成本解释功能差异，不做具体产品推荐"
+    },
+    {
+      "slug": "ios-subscription-import",
+      "title": "iOS 客户端导入订阅的三条路径，链接、二维码与配置文件",
+      "type": "教程",
+      "intent": "按客户端支持的方式完成导入，并确认规则集随之更新"
+    },
+    {
+      "slug": "ios-on-demand",
+      "title": "iOS 的按需连接与分流规则怎样工作，切换网络后为什么会重连",
+      "type": "解释",
+      "intent": "理解按需规则的触发条件与隧道重建过程"
+    },
+    {
+      "slug": "ios-network-extension",
+      "title": "iOS 没有桌面式 TUN，Network Extension 能做到什么、做不到什么",
+      "type": "解释",
+      "intent": "厘清系统扩展的能力边界，避免用桌面经验判断手机端行为"
+    },
+    {
+      "slug": "ios-app-delisted",
+      "title": "代理应用被下架后，已购应用还能不能重新下载",
+      "type": "核验",
+      "intent": "区分已购记录、设备本地副本与更新通道三种状态"
+    }
+  ],
+  "macos": [
+    {
+      "slug": "macos-client-types",
+      "title": "macOS 上原生客户端与跨平台客户端的差别，菜单栏、规则与资源占用",
+      "type": "对比",
+      "intent": "按交互方式与规则格式选择客户端，评估长期维护成本"
+    },
+    {
+      "slug": "macos-tun-authorization",
+      "title": "macOS 开 TUN 为什么要授权，系统扩展与网络权限的区别",
+      "type": "解释",
+      "intent": "理解提权安装的组件类型，判断授权请求是否合理"
+    },
+    {
+      "slug": "macos-gatekeeper-prompt",
+      "title": "macOS 提示无法验证开发者，公证状态与手动放行的边界",
+      "type": "核验",
+      "intent": "用系统工具确认签名与公证状态，再决定是否放行"
+    },
+    {
+      "slug": "macos-homebrew-install",
+      "title": "用 Homebrew 安装代理内核与 GUI 的路径，cask 来源与更新方式",
+      "type": "教程",
+      "intent": "通过包管理器获得可追溯的安装来源，并理解 cask 的校验逻辑"
+    },
+    {
+      "slug": "macos-system-proxy-not-working",
+      "title": "macOS 客户端启动后系统代理没生效，网络服务与 helper 排查",
+      "type": "故障",
+      "intent": "定位网络服务绑定、helper 未运行与命令行环境未继承三类问题"
+    },
+    {
+      "slug": "macos-arm-build",
+      "title": "Apple 芯片与 Intel 构建怎么区分，Universal 二进制与 Rosetta 的取舍",
+      "type": "核验",
+      "intent": "确认下载包架构与运行方式，避免装错版本导致启动失败"
+    },
+    {
+      "slug": "macos-sleep-reconnect",
+      "title": "macOS 睡眠唤醒后代理断流，网络位置切换与重连设置",
+      "type": "故障",
+      "intent": "解释唤醒后的路由与隧道重建过程，给出可验证的恢复步骤"
+    }
+  ],
+  "openwrt": [
+    {
+      "slug": "openwrt-plugin-map",
+      "title": "OpenWrt 上透明代理插件的分工，内核、LuCI 界面与 DNS 组件",
+      "type": "解释",
+      "intent": "理清插件与内核的层次，避免同时装多套互相改写防火墙"
+    },
+    {
+      "slug": "openwrt-mihomo-deploy",
+      "title": "在 OpenWrt 上部署 Mihomo 内核，配置文件、启动脚本与日志位置",
+      "type": "教程",
+      "intent": "手动完成一次内核部署，掌握服务状态与日志的查看位置"
+    },
+    {
+      "slug": "openwrt-bypass-router",
+      "title": "旁路由模式怎么接，网关、DNS 与主路由 DHCP 的改法",
+      "type": "教程",
+      "intent": "用旁路由接管指定设备流量，保留主路由拨号与 DHCP"
+    },
+    {
+      "slug": "openwrt-dns-hijack",
+      "title": "OpenWrt 上的 DNS 劫持与分流怎样配合透明代理",
+      "type": "解释",
+      "intent": "说明 DNS 请求被重定向后的解析路径，定位解析与代理不一致"
+    },
+    {
+      "slug": "openwrt-tproxy-vs-redirect",
+      "title": "nftables 的 TPROXY 与 REDIRECT 在路由器上有什么区别",
+      "type": "解释",
+      "intent": "理解两种透明代理方式对 UDP 与源地址保留的影响"
+    },
+    {
+      "slug": "openwrt-flash-space",
+      "title": "路由器存储空间不足装不上内核，overlay 与 U 盘扩展怎么选",
+      "type": "故障",
+      "intent": "按可用空间选择瘦身或外置存储方案，避免刷坏固件"
+    },
+    {
+      "slug": "openwrt-upgrade-keep-config",
+      "title": "OpenWrt 升级固件后代理配置丢失，保留配置与重刷的取舍",
+      "type": "故障",
+      "intent": "判断何时保留配置、何时干净重刷，并准备好回退路径"
+    },
+    {
+      "slug": "openwrt-gateway-cost",
+      "title": "把旧路由器改成代理网关的成本构成，硬件、功耗与维护时间",
+      "type": "成本",
+      "intent": "用折旧、电费与维护时间测算网关方案的真实月成本"
+    }
+  ],
+  "linux": [
+    {
+      "slug": "linux-systemd-mihomo",
+      "title": "在 Linux 上用 systemd 托管 Mihomo，服务单元、日志与开机自启",
+      "type": "教程",
+      "intent": "写出可用的服务单元，掌握启动失败时的日志定位方式"
+    },
+    {
+      "slug": "linux-tun-vs-tproxy",
+      "title": "Linux 网关的两条接管路径，TUN 设备与 TPROXY 的适用场景",
+      "type": "对比",
+      "intent": "按是否保留源地址、是否支持 UDP 选择接管方式"
+    },
+    {
+      "slug": "linux-nftables-redirect",
+      "title": "用 nftables 把流量重定向到本地代理端口，表、链与标记怎么写",
+      "type": "教程",
+      "intent": "完成一次最小可用的重定向规则，并验证回环流量没有再次进入"
+    },
+    {
+      "slug": "linux-headless-proxy",
+      "title": "无图形界面的服务器上跑代理内核，配置校验与端口监听",
+      "type": "教程",
+      "intent": "在无桌面环境完成内核启动、配置校验与端口确认"
+    },
+    {
+      "slug": "linux-split-dns",
+      "title": "Linux 上分流 DNS 怎么做，systemd-resolved 与 dnsmasq 的差异",
+      "type": "解释",
+      "intent": "理解本机解析器与代理 DNS 的衔接位置，减少解析泄漏"
+    },
+    {
+      "slug": "linux-docker-proxy",
+      "title": "容器流量怎么走宿主机代理，网络模式与网关地址的坑",
+      "type": "解释",
+      "intent": "说明桥接网络与 host 网络下的代理可达性差异"
+    },
+    {
+      "slug": "linux-capabilities",
+      "title": "代理内核需要哪些 Linux 能力，CAP_NET_ADMIN 与 root 的边界",
+      "type": "核验",
+      "intent": "用最小权限运行内核，判断哪些功能必须提权"
+    }
+  ],
+  "github": [
+    {
+      "slug": "release-asset-naming",
+      "title": "GitHub Release 的资产命名怎么读，架构、平台与压缩格式",
+      "type": "解释",
+      "intent": "从文件名判断目标平台与架构，减少下错包"
+    },
+    {
+      "slug": "repo-fork-mirror",
+      "title": "官方仓库、镜像仓库与 fork 的区别，怎样确认提交来源",
+      "type": "核验",
+      "intent": "通过组织归属与提交历史确认代码来源"
+    },
+    {
+      "slug": "checksum-file-verify",
+      "title": "用 Release 里的校验和核对安装包，三个平台的命令写法",
+      "type": "教程",
+      "intent": "完成一次哈希比对，并知道校验和文件本身也要来自官方发布页"
+    },
+    {
+      "slug": "latest-vs-prerelease",
+      "title": "latest 标签与预发布版本的区别，什么情况下不该追新",
+      "type": "解释",
+      "intent": "理解发布标签的含义，判断预发布版本的使用条件"
+    },
+    {
+      "slug": "fake-site-recognize",
+      "title": "假官网与镜像站怎么识别，域名、证书与页面特征",
+      "type": "核验",
+      "intent": "用域名归属、证书信息与下载指向识别仿冒站点"
+    },
+    {
+      "slug": "self-build-vs-release",
+      "title": "源码自编译与官方构建产物的差异，构建环境与可复现性",
+      "type": "解释",
+      "intent": "比较两条获取路径的信任假设与维护成本"
+    },
+    {
+      "slug": "issue-report-info",
+      "title": "提 issue 前要准备的版本信息，日志、平台与复现步骤",
+      "type": "核验",
+      "intent": "整理可复现的问题描述，避免因信息缺失被直接关闭"
+    }
+  ],
+  "signature": [
+    {
+      "slug": "windows-authenticode",
+      "title": "Windows 安装包的 Authenticode 签名怎么查，签名者与时间戳",
+      "type": "核验",
+      "intent": "用系统工具读取签名者与时间戳，判断包是否被改过"
+    },
+    {
+      "slug": "macos-codesign-spctl",
+      "title": "macOS 的应用签名与公证怎么验证，codesign 与 spctl 命令",
+      "type": "教程",
+      "intent": "分别验证代码签名与公证状态，理解两者不同的检查目标"
+    },
+    {
+      "slug": "apk-signature-verify",
+      "title": "Android APK 签名校验，apksigner 输出里该看哪几行",
+      "type": "教程",
+      "intent": "读出签名方案、证书摘要与有效期，识别重签名安装包"
+    },
+    {
+      "slug": "sha256-workflow",
+      "title": "下载后先算 SHA-256，再与发布页比对的顺序与常见错误",
+      "type": "教程",
+      "intent": "固定校验顺序，避开算错文件与抄错摘要两类错误"
+    },
+    {
+      "slug": "hash-vs-signature",
+      "title": "哈希与数字签名各防什么，为什么两者不能互相替代",
+      "type": "解释",
+      "intent": "区分完整性校验与来源认证的安全目标"
+    },
+    {
+      "slug": "gpg-signed-release",
+      "title": "GPG 签名发布的校验流程，公钥来源与指纹确认",
+      "type": "核验",
+      "intent": "完成一次独立签名验证，并确认公钥确实来自项目方"
+    },
+    {
+      "slug": "unsigned-build-risk",
+      "title": "没有签名的构建产物意味着什么，什么情况下仍然可以使用",
+      "type": "解释",
+      "intent": "理解无签名构建的风险来源，划定可接受的使用边界"
+    }
+  ],
+  "system-proxy": [
+    {
+      "slug": "system-proxy-coverage",
+      "title": "系统代理能覆盖哪些程序，为什么有些应用完全不理它",
+      "type": "解释",
+      "intent": "从系统接口差异解释应用不遵循系统代理的原因"
+    },
+    {
+      "slug": "system-proxy-vs-tun",
+      "title": "系统代理与 TUN 在覆盖率、DNS、UDP 与权限上的差异",
+      "type": "对比",
+      "intent": "按应用类型与协议需求选择接管方式"
+    },
+    {
+      "slug": "windows-proxy-registry",
+      "title": "Windows 系统代理写在哪里，WinINET 与 WinHTTP 的区别",
+      "type": "解释",
+      "intent": "理解同一台机器上两套代理设置为何表现不一致"
+    },
+    {
+      "slug": "pac-limits",
+      "title": "PAC 脚本能做什么、不能做什么，为什么不适合复杂分流",
+      "type": "解释",
+      "intent": "说明 PAC 的解析时机与能力边界，避免把规则逻辑全塞进脚本"
+    },
+    {
+      "slug": "linux-proxy-env",
+      "title": "Linux 与命令行工具的代理环境变量，http_proxy 与 ALL_PROXY 的差别",
+      "type": "教程",
+      "intent": "按工具支持情况设置变量，确认命令行流量真的走了代理"
+    },
+    {
+      "slug": "system-proxy-dns-leak",
+      "title": "只开系统代理时 DNS 仍在本地解析，泄漏路径与修复顺序",
+      "type": "故障",
+      "intent": "找到绕过代理的解析路径，按顺序修复，避免反复更换节点"
+    },
+    {
+      "slug": "proxy-loop",
+      "title": "代理自己走代理导致环路，绕过列表与回环地址怎么配",
+      "type": "故障",
+      "intent": "识别环路特征，用绕过规则与监听地址修正配置"
+    }
+  ],
+  "tun": [
+    {
+      "slug": "tun-data-path",
+      "title": "TUN 虚拟网卡怎样接管流量，从路由表到用户态转发",
+      "type": "解释",
+      "intent": "理解数据包进入虚拟网卡后由谁读取、如何转发"
+    },
+    {
+      "slug": "tun-route-changes",
+      "title": "开启 TUN 后路由表被改了哪些条目，默认路由与分流路由",
+      "type": "解释",
+      "intent": "看懂 TUN 模式下的路由改写范围与还原方式"
+    },
+    {
+      "slug": "tun-mtu",
+      "title": "TUN 的 MTU 设小了会怎样，分片、MSS 与握手失败的关系",
+      "type": "解释",
+      "intent": "解释 MTU 与 MSS 如何影响握手成功率与大包传输"
+    },
+    {
+      "slug": "tun-vs-vpnservice",
+      "title": "Android 的 VpnService 与桌面 TUN 的异同，权限模型与生命周期",
+      "type": "对比",
+      "intent": "比较两种系统级接管方式的授权与后台行为"
+    },
+    {
+      "slug": "tun-permission",
+      "title": "开启 TUN 需要什么权限，管理员、系统服务与驱动的差别",
+      "type": "核验",
+      "intent": "判断提权请求涉及的具体组件，决定授权范围"
+    },
+    {
+      "slug": "tun-ipv6-bypass",
+      "title": "TUN 模式下 IPv6 绕过代理，禁用、转发与路由三条路",
+      "type": "故障",
+      "intent": "定位 IPv6 未接管导致的连接不一致，按条件选择处理方式"
+    },
+    {
+      "slug": "tun-udp-gaming",
+      "title": "UDP 流量在 TUN 里怎么走，游戏与语音的延迟来自哪里",
+      "type": "解释",
+      "intent": "区分 UDP 转发链路中的排队、NAT 与协议开销"
+    }
+  ],
+  "import": [
+    {
+      "slug": "subscription-payloads",
+      "title": "订阅链接的四种载荷，Base64、明文 URI、Clash YAML 与 sing-box JSON",
+      "type": "解释",
+      "intent": "从响应内容判断订阅格式，选择支持的客户端"
+    },
+    {
+      "slug": "subscription-url-params",
+      "title": "订阅链接后面的参数是什么，UA、flag 与流量信息字段",
+      "type": "解释",
+      "intent": "理解链接参数如何影响返回格式与用量显示"
+    },
+    {
+      "slug": "clash-yaml-to-singbox",
+      "title": "把 Clash YAML 转成 sing-box JSON，字段映射与丢失项",
+      "type": "教程",
+      "intent": "完成一次格式转换，并列出无法等价迁移的字段"
+    },
+    {
+      "slug": "subscription-update-interval",
+      "title": "订阅自动更新的间隔怎么定，覆盖本地修改的风险",
+      "type": "教程",
+      "intent": "在时效性与本地改动之间设定更新策略"
+    },
+    {
+      "slug": "import-failure-causes",
+      "title": "订阅导入失败的六种原因，从 404 到 YAML 缩进",
+      "type": "故障",
+      "intent": "按响应状态、编码与结构逐层定位导入失败"
+    },
+    {
+      "slug": "subscription-is-credential",
+      "title": "订阅链接本身就是凭据，泄露、剪贴板与截图的风险",
+      "type": "核验",
+      "intent": "把订阅链接当密码管理，识别常见泄露路径"
+    },
+    {
+      "slug": "manual-node-fields",
+      "title": "手动添加单个节点，字段从哪来、哪些必须核对",
+      "type": "教程",
+      "intent": "在无订阅时手工录入节点，避免字段错位导致的握手失败"
+    }
+  ],
+  "rules": [
+    {
+      "slug": "rule-match-order",
+      "title": "规则匹配顺序，域名、后缀、关键词、IP CIDR 与 GEOIP 谁先谁后",
+      "type": "解释",
+      "intent": "理解首条命中原则，写出不会互相遮蔽的规则顺序"
+    },
+    {
+      "slug": "remote-rule-sets",
+      "title": "远程规则集怎样工作，更新、缓存与体积代价",
+      "type": "解释",
+      "intent": "说明规则集加载与更新机制，评估内存与启动时间代价"
+    },
+    {
+      "slug": "dns-split-vs-proxy-split",
+      "title": "DNS 分流与代理分流为什么要分开配",
+      "type": "解释",
+      "intent": "区分解析决策与连接决策，避免两套规则互相矛盾"
+    },
+    {
+      "slug": "fake-ip-behavior",
+      "title": "fake-ip 模式怎样工作，哪些程序会因此出错",
+      "type": "解释",
+      "intent": "理解假地址映射的生存期与失效场景"
+    },
+    {
+      "slug": "final-rule",
+      "title": "规则没命中时流量去哪，final 与 MATCH 的默认行为",
+      "type": "故障",
+      "intent": "定位未命中流量造成的直连泄漏或全部走代理"
+    },
+    {
+      "slug": "rule-hit-log",
+      "title": "用日志确认一条连接命中了哪条规则",
+      "type": "教程",
+      "intent": "从日志字段还原匹配过程，验证规则是否按预期生效"
+    },
+    {
+      "slug": "geo-database",
+      "title": "GeoIP 与 GeoSite 数据库从哪来，更新频率与误判边界",
+      "type": "核验",
+      "intent": "确认数据库来源与版本，理解地理匹配的误判来源"
+    }
+  ],
+  "update": [
+    {
+      "slug": "core-gui-version-pair",
+      "title": "内核与 GUI 的版本对应关系，谁兼容谁由什么决定",
+      "type": "解释",
+      "intent": "理解 GUI 对内核版本的依赖方式，判断能否单独升级"
+    },
+    {
+      "slug": "stable-vs-beta-channel",
+      "title": "稳定版与测试版通道怎么选，回滚要付什么代价",
+      "type": "对比",
+      "intent": "按可承受的故障时间选择更新通道"
+    },
+    {
+      "slug": "config-schema-migration",
+      "title": "大版本升级后的配置字段迁移，废弃项与新增项",
+      "type": "教程",
+      "intent": "用校验命令发现不兼容字段，按最小改动完成迁移"
+    },
+    {
+      "slug": "rollback-plan",
+      "title": "升级出问题怎么回滚，配置、内核与安装包三件套",
+      "type": "教程",
+      "intent": "准备可执行的回滚点，缩短升级失败后的恢复时间"
+    },
+    {
+      "slug": "auto-update-source",
+      "title": "客户端自动更新从哪里取包，什么情况下应该关掉",
+      "type": "核验",
+      "intent": "确认更新通道指向，判断自动更新是否适合当前环境"
+    },
+    {
+      "slug": "subscription-break-after-update",
+      "title": "升级后订阅解析失败，格式版本与解析器的变化",
+      "type": "故障",
+      "intent": "区分订阅内容变化与客户端解析器变化两类原因"
+    },
+    {
+      "slug": "eol-client-migration",
+      "title": "客户端停止维护后怎么迁移，配置导出与规则重建",
+      "type": "解释",
+      "intent": "规划停更客户端的迁移顺序，保留可用配置"
+    },
+    {
+      "slug": "update-time-cost",
+      "title": "追新版本的隐性成本，测试时间、回滚窗口与兼容验证",
+      "type": "成本",
+      "intent": "把升级维护折算成时间成本，判断更新频率是否值得"
+    }
+  ],
+  "troubleshoot": [
+    {
+      "slug": "client-no-start",
+      "title": "客户端双击没反应或直接闪退，先看日志与运行库",
+      "type": "故障",
+      "intent": "区分安装损坏、运行库缺失与权限拦截三类启动失败"
+    },
+    {
+      "slug": "subscription-empty",
+      "title": "订阅更新成功但节点列表为空，解析、过滤与格式排查",
+      "type": "故障",
+      "intent": "定位空列表发生在下载、解析还是过滤阶段"
+    },
+    {
+      "slug": "connected-no-internet",
+      "title": "显示已连接却打不开网页，分层定位 DNS 与路由",
+      "type": "故障",
+      "intent": "用分层顺序判断故障在隧道、解析还是目标站点"
+    },
+    {
+      "slug": "handshake-timeout",
+      "title": "握手超时的四种来源，端口、时间、证书与线路",
+      "type": "故障",
+      "intent": "按握手阶段拆分超时原因，避免反复更换节点"
+    },
+    {
+      "slug": "tls-cert-error",
+      "title": "TLS 证书错误的常见原因，系统时间与 SNI 先查哪个",
+      "type": "故障",
+      "intent": "按证书链、系统时间与 SNI 三项排序排查"
+    },
+    {
+      "slug": "slow-after-connect",
+      "title": "连上之后变慢，先分清本地瓶颈与出口瓶颈",
+      "type": "故障",
+      "intent": "用对照测试区分本地链路、代理链路与目标站点限速"
+    },
+    {
+      "slug": "log-key-lines",
+      "title": "从日志里读出关键行，时间、级别、连接与错误码",
+      "type": "教程",
+      "intent": "掌握日志字段含义，把现象转成可检索的错误信息"
+    }
+  ]
+}

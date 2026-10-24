@@ -1,0 +1,754 @@
+{
+  "what-is-free-vpn": [
+    {
+      "slug": "free-vpn-definition-boundary",
+      "title": "免费梯子、免费代理与免费 VPN 分别指哪一层",
+      "type": "解释",
+      "intent": "让读者先确认手里的工具接管的是应用流量还是整台设备的流量"
+    },
+    {
+      "slug": "free-source-taxonomy",
+      "title": "免费梯子的四种来源与各自的成本承担者",
+      "type": "解释",
+      "intent": "把开源软件、限时试用、公益供给与商业引流放进同一张分类表"
+    },
+    {
+      "slug": "software-free-server-cost",
+      "title": "客户端不要钱，服务器为什么仍然要付费",
+      "type": "解释",
+      "intent": "拆开软件复制成本与带宽、IP、维护成本，解释免费的真实边界"
+    },
+    {
+      "slug": "free-vpn-common-myths",
+      "title": "免费梯子的六个常见误区与对应的核验动作",
+      "type": "清单",
+      "intent": "逐条纠正无限流量、永久可用、绝对匿名等说法，并给出可执行的验证方式"
+    },
+    {
+      "slug": "proxy-vpn-tunnel-layer",
+      "title": "代理、VPN 与 TUN 分别改写了系统里的哪一部分",
+      "type": "解释",
+      "intent": "从路由表、虚拟网卡与权限三个角度区分三类工具的实际作用范围"
+    },
+    {
+      "slug": "free-vpn-cost-bearer",
+      "title": "免费方案的成本转移到了哪里",
+      "type": "成本",
+      "intent": "把零现金支出换算成带宽、隐私、时间与稳定性四类代价"
+    },
+    {
+      "slug": "free-vpn-is-a-stack",
+      "title": "为什么免费梯子是一套组合而不是一个网站",
+      "type": "解释",
+      "intent": "建立软件、服务、协议与运营四要素的分析框架，避免把入口当全部"
+    }
+  ],
+  "free-vs-paid": [
+    {
+      "slug": "free-vs-paid-five-dimensions",
+      "title": "免费与付费的五个可比维度：带宽、节点、并发、日志与支持",
+      "type": "对比",
+      "intent": "给出一张可以自己填数字的比较表，替代感受式评价"
+    },
+    {
+      "slug": "free-tier-bandwidth-ceiling",
+      "title": "免费额度的带宽上限通常卡在哪一层",
+      "type": "解释",
+      "intent": "从共享出口与限速策略解释免费方案为什么在晚高峰更慢"
+    },
+    {
+      "slug": "concurrency-device-difference",
+      "title": "并发设备数怎么改变家庭使用的实际成本",
+      "type": "成本",
+      "intent": "用设备数反推需要购买的套餐份数与单位成本"
+    },
+    {
+      "slug": "logging-visibility-gap",
+      "title": "免费服务与付费服务的日志差别该怎么核验",
+      "type": "核验",
+      "intent": "教读者从条款与隐私政策里找出可验证的日志承诺"
+    },
+    {
+      "slug": "support-boundary-free",
+      "title": "免费方案出问题时能获得什么样的支持",
+      "type": "对比",
+      "intent": "说明自助排障、社区支持与工单支持各自的边界"
+    },
+    {
+      "slug": "sla-claim-reality",
+      "title": "可用率承诺在两类服务里各自意味着什么",
+      "type": "解释",
+      "intent": "区分宣传口径、SLA 文本与真实赔付条件三件事"
+    },
+    {
+      "slug": "free-to-paid-migration-items",
+      "title": "从免费换到付费需要迁移哪些东西",
+      "type": "清单",
+      "intent": "列出订阅、规则、设备与账号四类迁移项，减少切换时的中断"
+    }
+  ],
+  "client-map": [
+    {
+      "slug": "client-kernel-gui-split",
+      "title": "图形客户端与内核谁在真正转发流量",
+      "type": "解释",
+      "intent": "讲清界面、内核与系统代理三者的职责划分"
+    },
+    {
+      "slug": "mihomo-family",
+      "title": "Mihomo 内核与周边客户端的分工关系",
+      "type": "解释",
+      "intent": "说明内核版本与界面版本为什么会错配，以及错配时的表现"
+    },
+    {
+      "slug": "xray-core-family",
+      "title": "Xray-core 与基于它的客户端是什么关系",
+      "type": "解释",
+      "intent": "区分内核能力与客户端实际暴露出来的功能"
+    },
+    {
+      "slug": "sing-box-single-core",
+      "title": "sing-box 的单内核路线与配置模型",
+      "type": "解释",
+      "intent": "解释一份配置为什么能同时描述入站、出站与 DNS 策略"
+    },
+    {
+      "slug": "clash-config-compat",
+      "title": "Clash 配置格式的兼容层与迁移坑",
+      "type": "故障",
+      "intent": "列出字段改名、规则集失效与内核不识别配置时的具体表现"
+    },
+    {
+      "slug": "client-feature-matrix",
+      "title": "主流开源客户端的功能对照表",
+      "type": "对比",
+      "intent": "按协议、TUN、规则集与平台四个维度横向比较，不比较界面美观"
+    },
+    {
+      "slug": "client-maintenance-signal",
+      "title": "判断一个客户端项目是否还在维护的六个信号",
+      "type": "核验",
+      "intent": "从提交频率、发布节奏与议题响应判断项目状态"
+    },
+    {
+      "slug": "choose-client-by-protocol",
+      "title": "按协议选客户端而不是按界面选",
+      "type": "清单",
+      "intent": "先确定协议，再缩小到支持该协议的客户端，减少来回试错"
+    }
+  ],
+  "platform-install": [
+    {
+      "slug": "windows-install-verify",
+      "title": "Windows 上从官方发布页安装并核对签名",
+      "type": "教程",
+      "intent": "完成一次来源可验证、失败可回滚的安装"
+    },
+    {
+      "slug": "android-apk-signature",
+      "title": "Android 安装包的签名指纹怎么比对",
+      "type": "教程",
+      "intent": "用签名指纹识别被二次打包的安装包"
+    },
+    {
+      "slug": "ios-store-region",
+      "title": "iOS 客户端的地区商店限制与替代路径",
+      "type": "解释",
+      "intent": "说明商店地区、账号归属与更新通道对客户端选择的影响"
+    },
+    {
+      "slug": "macos-notarization",
+      "title": "macOS 的公证、网络扩展与权限授予",
+      "type": "教程",
+      "intent": "完成安装并理解系统扩展申请了哪些权限"
+    },
+    {
+      "slug": "linux-cli-core",
+      "title": "Linux 上用命令行内核完成最小配置",
+      "type": "教程",
+      "intent": "不依赖图形界面跑通一次转发，并保留可回退的配置"
+    },
+    {
+      "slug": "install-runtime-deps",
+      "title": "客户端运行依赖与版本要求清单",
+      "type": "清单",
+      "intent": "列出运行库、系统代理组件与内核版本的前置条件"
+    },
+    {
+      "slug": "install-rollback-cleanup",
+      "title": "安装失败后的回滚与残留清理",
+      "type": "故障",
+      "intent": "恢复网络设置并清掉虚拟网卡、开机项与残留证书"
+    }
+  ],
+  "service-taxonomy": [
+    {
+      "slug": "free-service-by-supplier",
+      "title": "按供给方给免费服务分类",
+      "type": "解释",
+      "intent": "区分个人、社区、公司与公益四类供给方，并比较可持续性"
+    },
+    {
+      "slug": "trial-vs-free-forever",
+      "title": "限时试用与长期免费在条款上的分界",
+      "type": "对比",
+      "intent": "从起算点、额度与到期动作三处找出两者的实质差别"
+    },
+    {
+      "slug": "community-node-trust",
+      "title": "社区分享节点的可信度分层",
+      "type": "核验",
+      "intent": "按来源、更新记录与可追溯性给节点来源分级"
+    },
+    {
+      "slug": "commercial-lead-in",
+      "title": "商业引流的免费方案通常要求什么",
+      "type": "解释",
+      "intent": "说明注册、拉新与支付绑定三种常见前置条件"
+    },
+    {
+      "slug": "public-benefit-proxy",
+      "title": "公益代理项目的运营模式与规模上限",
+      "type": "解释",
+      "intent": "解释捐赠、志愿者与带宽成本之间的关系，以及扩容的天花板"
+    },
+    {
+      "slug": "free-quota-structures",
+      "title": "免费额度的四种结构与各自的坑",
+      "type": "清单",
+      "intent": "对比日包、月包、一次性流量与不限量限速的计费差异"
+    },
+    {
+      "slug": "free-service-lifespan",
+      "title": "判断免费供给能维持多久的六个信号",
+      "type": "核验",
+      "intent": "从公告频率、节点数量与条款变更推断服务生命周期"
+    },
+    {
+      "slug": "free-service-scope",
+      "title": "哪些东西不算免费资源",
+      "type": "解释",
+      "intent": "划清开源软件、试用活动、公益供给与商业引流之间的收录边界"
+    }
+  ],
+  "terms-risk": [
+    {
+      "slug": "terms-five-clauses",
+      "title": "注册前必须先读的五类条款",
+      "type": "清单",
+      "intent": "找出额度、期限、设备、日志与终止这五处关键约定"
+    },
+    {
+      "slug": "abuse-detection-triggers",
+      "title": "免费额度被判定滥用的常见触发条件",
+      "type": "解释",
+      "intent": "说明多 IP、异常流量与共享账号的判定逻辑"
+    },
+    {
+      "slug": "account-linkage-risk",
+      "title": "同一账号在多设备多地区的连带风险",
+      "type": "解释",
+      "intent": "解释风控如何从单点异常推到整号封禁"
+    },
+    {
+      "slug": "aup-limits",
+      "title": "可接受使用政策会限制哪些具体行为",
+      "type": "解释",
+      "intent": "把条款里的抽象表述换成可以判断的行为边界"
+    },
+    {
+      "slug": "terms-unilateral-change",
+      "title": "条款单方变更时用户还剩什么权利",
+      "type": "核验",
+      "intent": "找出通知方式、生效时间与异议渠道三处可核验内容"
+    },
+    {
+      "slug": "log-retention-wording",
+      "title": "日志保留期怎么写才算说清楚",
+      "type": "核验",
+      "intent": "区分不记录、短期保留与依法配合三种表述的实际含义"
+    },
+    {
+      "slug": "terms-red-flags",
+      "title": "条款里的七个风险信号",
+      "type": "清单",
+      "intent": "给出可以直接对照的排除清单，缩短判断时间"
+    }
+  ],
+  "proxy-protocols": [
+    {
+      "slug": "shadowsocks-aead",
+      "title": "Shadowsocks 的 AEAD 加密与握手过程",
+      "type": "解释",
+      "intent": "讲清盐值、密钥派生与分块认证的作用"
+    },
+    {
+      "slug": "vmess-header-time",
+      "title": "VMess 的头部结构、时间校验与失效表现",
+      "type": "解释",
+      "intent": "解释时间窗校验为什么会造成大面积握手失败"
+    },
+    {
+      "slug": "vless-stateless",
+      "title": "VLESS 的无状态设计与它省掉了什么",
+      "type": "解释",
+      "intent": "说明把加密交给外层 TLS 之后的收益与代价"
+    },
+    {
+      "slug": "trojan-tls-fallback",
+      "title": "Trojan 的 TLS 伪装与回落机制",
+      "type": "解释",
+      "intent": "解释密码认证与真实站点回落如何同时生效"
+    },
+    {
+      "slug": "hysteria2-congestion",
+      "title": "Hysteria2 的 QUIC 传输与带宽指定式拥塞控制",
+      "type": "解释",
+      "intent": "说明固定发送速率在高丢包链路的效果与风险"
+    },
+    {
+      "slug": "tuic-vs-hysteria2",
+      "title": "TUIC 与 Hysteria2 在 QUIC 路线上的差异",
+      "type": "对比",
+      "intent": "从多路复用、认证方式与拥塞控制三处比较"
+    },
+    {
+      "slug": "wireguard-boundary",
+      "title": "WireGuard 的协议边界与适用场景",
+      "type": "解释",
+      "intent": "说明它为什么不适合直接用于对抗封锁"
+    },
+    {
+      "slug": "protocol-by-network",
+      "title": "按网络环境选协议的判断表",
+      "type": "清单",
+      "intent": "用 UDP 可用性、丢包率与封锁强度三个条件分流"
+    }
+  ],
+  "transport": [
+    {
+      "slug": "tls13-round-trips",
+      "title": "TLS 1.3 的往返次数与首字节代价",
+      "type": "解释",
+      "intent": "算清 TCP 加 TLS 的握手成本，以及 0-RTT 省掉了什么"
+    },
+    {
+      "slug": "quic-vs-tcp-hol",
+      "title": "QUIC 与 TCP 的队头阻塞差异在代理里的表现",
+      "type": "对比",
+      "intent": "用多流场景解释两种传输在卡顿上的体验差别"
+    },
+    {
+      "slug": "reality-cert-borrow",
+      "title": "REALITY 的证书借用机制与前提条件",
+      "type": "解释",
+      "intent": "说明目标站点、公钥与 shortId 各自承担什么作用"
+    },
+    {
+      "slug": "websocket-http2",
+      "title": "WebSocket 与 HTTP/2 传输的适用场景",
+      "type": "对比",
+      "intent": "从中间设备兼容性与多路复用能力比较两种传输"
+    },
+    {
+      "slug": "sni-ech-fingerprint",
+      "title": "SNI、ECH 与 TLS 指纹在检测中的角色",
+      "type": "解释",
+      "intent": "说明哪些握手字段可见、哪些已经被加密"
+    },
+    {
+      "slug": "udp-over-tcp",
+      "title": "UDP over TCP 的代价与适用条件",
+      "type": "解释",
+      "intent": "解释重传叠加造成的延迟放大，以及什么场景只能接受它"
+    },
+    {
+      "slug": "mtu-tunnel-fragmentation",
+      "title": "隧道封装的 MTU 与分片问题",
+      "type": "故障",
+      "intent": "从大包丢失的现象反推 MTU 设置是否合理"
+    },
+    {
+      "slug": "transport-failure-map",
+      "title": "传输层选择对应的典型失败现象",
+      "type": "故障",
+      "intent": "把超时、连接重置与半开连接映射回具体层"
+    }
+  ],
+  "metrics": [
+    {
+      "slug": "rtt-probe-methods",
+      "title": "ICMP、TCP 与代理内探测的 RTT 差异",
+      "type": "解释",
+      "intent": "说明三种探测方式为什么给出不同的数字"
+    },
+    {
+      "slug": "jitter-percentile",
+      "title": "抖动为什么必须看分位数",
+      "type": "解释",
+      "intent": "用 P50 与 P95 的差距描述稳定性，而不是只报平均值"
+    },
+    {
+      "slug": "loss-measurement-window",
+      "title": "丢包率的测量窗口与误判",
+      "type": "核验",
+      "intent": "说明窗口长度、包长与采样点如何影响结论"
+    },
+    {
+      "slug": "single-vs-multi-stream",
+      "title": "单线程与多线程吞吐的口径差别",
+      "type": "对比",
+      "intent": "解释两个数字分别回答什么问题，不能互相替代"
+    },
+    {
+      "slug": "bandwidth-delay-product",
+      "title": "带宽时延积如何限制单流速度",
+      "type": "解释",
+      "intent": "用窗口除以 RTT 估算单流上限，解释为什么高延迟跑不满带宽"
+    },
+    {
+      "slug": "mbps-megabyte-confusion",
+      "title": "Mbps 与 MB/s 混用造成的十倍误差",
+      "type": "解释",
+      "intent": "给出换算方法，并列出最常见的误读场景"
+    },
+    {
+      "slug": "ttfb-breakdown",
+      "title": "首字节时间可以拆成哪几段",
+      "type": "解释",
+      "intent": "把 DNS、握手、排队与回源分开计时，定位慢在哪一段"
+    },
+    {
+      "slug": "metric-record-fields",
+      "title": "一份可复现的性能记录该有哪些字段",
+      "type": "清单",
+      "intent": "给出可以直接套用的记录模板，避免数字脱离条件"
+    }
+  ],
+  "bottlenecks": [
+    {
+      "slug": "local-network-first",
+      "title": "先排除本地瓶颈的顺序",
+      "type": "故障",
+      "intent": "从无线干扰、网卡协商、路由性能与本地限速逐项排除"
+    },
+    {
+      "slug": "exit-bandwidth-sharing",
+      "title": "出口带宽共享与超售怎么识别",
+      "type": "核验",
+      "intent": "用不同时段的吞吐变化判断共享比例与超售程度"
+    },
+    {
+      "slug": "cross-border-congestion",
+      "title": "跨境链路拥塞的时间分布",
+      "type": "解释",
+      "intent": "说明晚高峰为什么集中出现在固定时段，以及能做的规避"
+    },
+    {
+      "slug": "protocol-overhead-impact",
+      "title": "协议封装开销对吞吐的实际影响",
+      "type": "解释",
+      "intent": "用包长与头部字节估算有效吞吐，判断开销是否值得优化"
+    },
+    {
+      "slug": "peak-hour-degradation",
+      "title": "高峰降速的三种成因与区分方法",
+      "type": "解释",
+      "intent": "区分本地拥塞、出口争用与目标站点限速三种情况"
+    },
+    {
+      "slug": "dns-bottleneck",
+      "title": "DNS 解析成为瓶颈的典型表现",
+      "type": "故障",
+      "intent": "从首字节时间与解析耗时的比例定位解析问题"
+    },
+    {
+      "slug": "bottleneck-isolation",
+      "title": "逐层隔离瓶颈的七步流程",
+      "type": "教程",
+      "intent": "给出一套可以重复执行、每一步都有判定条件的排查顺序"
+    }
+  ],
+  "threat-model": [
+    {
+      "slug": "operator-visibility",
+      "title": "免费代理运营方能看到什么",
+      "type": "解释",
+      "intent": "列出 SNI、目标域名、连接时间与流量体积四类可见信息"
+    },
+    {
+      "slug": "tls-termination-point",
+      "title": "TLS 终止点决定谁能看到明文",
+      "type": "解释",
+      "intent": "用终止位置画出三种可见性，解释端到端加密的边界"
+    },
+    {
+      "slug": "dns-leak-path",
+      "title": "DNS 请求路径与泄漏点",
+      "type": "解释",
+      "intent": "标出解析请求可能离开隧道的三个位置及判断方法"
+    },
+    {
+      "slug": "ip-leak-scenarios",
+      "title": "代理失效时的 IP 泄漏场景",
+      "type": "故障",
+      "intent": "列出客户端崩溃、分流误判与本地接口绕过三类泄漏"
+    },
+    {
+      "slug": "traffic-analysis-limits",
+      "title": "流量分析能推断出什么",
+      "type": "解释",
+      "intent": "说明体积、时序与包长特征能暴露的信息边界"
+    },
+    {
+      "slug": "account-correlation",
+      "title": "账号关联如何把多个身份连起来",
+      "type": "解释",
+      "intent": "从邮箱、支付信息与设备指纹三条线索分析关联路径"
+    },
+    {
+      "slug": "malicious-operator",
+      "title": "恶意运营方的四种典型手法",
+      "type": "清单",
+      "intent": "给出可以观察的行为特征，而不是猜测动机"
+    },
+    {
+      "slug": "threat-model-by-user",
+      "title": "按用户类型建立威胁模型",
+      "type": "解释",
+      "intent": "为普通浏览、远程办公与敏感职业分别划出使用边界"
+    }
+  ],
+  "supply-chain": [
+    {
+      "slug": "github-release-verify",
+      "title": "核对 GitHub Release 的版本、校验和与签名",
+      "type": "教程",
+      "intent": "完成一次从上游发布页到本地文件的完整核对"
+    },
+    {
+      "slug": "hash-check-workflow",
+      "title": "哈希校验的完整操作流程",
+      "type": "教程",
+      "intent": "在不同操作系统上算出并比对哈希值"
+    },
+    {
+      "slug": "windows-code-signing",
+      "title": "Windows 代码签名与 SmartScreen 提示",
+      "type": "解释",
+      "intent": "说明签名主体、证书链与提示含义之间的关系"
+    },
+    {
+      "slug": "macos-gatekeeper",
+      "title": "macOS 公证与 Gatekeeper 校验",
+      "type": "核验",
+      "intent": "判断一个应用是否通过公证，以及被拦截时该看什么"
+    },
+    {
+      "slug": "android-signature-fingerprint",
+      "title": "Android 签名指纹的获取与比对",
+      "type": "教程",
+      "intent": "用指纹识别重打包的安装包，避免装到改过的版本"
+    },
+    {
+      "slug": "fake-site-recognition",
+      "title": "识别假冒官网与二次打包站",
+      "type": "核验",
+      "intent": "从域名、仓库链接与下载跳转三个位置判断真伪"
+    },
+    {
+      "slug": "update-channel-risk",
+      "title": "更新通道与依赖来源的风险",
+      "type": "解释",
+      "intent": "说明自动更新与第三方依赖带来的持续暴露面"
+    }
+  ],
+  "audit-protocol": [
+    {
+      "slug": "five-criteria",
+      "title": "五项收录标准的逐条解释",
+      "type": "解释",
+      "intent": "说明每条标准在排除什么，以及为什么必须是五条同时满足"
+    },
+    {
+      "slug": "evidence-chain",
+      "title": "证据链的结构与字段",
+      "type": "解释",
+      "intent": "定义快照、条款原文、核验时间与复核人四项要素"
+    },
+    {
+      "slug": "review-cadence",
+      "title": "复核周期的设计依据",
+      "type": "解释",
+      "intent": "说明三十天未复核自动降级这条规则的来源"
+    },
+    {
+      "slug": "quota-verification",
+      "title": "额度与有效期的核验步骤",
+      "type": "教程",
+      "intent": "完成一次可以复算的额度核对，留下可引用的结果"
+    },
+    {
+      "slug": "terms-snapshot",
+      "title": "条款快照的保存与引用方法",
+      "type": "教程",
+      "intent": "保存带时间的条款原文，使结论在条款变更后仍可追溯"
+    },
+    {
+      "slug": "review-record-template",
+      "title": "审核记录模板与字段说明",
+      "type": "清单",
+      "intent": "提供可以直接使用的记录表，减少复核时的口径漂移"
+    },
+    {
+      "slug": "reviewer-disagreement",
+      "title": "复核结论不一致时的处理规则",
+      "type": "解释",
+      "intent": "定义复核人与仲裁人的分工，避免结论随人变化"
+    },
+    {
+      "slug": "audit-scope",
+      "title": "审核范围的界定与排除项",
+      "type": "解释",
+      "intent": "说明哪些资源不进入审核池，以及排除的理由"
+    }
+  ],
+  "zero-result": [
+    {
+      "slug": "zero-result-meaning",
+      "title": "零结果的含义与它不代表什么",
+      "type": "解释",
+      "intent": "区分收录状态与全网可用性，避免把零结果读成断言"
+    },
+    {
+      "slug": "why-not-publish-unverified",
+      "title": "为什么不发布无法复核的免费资源",
+      "type": "解释",
+      "intent": "说明发布不可复核条目会给读者带来什么具体损失"
+    },
+    {
+      "slug": "expired-node-process",
+      "title": "失效节点的处理流程",
+      "type": "教程",
+      "intent": "从发现失效到降级下架，给出每一步的判定与记录"
+    },
+    {
+      "slug": "zero-result-page-design",
+      "title": "零结果页面的信息设计",
+      "type": "解释",
+      "intent": "说明一个诚实的零结果页面应该交代哪些事实"
+    },
+    {
+      "slug": "no-fake-quota-copy",
+      "title": "不用文案补齐额度的四种做法",
+      "type": "清单",
+      "intent": "列出应当避免的表述，以及每种表述的替代写法"
+    },
+    {
+      "slug": "recheck-after-failure",
+      "title": "资源失效后的复核与恢复判定",
+      "type": "核验",
+      "intent": "给出恢复上架需要满足的条件，避免反复上下架"
+    },
+    {
+      "slug": "zero-result-communication",
+      "title": "如何向读者说明现在没有",
+      "type": "解释",
+      "intent": "在不失可信度的前提下交代资源状态与下一步"
+    }
+  ],
+  "decision": [
+    {
+      "slug": "usage-first",
+      "title": "先算用量再选方案",
+      "type": "成本",
+      "intent": "用具体场景估算月流量，替代凭感觉选套餐"
+    },
+    {
+      "slug": "budget-tier-mapping",
+      "title": "预算档位与需求强度的对应关系",
+      "type": "解释",
+      "intent": "把需求换成可比较的预算区间，减少无效比价"
+    },
+    {
+      "slug": "device-count-cost",
+      "title": "设备数如何改变套餐选择",
+      "type": "成本",
+      "intent": "按并发条款折算真实成本，而不是看标称设备数"
+    },
+    {
+      "slug": "stability-levels",
+      "title": "稳定性要求的三个等级与对应成本",
+      "type": "解释",
+      "intent": "用中断后果给稳定性定级，再反推该花多少钱"
+    },
+    {
+      "slug": "trial-as-acceptance",
+      "title": "把试用当成一次验收",
+      "type": "教程",
+      "intent": "设计一次有通过条件、有记录、有结论的试用"
+    },
+    {
+      "slug": "hard-filter-order",
+      "title": "先过硬门槛再比体验",
+      "type": "清单",
+      "intent": "给出排除式筛选的顺序，避免在营销参数上浪费时间"
+    },
+    {
+      "slug": "cost-per-gb",
+      "title": "用单位流量成本横向比较方案",
+      "type": "成本",
+      "intent": "统一口径后比较月付、年付与流量包三种计费方式"
+    },
+    {
+      "slug": "stop-free-conditions",
+      "title": "什么条件下应该停止使用免费方案",
+      "type": "解释",
+      "intent": "给出四条可以自我检查的信号，而不是等到出事"
+    }
+  ],
+  "migration": [
+    {
+      "slug": "subscription-backup",
+      "title": "订阅链接与配置的备份方法",
+      "type": "教程",
+      "intent": "在换设备或换客户端之前保存可恢复的配置"
+    },
+    {
+      "slug": "client-migration-checklist",
+      "title": "换客户端的迁移清单",
+      "type": "清单",
+      "intent": "列出配置、规则、证书与开机项四类需要带走的东西"
+    },
+    {
+      "slug": "rules-export-restore",
+      "title": "分流规则的导出与恢复",
+      "type": "教程",
+      "intent": "保留规则集与自定义规则，减少重装后的重复配置"
+    },
+    {
+      "slug": "refund-window-math",
+      "title": "退款窗口与已用流量的计算",
+      "type": "成本",
+      "intent": "用剩余流量与剩余天数估算可退金额与时间成本"
+    },
+    {
+      "slug": "exit-data-cleanup",
+      "title": "退出后的本地数据清理",
+      "type": "教程",
+      "intent": "清掉订阅、日志、证书与虚拟网卡，恢复干净的网络设置"
+    },
+    {
+      "slug": "account-deletion-request",
+      "title": "账号注销请求怎么写",
+      "type": "教程",
+      "intent": "留下可追溯的注销证据，并确认数据删除范围"
+    },
+    {
+      "slug": "migration-rollback",
+      "title": "迁移失败后的回退路径",
+      "type": "故障",
+      "intent": "在主方案不可用时恢复旧配置，保证有网可用"
+    }
+  ]
+}

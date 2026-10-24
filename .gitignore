@@ -1,0 +1,16 @@
+node_modules/
+.pnpm-store/
+docs/.vitepress/dist/
+docs/.vitepress/cache/
+docs/.vitepress/.temp/
+.env
+.env.local
+build.log
+.playwright-mcp/
+.tmp-*/
+*.part*.md
+part*.md
+.DS_Store
+Thumbs.db
+
+*.zip

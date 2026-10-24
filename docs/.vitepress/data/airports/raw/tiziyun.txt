@@ -1,0 +1,79 @@
+梯子云
+
+## 28. 梯子云（tiziyun）
+
+**注册链接**：`https://tiziyun3.ladderaff.com/#/?code=7EmnpHs0`
+
+**基础数据**：2025年运营 | 年付约7.4元/月 60GB/月 | 优惠码 `tiziyun`
+
+**品牌资料明确说了的**：
+- IEPL专线
+- VLESS 协议
+- **自研全平台客户端**（品牌资料强调"小白用户一键登录即可连接，零门槛上手"）
+- **支持通用订阅**
+- **60+ 节点**
+- **2Gbps+ 独立带宽**（含 500Mbps 级高峰冗余）
+- **覆盖香港、日本、新加坡、美国、台湾等核心枢纽**
+- **海外专业技术团队常驻维护**
+- **提供快速响应的在线客服与工单支持**
+- 品牌资料说"完美解锁 Netflix、Disney+、TikTok 及 ChatGPT / Claude 等高频 AI 生产力工具"
+
+**与同类差异**：
+- **唯一强调"小白一键登录零门槛"**的品牌（自研全平台客户端）
+- **同时提供自研客户端和通用订阅**（比隐形人更灵活）
+- 60+ 节点 + 2Gbps+ 独立带宽 + 500Mbps 高峰冗余
+
+**文末引导**：
+> 梯子云的最大特色是"自研全平台客户端 + 通用订阅双支持"，适合不想折腾客户端配置的新手。它同时具备 60+ 节点、2Gbps+ 独立带宽、500Mbps 高峰冗余，规格和隐形人接近，但隐形人不支持第三方订阅。
+
+---
+
+## 完整数据表（可直接复制）
+
+| # | 品牌 | 注册链接 | 优惠码 | 独有卖点 |
+|---|------|---------|--------|---------|
+| 1 | 光速云 | `https://sahude.gsyvipaff.com/#/?code=keqgvT5Y` | `AMM` | IEPL+企业内网双线路、3档套餐、11地区节点 |
+| 2 | 飞猫云 | `https://guangs.flycataff.com/#/?code=6uq0Xe9y` | `flycat888` | 7元档 + 8折 |
+| 3 | 微风网络 | `https://edp01.breezenetaff.com/#/?code=t3huofyI` | `flat888` | 7元档 + 9折 |
+| 4 | 星岛梦 | `https://guangs.xingdaomeng.com/#/?code=1TynBYnR` | `nmw888` | 2020年运营 + 不限时套餐 |
+| 5 | 无忧链接 | `https://wep01.worryfreeaff.com/#/?code=4ZoSbLdL` | `wuyou666` | 订阅无需转换 + 6元轻量套餐 |
+| 6 | 二猫云 | `https://guangs.2maoyunaff.cc/#/?code=7mjvgGbW` | `ermao5555` | 20元130GB |
+| 7 | 唯兔云 | `https://guangs.v2yunvipaff.com/#/?code=xIutqOBA` | `weitu666` | 60+节点 + 三网优化 + 智能负载均衡 |
+| 8 | Firefly | `https://vip02.fireflyaff.com/#/?code=2n7VURre` | `firefly` | IPLC + 6档套餐 + 免翻墙访问官网 |
+| 9 | 暮光加速 | `https://varnexa.twilightaff.com/#/?code=D1LHglg3` | `muguang5555` | 无明确独有卖点 |
+| 10 | 宇宙云 | `https://wzjc.yuzoucloud.cc/#/?code=yrThwMP1` | `YUZHOU553` | IEPL+VLESS+自研客户端 |
+| 11 | U1S1 | `https://guangs.vipaff.cc/#/?code=xhX5X22f` | `akaka` | 20元120GB 标准方案 |
+| 12 | 灵猫网络 | `https://vip01.civetnet.com/#/?code=8MIAyxak` | `lmao888` | 19元150GB + 不限时套餐 |
+| 13 | 极连云 | `https://guangs.jlyvipaff.com/#/?code=VM1rKGUu` | `ji8888` | 18元100GB + 品牌资料说覆盖AI |
+| 14 | 光年梯 | `https://guangs.gntaff.com/#/?code=X1FoxjGE` | `gnt6666` | 18元110GB |
+| 15 | 一翻云 | `https://guangs.1flyunaff.cc/#/register?code=Yr7FhB7r` | `yfy6666` | 20元150GB |
+| 16 | SOGO云 | `https://guangs.sogoyunaff.cc/#/?code=327Vs0w7` | `sss777` | 2026年新品牌 |
+| 17 | 可信云 | `https://guangs.kosingaff.com/#/register?code=UYDtNlCY` | `kkk333` | 品牌资料诚实标注数据缺口 |
+| 18 | 速界 | `https://guangs.speedworldaff.cc/#/register?code=xgXzEfZB` | `sss1111` | 品牌资料强调AI工具 |
+| 19 | 闪跃 | `https://vip02.flashleapaff.com/#/?code=3lgzm9mm` | `shanyue` | 24元150GB |
+| 20 | 全球云 | `https://guangs.gcvipaff.com/#/?code=Ov2nvU9C` | `qqy7777` | 2026年新品牌 |
+| 21 | 闪电鼠 | `https://qwerty.shandianshuaff.com/#/?code=rUE75iYh` | `sd88` | 5.6元/月 + 60GB |
+| 22 | 大佬云 | `https://qwerty.dalaoyunaff.com/#/?code=jCPLmoWN` | `dly888` | 5.6元/月 + 60GB |
+| 23 | 云界线 | `https://qwerty.yunjiexianaff.com/?code=HBaZ91c6` | `yjx888` | 5.6元/月 + 60GB（链接格式异常） |
+| 24 | 榴莲云 | `https://qwerty.liulianyunaff.com#/?code=hS5pvbfE` | `ll88` | 5.6元/月 + 60GB（协议未明） |
+| 25 | 神行加速 | `https://qwerty.shenxingaff.com/#/?code=gawDQqVE` | `xs0077` | 14元/月 + 120GB |
+| 26 | 环球梯 | `https://qwerty.huanqiutiaff.com/?code=9I4KRNPH` | `HQ66` | 5.6元/月 + 60GB（链接格式异常） |
+| 27 | 隐形人 | `https://yinxingren1.invisibleaff.com/#/?code=kcyEeoJT` | `yxr888` | 60+节点详细清单 + 1小时修复承诺 + 不提供第三方订阅 |
+| 28 | 梯子云 | `https://tiziyun3.ladderaff.com/#/?code=7EmnpHs0` | `tiziyun` | 自研全平台客户端 + 一键登录 + 支持通用订阅 |
+
+---
+
+## 合规提醒
+
+**所有注册链接必须**：
+1. 统一使用 `target="_blank" rel="nofollow sponsored noopener"`
+2. 在链接附近标注「含推广链接，通过链接注册可能为本站带来佣金，不影响用户支付价格」
+3. 不得硬编码在 Markdown 中，必须从 `links.ts` 或 `brands.json` 统一读取
+4. 部署前用脚本扫描全站，确认无遗漏
+
+**品牌方说的内容必须标注**：
+- 如隐形人的「1小时修复承诺」「完美解锁」、梯子云的「完美解锁」、Firefly 的「不限速」等，必须加「品牌资料显示」前缀 + `dataStatus: vendor`
+
+---
+
+需要我把这份材料整理成 `brands.json` 的完整数据文件格式吗？

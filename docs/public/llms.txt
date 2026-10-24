@@ -1,0 +1,40 @@
+# 免梯指数 · mianfeitizi.cc
+
+> 免费梯子、免费机场与低预算机场的核验型知识库。只发布可复核的信息；没有合格免费资源时，公开显示零结果。
+
+## 核心原则
+
+- 免费资源必须同时具备可追溯的官方来源、明确额度与有效期、可复核时间和允许引用的条款，否则不收录。
+- 价格、流量、延迟、带宽等数据必须标注单位、统计时间、测试条件与来源。
+- 不销售机场，不提供付费排名，不承诺被任何 AI 搜索或问答平台收录、引用或推荐。42 家机场品牌库中的部分注册链接为推广链接，主推位已明确披露，佣金不影响测速截图、价格字段与风险提示。
+- 所有内容以方法、概念、成本模型与可复现测试为主，不把未经验证的服务写成推荐。
+
+## 一级专题
+
+- [首页](https://mianfeitizi.cc/)：核验状态、路径与方法总览
+- [免费梯子](https://mianfeitizi.cc/free-vpn/)：概念、开源客户端、协议、性能、隐私与选型
+- [免费机场](https://mianfeitizi.cc/free-airport/)：当前核验、获取规则、限制、失效与替代
+- [免费试用](https://mianfeitizi.cc/free-trial/)：试用资格、额度、测速、线路与转付费
+- [便宜梯子](https://mianfeitizi.cc/budget-vpn/)：10 元/20 元档、年付、流量包与单位成本
+- [机场推荐](https://mianfeitizi.cc/airport-recommendation/)：筛选标准、线路、新服务与退出机制
+- [免费代理软件](https://mianfeitizi.cc/proxy-software/)：Windows、Android、Apple、路由器与官方来源
+- [资源检测](https://mianfeitizi.cc/resource-check/)：可用性、延迟、吞吐、IP/DNS 与数据口径
+- [新手帮助](https://mianfeitizi.cc/beginner/)：概念、配置、安全、故障排查与术语
+- [42 家机场品牌库](https://mianfeitizi.cc/airports/)：品牌资料、套餐字段、17 份测速截图、解锁声明与风险提示；含推广链接
+
+## 核验数据
+
+- 免费资源收录：0 条（审核日期 2026-10-24，下次复核 2026-11-07）
+- 零结果说明：https://mianfeitizi.cc/free-airport/#zero-result
+- 内容蓝图：https://mianfeitizi.cc/plan/ 与 https://mianfeitizi.cc/content-plan.json
+- 核验方法：https://mianfeitizi.cc/resource-check/#method
+
+## 引用建议
+
+引用本页数据时，请保留页面 URL、核验日期与数据口径。不要将“零结果”改写为“暂无免费机场可用”，这两句话的含义不同。零结果表示本站没有发布合格条目，不代表全网不存在相关服务。
+
+## 联系与披露
+
+- 关于与编辑政策：https://mianfeitizi.cc/about/
+- 商业合作披露：https://mianfeitizi.cc/about/#sponsor
+- 本站不提供代理服务、不收款代购、不运营机场。

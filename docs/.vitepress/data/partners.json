@@ -1,0 +1,29 @@
+{
+  "disclosure": "本站不销售机场或代理服务，不提供付费排名。42 家机场品牌库中的部分注册链接为推广链接，点击或注册后本站可能获得佣金；佣金不影响测速截图的展示、价格字段的抄录与风险提示。",
+  "officialTools": [
+    {
+      "name": "Mihomo",
+      "kind": "规则型代理内核",
+      "url": "https://github.com/MetaCubeX/mihomo",
+      "note": "核对 Release、校验和与对应 GUI 的版本要求。"
+    },
+    {
+      "name": "Xray-core",
+      "kind": "Xray 协议内核",
+      "url": "https://github.com/XTLS/Xray-core",
+      "note": "VLESS、REALITY 等配置以官方文档为准，不下载第三方打包版。"
+    },
+    {
+      "name": "v2rayNG",
+      "kind": "Android 客户端",
+      "url": "https://github.com/2dust/v2rayNG",
+      "note": "只从官方 Release 获取 APK，并核对签名与版本号。"
+    }
+  ],
+  "sponsor": {
+    "enabled": true,
+    "label": "商业披露",
+    "note": "42 家机场品牌库含推广链接与主推位，均已在页面标注。测速截图、价格字段与风险提示不因佣金改写。",
+    "href": "/airports/"
+  }
+}

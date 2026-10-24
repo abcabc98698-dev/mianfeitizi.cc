@@ -1,0 +1,712 @@
+{
+  "who-offers": [
+    {
+      "slug": "trial-supply-models",
+      "title": "机场试用由谁提供，各类供给方的成本从哪里回收",
+      "type": "解释",
+      "intent": "区分商业机场、新服务与渠道页的试用供给，判断活动背后的成本结构。"
+    },
+    {
+      "slug": "new-service-trial-motivation",
+      "title": "新服务为什么愿意发试用，试用期通常对应什么运营阶段",
+      "type": "解释",
+      "intent": "理解试用发放与获客、扩容、口碑阶段的关系，判断活动是否可持续。"
+    },
+    {
+      "slug": "paid-user-trial-vs-open-trial",
+      "title": "老用户回馈试用与公开注册试用的门槛差异",
+      "type": "对比",
+      "intent": "比较两类试用的资格、额度与隐性条件，避免把回馈活动当成公开名额。"
+    },
+    {
+      "slug": "invite-code-trial-audit",
+      "title": "邀请码试用要核查哪些前置条件与传播链",
+      "type": "核验",
+      "intent": "从邀请码来源、使用次数与绑定关系判断试用是否真实可进入。"
+    },
+    {
+      "slug": "trial-landing-page-anatomy",
+      "title": "试用落地页的常见模块各自能证明什么",
+      "type": "解释",
+      "intent": "拆解页面上的额度、倒计时、用户评价与按钮，区分可核验信息与营销话术。"
+    },
+    {
+      "slug": "no-registration-trial-risk",
+      "title": "免注册试用在身份、额度与日志上的额外风险",
+      "type": "核验",
+      "intent": "判断不需要账号的试用用什么换取访问，以及代价落在哪一层。"
+    },
+    {
+      "slug": "trial-channel-credibility-tiers",
+      "title": "官方公告、社群转发与聚合页的可信度分层",
+      "type": "清单",
+      "intent": "按发布主体、可追溯性与更新记录给试用信息源分级。"
+    }
+  ],
+  "verification": [
+    {
+      "slug": "trial-terms-five-checks",
+      "title": "判断试用真实性的五项条款检查",
+      "type": "清单",
+      "intent": "用额度、起算点、有效期、退款与主体五项条件快速排除虚假活动。"
+    },
+    {
+      "slug": "trial-page-timeline-evidence",
+      "title": "用页面时间线与存档证据确认活动仍在有效期",
+      "type": "核验",
+      "intent": "通过发布日期、修改记录与存档快照判断活动是否过期或被改写。"
+    },
+    {
+      "slug": "trial-vs-lead-magnet",
+      "title": "真试用与收集邮箱的引流页在流程上有什么区别",
+      "type": "对比",
+      "intent": "比较注册后的下一步、额度交付方式与退出路径，识别只收集信息的页面。"
+    },
+    {
+      "slug": "trial-requires-payment-red-flags",
+      "title": "要求先绑卡或先付款的试用要查哪些扣费授权",
+      "type": "核验",
+      "intent": "核对预授权、自动续费与最低消费条款，估算最坏扣款金额。"
+    },
+    {
+      "slug": "trial-quota-claim-cross-check",
+      "title": "交叉核对宣传额度、面板额度与客户端计数",
+      "type": "核验",
+      "intent": "用三个来源的差额判断额度是否被倍率、单位或后台流量影响。"
+    },
+    {
+      "slug": "trial-support-channel-test",
+      "title": "用一次售前咨询测试服务方的响应与口径",
+      "type": "教程",
+      "intent": "通过提问额度、退款与线路差异，观察回答是否具体且可追溯。"
+    },
+    {
+      "slug": "trial-disclosure-and-entity",
+      "title": "从主体信息、联系方式与隐私政策判断可追责性",
+      "type": "核验",
+      "intent": "确认页面背后是否有可识别主体、投诉渠道与数据使用说明。"
+    }
+  ],
+  "traffic": [
+    {
+      "slug": "trial-traffic-scenario-budget",
+      "title": "按网页、视频、下载与更新估算试用流量消耗",
+      "type": "成本",
+      "intent": "把日常操作换算成 GB，判断试用额度能覆盖哪些测试场景。"
+    },
+    {
+      "slug": "trial-gb-vs-gib-billing",
+      "title": "试用面板的 GB 与客户端 GiB 为什么对不上",
+      "type": "解释",
+      "intent": "解释十进制与二进制单位的差异，避免把显示差额当成偷跑。"
+    },
+    {
+      "slug": "trial-uplink-downlink-counting",
+      "title": "上下行合计、倍率与重置规则如何影响可用额度",
+      "type": "核验",
+      "intent": "确认计费方向、倍率与重置时间，算出真正可用的流量。"
+    },
+    {
+      "slug": "trial-background-traffic-drain",
+      "title": "试用期最容易偷跑流量的后台任务",
+      "type": "清单",
+      "intent": "列出系统更新、云同步、备份与自动播放等消耗项并给出关闭顺序。"
+    },
+    {
+      "slug": "trial-video-bitrate-estimate",
+      "title": "按码率与时长估算视频试用消耗",
+      "type": "成本",
+      "intent": "用分辨率、码率与播放时长计算流量，避免用看几集来估算。"
+    },
+    {
+      "slug": "trial-large-download-feasibility",
+      "title": "试用额度能否支撑一次系统更新或大文件下载",
+      "type": "解释",
+      "intent": "比较更新包大小、重试成本与剩余额度，判断是否值得在试用期下载。"
+    },
+    {
+      "slug": "trial-traffic-exhaustion-behavior",
+      "title": "流量耗尽后的限速、断连与计费行为",
+      "type": "故障",
+      "intent": "区分断网、降速、按量计费与自动升级四种超额策略。"
+    }
+  ],
+  "validity": [
+    {
+      "slug": "trial-start-trigger-types",
+      "title": "注册、首次登录、首次连接与人工激活四种起算点",
+      "type": "解释",
+      "intent": "识别有效期从哪一刻开始，避免注册后才发现窗口已缩短。"
+    },
+    {
+      "slug": "trial-calendar-vs-rolling-window",
+      "title": "自然日、24 小时窗口与滚动有效期的差别",
+      "type": "对比",
+      "intent": "比较三种计时方式对最后一天可用时长的影响。"
+    },
+    {
+      "slug": "trial-expiry-timezone",
+      "title": "到期时间按哪个时区计算，如何自行换算",
+      "type": "核验",
+      "intent": "用面板时间、条款时区与本地时间对齐到期点，防止提前失效。"
+    },
+    {
+      "slug": "trial-pause-and-extend-rules",
+      "title": "试用能否暂停、顺延或补发",
+      "type": "核验",
+      "intent": "确认暂停条件、补发门槛与客服权限，判断测试窗口是否可控。"
+    },
+    {
+      "slug": "trial-short-window-test-plan",
+      "title": "只有 24 小时试用期时如何安排测试顺序",
+      "type": "教程",
+      "intent": "给出压缩版验收顺序，把有限时间用在可用性与退出路径上。"
+    },
+    {
+      "slug": "trial-expiry-grace-behavior",
+      "title": "到期瞬间的连接中断与配置残留",
+      "type": "故障",
+      "intent": "观察到期后的断连方式、面板状态与本地配置保留情况。"
+    },
+    {
+      "slug": "trial-multiple-account-reset-risk",
+      "title": "重复注册延长试用会触发哪些风控",
+      "type": "核验",
+      "intent": "分析邮箱、设备、IP 与支付关联，判断重复注册的封禁风险。"
+    }
+  ],
+  "method": [
+    {
+      "slug": "trial-baseline-local-network",
+      "title": "测速前先测本地带宽与路由基线",
+      "type": "教程",
+      "intent": "建立本地上下限，避免把设备或宽带瓶颈算到代理线路上。"
+    },
+    {
+      "slug": "trial-single-thread-design",
+      "title": "单线程吞吐测试的时长、并发与采样设计",
+      "type": "教程",
+      "intent": "用固定单流、固定时长与三次重复得到可比较的单线程结果。"
+    },
+    {
+      "slug": "trial-multi-thread-design",
+      "title": "多线程聚合测试如何避免本地先打满",
+      "type": "教程",
+      "intent": "设置流数、并发与 CPU 监控，区分线路瓶颈与本地瓶颈。"
+    },
+    {
+      "slug": "trial-latency-jitter-sampling",
+      "title": "延迟与抖动的采样次数、时间窗与记录格式",
+      "type": "教程",
+      "intent": "用 20 次以上样本计算 P50 与 P95，避免单次 ping 下结论。"
+    },
+    {
+      "slug": "trial-packet-loss-measurement",
+      "title": "丢包测量的探测频率、目标与误判来源",
+      "type": "教程",
+      "intent": "设计 100 次连续探测，识别 ICMP 限速与真实丢包的差别。"
+    },
+    {
+      "slug": "trial-peak-hour-comparison",
+      "title": "高峰与非高峰时段的对照测试安排",
+      "type": "对比",
+      "intent": "在同一端点、同一协议下比较两个时段的吞吐与丢包。"
+    },
+    {
+      "slug": "trial-udp-quic-test",
+      "title": "针对 UDP 与 QUIC 线路的额外测试项",
+      "type": "教程",
+      "intent": "单独验证 UDP 可达、丢包与抖动，避免用 TCP 结果代替。"
+    },
+    {
+      "slug": "trial-acceptance-sheet-template",
+      "title": "一张空白试用验收表应包含哪些字段",
+      "type": "清单",
+      "intent": "给出可直接复制的字段清单，覆盖条件、单位、判定与证据编号。"
+    }
+  ],
+  "interpretation": [
+    {
+      "slug": "trial-speedtest-vs-real-download",
+      "title": "测速站点结果与实际下载速度的差距",
+      "type": "对比",
+      "intent": "解释测速端点、并发与缓存对结果的影响，建立两者的换算关系。"
+    },
+    {
+      "slug": "trial-local-bottleneck-signals",
+      "title": "从 CPU、Wi-Fi 与旧设备识别本地瓶颈",
+      "type": "故障",
+      "intent": "用 CPU 占用、无线速率与本地测速排除设备侧限制。"
+    },
+    {
+      "slug": "trial-route-bottleneck-signals",
+      "title": "入口、中转与出口三段链路的瓶颈定位",
+      "type": "故障",
+      "intent": "按 RTT、丢包与首字节时间判断阻塞发生在哪一段。"
+    },
+    {
+      "slug": "trial-target-site-throttling",
+      "title": "目标站点限速与线路限速如何区分",
+      "type": "解释",
+      "intent": "用多站点对照与单站多时段测试区分线路问题与站点策略。"
+    },
+    {
+      "slug": "trial-evening-degradation-pattern",
+      "title": "晚高峰掉速的常见链路原因",
+      "type": "解释",
+      "intent": "分析共享带宽、跨境拥塞与运营商调度对晚高峰的影响。"
+    },
+    {
+      "slug": "trial-loss-with-low-rtt",
+      "title": "低延迟高丢包代表什么",
+      "type": "解释",
+      "intent": "解释近距离链路也可能因拥塞或 QoS 丢包，不能只看 RTT。"
+    },
+    {
+      "slug": "trial-single-vs-multi-gap",
+      "title": "单线程低、多线程高说明什么",
+      "type": "解释",
+      "intent": "判断瓶颈在单流窗口、协议开销还是本地并发能力。"
+    }
+  ],
+  "route-types": [
+    {
+      "slug": "trial-direct-vs-transit",
+      "title": "直连与中转线路在延迟和稳定性上的差异",
+      "type": "对比",
+      "intent": "比较两种路径的物理距离、绕路风险与故障点数量。"
+    },
+    {
+      "slug": "trial-bgp-transit-explained",
+      "title": "BGP 中转的名称能证明什么，不能证明什么",
+      "type": "解释",
+      "intent": "解释 BGP 只描述路由方式，不保证带宽、优先级或落地质量。"
+    },
+    {
+      "slug": "trial-ipepl-claim-check",
+      "title": "IPLC 与 IEPL 宣传的可核验边界",
+      "type": "核验",
+      "intent": "列出专线宣传中可验证与不可验证的部分，避免只看名称。"
+    },
+    {
+      "slug": "trial-entry-exit-segments",
+      "title": "入口、中转、出口三段如何影响体验",
+      "type": "解释",
+      "intent": "分别测量三段延迟与丢包，定位体验差异的来源。"
+    },
+    {
+      "slug": "trial-route-redundancy",
+      "title": "多入口与故障切换是否真实存在",
+      "type": "核验",
+      "intent": "通过断开单条线路观察切换时间与可用性，验证冗余宣传。"
+    },
+    {
+      "slug": "trial-residential-vs-datacenter",
+      "title": "家宽落地与机房落地的用途差异",
+      "type": "对比",
+      "intent": "比较两类出口在流媒体、AI 服务与风控上的不同表现。"
+    },
+    {
+      "slug": "trial-route-traceroute-reading",
+      "title": "用路由追踪判断流量是否绕路",
+      "type": "教程",
+      "intent": "读懂跳数、ASN 与往返时间，识别明显绕路与隐藏中转。"
+    }
+  ],
+  "streaming-ai": [
+    {
+      "slug": "trial-streaming-region-check",
+      "title": "流媒体地区库与账号地区的一致性检查",
+      "type": "核验",
+      "intent": "核对账号注册地、出口地区与内容库，判断限制来自哪一层。"
+    },
+    {
+      "slug": "trial-ai-service-login-test",
+      "title": "AI 服务登录、验证码与支付环节的试用测试",
+      "type": "教程",
+      "intent": "按登录、验证码、对话与支付四步测试，记录失败发生在哪一步。"
+    },
+    {
+      "slug": "trial-ip-reputation-basics",
+      "title": "IP 信誉、ASN 与风控标签的关系",
+      "type": "解释",
+      "intent": "解释出口 IP 的历史行为如何影响验证码、封禁与支付审核。"
+    },
+    {
+      "slug": "trial-streaming-vs-ai-requirements",
+      "title": "流媒体与 AI 服务对线路的不同要求",
+      "type": "对比",
+      "intent": "比较带宽、地区、IP 类型与稳定会话需求的差异。"
+    },
+    {
+      "slug": "trial-captcha-loop-diagnosis",
+      "title": "反复验证码时的排查顺序",
+      "type": "故障",
+      "intent": "从出口 IP、Cookie、浏览器指纹与节点切换记录定位触发原因。"
+    },
+    {
+      "slug": "trial-account-region-mismatch",
+      "title": "账号地区与出口地区不一致的后果",
+      "type": "解释",
+      "intent": "解释地区错配对内容库、支付与风控的影响。"
+    },
+    {
+      "slug": "trial-unlock-claim-verification",
+      "title": "解锁标签需要哪些可复现证据",
+      "type": "核验",
+      "intent": "定义可复核的播放、登录与支付证据，排除一次性截图。"
+    }
+  ],
+  "import": [
+    {
+      "slug": "trial-subscription-link-formats",
+      "title": "Base64、Clash YAML 与 sing-box JSON 的格式差异",
+      "type": "解释",
+      "intent": "识别订阅格式与客户端支持的匹配关系，避免导入即失败。"
+    },
+    {
+      "slug": "trial-qr-code-import-risk",
+      "title": "二维码导入的泄露面与核对方法",
+      "type": "核验",
+      "intent": "说明二维码包含的凭据、截图风险与导入前的核对步骤。"
+    },
+    {
+      "slug": "trial-manual-node-entry",
+      "title": "手动填写节点参数时必查的字段",
+      "type": "教程",
+      "intent": "列出地址、端口、协议、认证与传输字段的核对顺序。"
+    },
+    {
+      "slug": "trial-subscription-update-behavior",
+      "title": "订阅更新频率与节点覆盖行为",
+      "type": "核验",
+      "intent": "观察自动更新是否覆盖本地修改、删除节点或改变分组。"
+    },
+    {
+      "slug": "trial-subscription-url-leak",
+      "title": "订阅链接泄露后的表现与处置",
+      "type": "故障",
+      "intent": "识别异常流量、设备列表变化与链接失效，给出替换顺序。"
+    },
+    {
+      "slug": "trial-config-backup-before-expiry",
+      "title": "试用到期前的配置备份清单",
+      "type": "清单",
+      "intent": "在失效前保存节点参数、规则与验收记录，避免无法复现。"
+    },
+    {
+      "slug": "trial-multi-client-same-subscription",
+      "title": "同一订阅导入多个客户端的兼容差异",
+      "type": "对比",
+      "intent": "比较不同客户端对协议、规则与更新行为的处理差异。"
+    }
+  ],
+  "compatibility": [
+    {
+      "slug": "trial-client-core-version-match",
+      "title": "客户端与内核版本错配的识别",
+      "type": "核验",
+      "intent": "从关于页面、日志与启动错误判断 GUI 与内核是否匹配。"
+    },
+    {
+      "slug": "trial-tun-mode-requirement",
+      "title": "哪些测试必须开 TUN，哪些用系统代理即可",
+      "type": "解释",
+      "intent": "按应用覆盖范围与 UDP 需求选择代理模式，避免测试条件不一致。"
+    },
+    {
+      "slug": "trial-rule-set-compatibility",
+      "title": "规则集格式与客户端支持的匹配",
+      "type": "核验",
+      "intent": "确认规则集语法、订阅格式与客户端版本是否兼容。"
+    },
+    {
+      "slug": "trial-protocol-support-matrix",
+      "title": "常见客户端对主流协议的支持差异",
+      "type": "对比",
+      "intent": "用协议维度列出客户端支持差异，避免导入后无法启用。"
+    },
+    {
+      "slug": "trial-ios-background-limits",
+      "title": "iOS 后台限制对长时间测试的影响",
+      "type": "解释",
+      "intent": "解释后台挂起、按需连接与电量策略如何中断测试。"
+    },
+    {
+      "slug": "trial-router-deployment-check",
+      "title": "把试用配置放到路由器前的兼容性检查",
+      "type": "教程",
+      "intent": "核对固件、内核、内存与 TUN 支持，避免部署后不可回退。"
+    },
+    {
+      "slug": "trial-client-log-evidence",
+      "title": "从客户端日志提取可引用的验收证据",
+      "type": "教程",
+      "intent": "定位时间戳、错误码与握手结果，形成脱敏后的证据片段。"
+    }
+  ],
+  "decision": [
+    {
+      "slug": "trial-conversion-decision-matrix",
+      "title": "用量、稳定性、价格与退出成本四维决策矩阵",
+      "type": "清单",
+      "intent": "把试用结果压缩成四个评分维度，给出续费或放弃的条件。"
+    },
+    {
+      "slug": "trial-usage-based-plan-sizing",
+      "title": "按实际用量反推套餐流量档位",
+      "type": "成本",
+      "intent": "用试用期日均流量与峰值月份估算所需套餐，避免买大或买小。"
+    },
+    {
+      "slug": "trial-stability-threshold",
+      "title": "可用率达到多少才值得续费",
+      "type": "解释",
+      "intent": "定义可用率、统计窗口与失败容忍度，避免凭感觉续费。"
+    },
+    {
+      "slug": "trial-monthly-vs-annual-first-purchase",
+      "title": "首次付费选月付还是年付",
+      "type": "对比",
+      "intent": "比较现金流、退款概率与迁移成本，给出首次购买的默认顺序。"
+    },
+    {
+      "slug": "trial-sunk-cost-trap",
+      "title": "试用投入的时间成本如何影响决策",
+      "type": "解释",
+      "intent": "识别因为已经投入而继续付费的沉没成本偏差。"
+    },
+    {
+      "slug": "trial-switch-cost-estimate",
+      "title": "换服务后的迁移与重新验收成本",
+      "type": "成本",
+      "intent": "把重新配置、重新测试与学习中段计入换服务成本。"
+    },
+    {
+      "slug": "trial-conversion-checklist",
+      "title": "付款前的最终核对清单",
+      "type": "清单",
+      "intent": "在点击付款前核对价格、条款、退款、续费与备份五项。"
+    }
+  ],
+  "pricing": [
+    {
+      "slug": "trial-unit-cost-formula",
+      "title": "试用转付费的单位流量成本公式",
+      "type": "成本",
+      "intent": "用价格、额度、倍率与手续费算出可比较的元/GB。"
+    },
+    {
+      "slug": "trial-plan-price-normalization",
+      "title": "月付、季付与年付价格的统一折算",
+      "type": "成本",
+      "intent": "把不同计费周期折算到月成本与单位流量成本。"
+    },
+    {
+      "slug": "trial-data-pack-vs-monthly",
+      "title": "流量包与月付在低频场景下的成本差异",
+      "type": "对比",
+      "intent": "按实际用量比较一次性流量包与月付的支出。"
+    },
+    {
+      "slug": "trial-payment-fee-impact",
+      "title": "手续费与汇率加价对实际支出的影响",
+      "type": "成本",
+      "intent": "把固定手续费、比例手续费与汇兑加价计入实付。"
+    },
+    {
+      "slug": "trial-bundle-device-cost",
+      "title": "多设备套餐的按设备成本折算",
+      "type": "成本",
+      "intent": "按并发设备数计算每台设备的月成本，比较加购与升级。"
+    },
+    {
+      "slug": "trial-refund-adjusted-cost",
+      "title": "计入退款概率后的期望成本",
+      "type": "成本",
+      "intent": "用退款成功率与手续费估算年付的风险调整成本。"
+    },
+    {
+      "slug": "trial-price-change-history-check",
+      "title": "续费价格变化的核查方法",
+      "type": "核验",
+      "intent": "对比首月价、续费价与历史页面，识别悄然涨价。"
+    }
+  ],
+  "refund": [
+    {
+      "slug": "trial-refund-window-rules",
+      "title": "退款窗口的起算点与申请方式",
+      "type": "核验",
+      "intent": "确认冷静期从付款、激活还是首次连接开始，以及申请入口。"
+    },
+    {
+      "slug": "trial-used-traffic-deduction",
+      "title": "已用流量如何影响退款金额",
+      "type": "解释",
+      "intent": "按已用额度、倍率与手续费估算实际可退金额。"
+    },
+    {
+      "slug": "trial-refund-exclusions",
+      "title": "常见退款例外条款",
+      "type": "清单",
+      "intent": "列出已使用、特价、流量包与违规使用等例外。"
+    },
+    {
+      "slug": "trial-chargeback-boundary",
+      "title": "拒付与退款的区别及后果",
+      "type": "解释",
+      "intent": "解释拒付的适用条件、周期与对账号的影响，避免误用。"
+    },
+    {
+      "slug": "trial-refund-evidence-pack",
+      "title": "申请退款需要准备哪些证据",
+      "type": "教程",
+      "intent": "整理订单、条款、流量记录与沟通记录，形成可提交的材料。"
+    },
+    {
+      "slug": "trial-trial-to-paid-refund-window",
+      "title": "试用转付费后的冷静期是否适用",
+      "type": "核验",
+      "intent": "判断试用期是否计入退款窗口，以及转化订单的起算点。"
+    },
+    {
+      "slug": "trial-refund-denied-next-step",
+      "title": "退款被拒后的处理顺序",
+      "type": "故障",
+      "intent": "按复核条款、书面申诉、支付机构争议的顺序处理。"
+    }
+  ],
+  "renewal-risk": [
+    {
+      "slug": "trial-auto-renew-default",
+      "title": "自动续费是否默认开启及关闭路径",
+      "type": "核验",
+      "intent": "在付款前确认默认状态、关闭入口与确认凭证。"
+    },
+    {
+      "slug": "trial-renewal-price-change",
+      "title": "续费涨价的提前通知与核对",
+      "type": "核验",
+      "intent": "比较首单价、续费价与通知条款，估算涨价后的单位成本。"
+    },
+    {
+      "slug": "trial-plan-discontinuation",
+      "title": "套餐下架后的迁移与补偿",
+      "type": "解释",
+      "intent": "确认下架通知、替代套餐与剩余额度处理方式。"
+    },
+    {
+      "slug": "trial-payment-method-retry",
+      "title": "扣费失败后的重试与账号状态",
+      "type": "故障",
+      "intent": "了解重试节奏、宽限期与停服条件，避免突然断连。"
+    },
+    {
+      "slug": "trial-cancellation-confirmation",
+      "title": "取消自动续费后的确认证据",
+      "type": "教程",
+      "intent": "保存取消页面、邮件与时间，防止下一周期继续扣款。"
+    },
+    {
+      "slug": "trial-service-shutdown-signals",
+      "title": "服务终止前的公开信号",
+      "type": "清单",
+      "intent": "从公告频率、域名变化与支持响应识别停服前兆。"
+    },
+    {
+      "slug": "trial-subscription-expiry-data-retention",
+      "title": "到期后配置与数据保留多久",
+      "type": "核验",
+      "intent": "确认节点、账单与账号数据的保留期限，安排导出与删除。"
+    }
+  ],
+  "account": [
+    {
+      "slug": "trial-email-alias-strategy",
+      "title": "用邮箱别名隔离试用账号",
+      "type": "教程",
+      "intent": "建立独立别名、独立密码与独立收件规则，降低关联。"
+    },
+    {
+      "slug": "trial-phone-verification-boundary",
+      "title": "手机号验证的必要性与替代方案",
+      "type": "核验",
+      "intent": "判断哪些试用值得交出手机号，哪些可以放弃。"
+    },
+    {
+      "slug": "trial-real-name-requirement",
+      "title": "实名要求出现时如何判断是否继续",
+      "type": "解释",
+      "intent": "核对法律要求、信息范围与保存期限，决定继续或退出。"
+    },
+    {
+      "slug": "trial-password-manager-setup",
+      "title": "为试用账号建立独立凭据",
+      "type": "教程",
+      "intent": "用密码管理器生成、保存与回收试用账号凭据。"
+    },
+    {
+      "slug": "trial-account-linking-risk",
+      "title": "同一设备登录多个试用账号的关联风险",
+      "type": "核验",
+      "intent": "分析设备指纹、IP 与浏览器配置的关联路径。"
+    },
+    {
+      "slug": "trial-account-deletion",
+      "title": "试用结束后的账号删除与数据清理",
+      "type": "教程",
+      "intent": "按导出、解绑、删除、确认四步完成退出。"
+    },
+    {
+      "slug": "trial-shared-account-risk",
+      "title": "共享试用账号的封禁与隐私后果",
+      "type": "解释",
+      "intent": "解释多人共用同一账号的并发、日志与责任问题。"
+    }
+  ],
+  "payment-privacy": [
+    {
+      "slug": "trial-card-binding-authorization",
+      "title": "绑卡试用的授权范围与扣款权限",
+      "type": "核验",
+      "intent": "区分验证、预授权与自动扣款，估算可被扣走的金额。"
+    },
+    {
+      "slug": "trial-virtual-card-boundary",
+      "title": "虚拟卡与一次性卡在试用中的适用边界",
+      "type": "解释",
+      "intent": "说明可用场景、失败原因与不建议使用的情形。"
+    },
+    {
+      "slug": "trial-payment-method-minimization",
+      "title": "支付信息最小化清单",
+      "type": "清单",
+      "intent": "只提交必要字段，关闭无关授权与境外支付。"
+    },
+    {
+      "slug": "trial-billing-descriptor-check",
+      "title": "账单名称与商户主体的核对",
+      "type": "核验",
+      "intent": "用账单描述、商户编号与客服信息确认扣款方。"
+    },
+    {
+      "slug": "trial-currency-conversion-cost",
+      "title": "跨境支付的汇率与手续费",
+      "type": "成本",
+      "intent": "把汇率点差、货币转换费与固定手续费计入成本。"
+    },
+    {
+      "slug": "trial-payment-failure-data-exposure",
+      "title": "支付失败页面可能暴露的信息",
+      "type": "故障",
+      "intent": "识别失败页面的字段回显、错误码与重试风险。"
+    },
+    {
+      "slug": "trial-refund-to-original-method",
+      "title": "退款原路返回的时间与凭证",
+      "type": "核验",
+      "intent": "确认退款路径、到账时间与需要保留的凭证。"
+    }
+  ]
+}

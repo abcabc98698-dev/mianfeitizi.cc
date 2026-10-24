@@ -1,0 +1,772 @@
+{
+  "audit-log": [
+    {
+      "slug": "five-criteria-audit",
+      "title": "免费机场收录的五项标准如何逐条核验",
+      "type": "核验",
+      "intent": "把来源、额度、条款、复核时点与可引用性拆成可执行的检查项，并说明每项需要的证据。"
+    },
+    {
+      "slug": "audit-record-columns",
+      "title": "本期收录审核记录表的四列分别代表什么",
+      "type": "解释",
+      "intent": "解释核验日期、结果、未收录原因与待补证据的判定口径，避免把审核记录读成实测报告。"
+    },
+    {
+      "slug": "review-cycle-14-days",
+      "title": "免费资源复核周期为什么定为 14 天",
+      "type": "解释",
+      "intent": "用订阅有效期、活动周期与节点寿命解释复核频率的选择依据。"
+    },
+    {
+      "slug": "snapshot-evidence-fields",
+      "title": "官方页面快照要保存哪些字段才算证据",
+      "type": "教程",
+      "intent": "给出 URL、抓取时间、条款正文、额度数字与页面哈希的记录格式。"
+    },
+    {
+      "slug": "six-rejected-materials",
+      "title": "被拒绝收录的六类常见材料",
+      "type": "清单",
+      "intent": "按截图、转述、聚合页、邀请码、过期活动与付费解锁分类说明拒绝理由。"
+    },
+    {
+      "slug": "second-review-timing",
+      "title": "两个独立时点复核怎么安排",
+      "type": "教程",
+      "intent": "给出首次核验、间隔复核与下架判定的时间表模板。"
+    },
+    {
+      "slug": "operator-identity-check",
+      "title": "运营方主体信息如何核验到可追溯",
+      "type": "核验",
+      "intent": "从域名注册、页面署名、条款主体与客服渠道四个角度收集主体证据。"
+    },
+    {
+      "slug": "status-labels-meaning",
+      "title": "待复核、已下架与零结果三种状态的区别",
+      "type": "解释",
+      "intent": "说明收录状态机与页面展示规则，避免把待复核条目写成可用资源。"
+    }
+  ],
+  "zero-result": [
+    {
+      "slug": "zero-result-definition",
+      "title": "免费机场零结果究竟代表什么",
+      "type": "解释",
+      "intent": "区分本站未发布合格条目与全网不存在免费资源两种完全不同的陈述。"
+    },
+    {
+      "slug": "no-placeholder-copy",
+      "title": "为什么不用“即将上线”或“内部渠道”补位",
+      "type": "解释",
+      "intent": "说明占位文案对读者决策与站点可信度的具体损害。"
+    },
+    {
+      "slug": "expired-list-not-entry",
+      "title": "已失效的免费节点列表为什么不能算收录",
+      "type": "核验",
+      "intent": "用订阅令牌吊销、端口关闭与出口变更解释列表失效的机制。"
+    },
+    {
+      "slug": "invite-code-exclusion",
+      "title": "邀请码与限时活动为什么进不了收录表",
+      "type": "解释",
+      "intent": "说明名额、时效与不可复核性三个冲突点。"
+    },
+    {
+      "slug": "paid-unlock-disguise",
+      "title": "付费后才能解锁的“免费”方案如何识别",
+      "type": "核验",
+      "intent": "列出绑卡、首月价、押金与最低消费四类伪装。"
+    },
+    {
+      "slug": "empty-state-minimum",
+      "title": "零结果页面应该放哪些信息",
+      "type": "教程",
+      "intent": "给出核验日期、标准、复核计划与自查入口的最小信息集。"
+    },
+    {
+      "slug": "monthly-zero-diff",
+      "title": "每月复核后零结果页面要更新什么",
+      "type": "清单",
+      "intent": "列出日期、口径、拒绝理由与新增证据来源的变更清单。"
+    },
+    {
+      "slug": "reader-next-actions",
+      "title": "看到零结果后读者可以做什么",
+      "type": "解释",
+      "intent": "给出自行核验、改走低价方案与等待复核三条路径的适用条件。"
+    }
+  ],
+  "rules": [
+    {
+      "slug": "signup-bonus-conditions",
+      "title": "机场注册赠送通常附带哪些条件",
+      "type": "解释",
+      "intent": "拆解邮箱验证、手机号、邀请关系与首次登录四类前置条件。"
+    },
+    {
+      "slug": "email-isolation",
+      "title": "注册免费机场时邮箱如何隔离",
+      "type": "教程",
+      "intent": "说明别名、独立密码与不绑定主邮箱的操作边界。"
+    },
+    {
+      "slug": "invite-reward-types",
+      "title": "邀请返利与邀请解锁的规则差异",
+      "type": "对比",
+      "intent": "对比单向奖励、双向奖励与阶梯奖励对使用决策的影响。"
+    },
+    {
+      "slug": "region-eligibility",
+      "title": "限地区领取怎么判断自己是否符合",
+      "type": "核验",
+      "intent": "从 IP 归属、支付地区与账号注册地三个维度核对资格。"
+    },
+    {
+      "slug": "device-binding-mechanics",
+      "title": "设备绑定与首次登录锁定的机制",
+      "type": "解释",
+      "intent": "解释设备指纹、并发 IP 与换机冷却期的常见设计。"
+    },
+    {
+      "slug": "terms-seven-clauses",
+      "title": "免费套餐条款里必须读的七条",
+      "type": "清单",
+      "intent": "按额度、期限、限速、退款、转售、日志与终止权排列。"
+    },
+    {
+      "slug": "eligibility-checklist",
+      "title": "领取前资格自查清单",
+      "type": "清单",
+      "intent": "用十二项是非题判断是否值得提交账号信息。"
+    },
+    {
+      "slug": "quota-revoke-triggers",
+      "title": "免费额度被回收的触发条件",
+      "type": "核验",
+      "intent": "说明多 IP 登录、共享订阅、异常流量与滥用投诉的判定路径。"
+    }
+  ],
+  "channels": [
+    {
+      "slug": "channel-trust-tiers",
+      "title": "免费机场信息渠道的四个可信层级",
+      "type": "解释",
+      "intent": "按官方公告、运营者直发、社区分享与聚合转发分层。"
+    },
+    {
+      "slug": "aggregator-risks",
+      "title": "聚合站转发的订阅链接有哪些风险",
+      "type": "核验",
+      "intent": "说明二次编码、令牌替换与失效延迟三个问题。"
+    },
+    {
+      "slug": "community-share-lifetime",
+      "title": "社群分享的免费节点为什么寿命短",
+      "type": "解释",
+      "intent": "从公开暴露、爬虫抓取与滥用速度解释。"
+    },
+    {
+      "slug": "github-list-maintenance",
+      "title": "GitHub 免费节点仓库怎么判断维护状态",
+      "type": "核验",
+      "intent": "看提交频率、Issue 响应、Release 与抓取脚本更新时间。"
+    },
+    {
+      "slug": "official-announcement-find",
+      "title": "怎么找到运营方的官方公告页",
+      "type": "教程",
+      "intent": "从域名、证书、页脚与客服入口交叉确认。"
+    },
+    {
+      "slug": "repost-chain-distortion",
+      "title": "一条免费信息的转发链如何失真",
+      "type": "解释",
+      "intent": "用原始发布日期、额度改动与截图裁剪说明失真路径。"
+    },
+    {
+      "slug": "search-result-traps",
+      "title": "搜索结果里的免费机场陷阱特征",
+      "type": "清单",
+      "intent": "列出落地页、跳转链、下载包与话术四类信号。"
+    }
+  ],
+  "quota": [
+    {
+      "slug": "daily-quota-math",
+      "title": "免费机场的日包额度怎么算",
+      "type": "成本",
+      "intent": "按 GB/日、重置时区与峰值限速拆解可用量。"
+    },
+    {
+      "slug": "monthly-quota-ratio",
+      "title": "月包免费额度的实际可用比例",
+      "type": "成本",
+      "intent": "用倍率与损耗率估算真实可用流量。"
+    },
+    {
+      "slug": "gb-vs-gib-billing",
+      "title": "机场流量按 GB 还是 GiB 结算",
+      "type": "解释",
+      "intent": "说明十进制与二进制单位差异对额度的影响。"
+    },
+    {
+      "slug": "multiplier-billing",
+      "title": "倍率结算如何改变免费额度",
+      "type": "成本",
+      "intent": "给出计费流量公式与常见倍率档位的测算。"
+    },
+    {
+      "slug": "expiry-start-point",
+      "title": "免费额度从哪一刻开始计时",
+      "type": "解释",
+      "intent": "对比注册即计时、首次连接计时与自然日重置。"
+    },
+    {
+      "slug": "one-time-pack-expiry",
+      "title": "一次性免费流量包的有效期陷阱",
+      "type": "成本",
+      "intent": "说明固定期限、用尽即止与过期清零三种规则。"
+    },
+    {
+      "slug": "usage-estimate-2h",
+      "title": "每天两小时网页与视频要多少流量",
+      "type": "教程",
+      "intent": "给出分场景的用量估算表与误差范围。"
+    },
+    {
+      "slug": "quota-exhausted-signals",
+      "title": "额度用尽时的典型表现",
+      "type": "故障",
+      "intent": "区分限速、断流、仅剩直连与订阅空白的差异。"
+    }
+  ],
+  "devices": [
+    {
+      "slug": "concurrent-counting",
+      "title": "同时在线设备数怎么统计",
+      "type": "解释",
+      "intent": "说明按连接、按 IP 与按设备指纹三种口径。"
+    },
+    {
+      "slug": "ip-binding-risk",
+      "title": "IP 绑定与异地登录的风控逻辑",
+      "type": "核验",
+      "intent": "解释家庭宽带换 IP、移动网络与双栈环境的影响。"
+    },
+    {
+      "slug": "router-share-count",
+      "title": "路由器共享算一台还是多台",
+      "type": "成本",
+      "intent": "按 NAT 后连接数与出口 IP 判断实际并发。"
+    },
+    {
+      "slug": "family-account-risk",
+      "title": "家庭共享免费账号的连带风险",
+      "type": "解释",
+      "intent": "说明同账号多地区登录与滥用投诉的关联。"
+    },
+    {
+      "slug": "multi-device-cost",
+      "title": "多设备场景下免费与低价方案的成本对比",
+      "type": "成本",
+      "intent": "用设备数乘单价与失效时间建立公式。"
+    },
+    {
+      "slug": "client-fingerprint",
+      "title": "客户端指纹能否识别设备",
+      "type": "核验",
+      "intent": "从 UA、TLS 指纹与订阅拉取行为判断识别能力。"
+    },
+    {
+      "slug": "device-limit-check",
+      "title": "领取前如何确认设备数够用",
+      "type": "教程",
+      "intent": "给出设备清单、并发峰值与备用方案三步核对法。"
+    }
+  ],
+  "monitoring": [
+    {
+      "slug": "subscription-update-layers",
+      "title": "订阅更新失败怎么分层排查",
+      "type": "教程",
+      "intent": "按 URL、HTTP 状态、解析与内核日志四层定位。"
+    },
+    {
+      "slug": "handshake-vs-auth",
+      "title": "握手失败与认证失败怎么区分",
+      "type": "故障",
+      "intent": "用日志字段与错误码区分 TLS、协议与凭证问题。"
+    },
+    {
+      "slug": "exit-ip-change",
+      "title": "出口 IP 变化意味着什么",
+      "type": "核验",
+      "intent": "说明中转切换、IP 被封与落地更换三种原因。"
+    },
+    {
+      "slug": "latency-baseline",
+      "title": "给免费节点建立延迟基线",
+      "type": "教程",
+      "intent": "用同一目标、同一时段、多次采样记录 P50 与 P95。"
+    },
+    {
+      "slug": "uptime-log-design",
+      "title": "免费节点可用率记录表怎么设计",
+      "type": "清单",
+      "intent": "列出时间戳、探测方式、结果与失败原因的字段。"
+    },
+    {
+      "slug": "tcp-vs-end-to-end",
+      "title": "TCP 探测与端到端探测的差别",
+      "type": "核验",
+      "intent": "解释端口开放不等于代理可用。"
+    },
+    {
+      "slug": "dns-pollution-detect",
+      "title": "如何判断 DNS 污染而不是节点失效",
+      "type": "故障",
+      "intent": "对比解析结果、DoH 与直连 IP 的差异。"
+    },
+    {
+      "slug": "token-expiry-vs-404",
+      "title": "订阅令牌过期与链接失效的区别",
+      "type": "故障",
+      "intent": "从 401、403、404 状态码与返回内容判断原因。"
+    }
+  ],
+  "failure-patterns": [
+    {
+      "slug": "entry-ip-blocked",
+      "title": "入口 IP 被封的典型症状",
+      "type": "故障",
+      "intent": "说明端口不可达、握手超时与备用入口切换。"
+    },
+    {
+      "slug": "sni-blocking",
+      "title": "SNI 阻断与 TLS 握手异常的识别",
+      "type": "故障",
+      "intent": "对比握手阶段、证书返回与连接重置。"
+    },
+    {
+      "slug": "active-probing-shutdown",
+      "title": "主动探测如何让免费节点下线",
+      "type": "解释",
+      "intent": "解释探测原理与运营方的应对成本。"
+    },
+    {
+      "slug": "certificate-expired",
+      "title": "证书过期为什么会导致全面失效",
+      "type": "故障",
+      "intent": "从证书链、SNI 与客户端校验说明。"
+    },
+    {
+      "slug": "oversell-peak",
+      "title": "高峰期限速与超售的关系",
+      "type": "解释",
+      "intent": "用并发带宽与出口容量解释晚高峰掉速。"
+    },
+    {
+      "slug": "abuse-shutdown",
+      "title": "滥用导致的批量封禁路径",
+      "type": "解释",
+      "intent": "说明投诉、扫描、垃圾邮件与版权举报的连锁反应。"
+    },
+    {
+      "slug": "core-version-mismatch",
+      "title": "内核版本不匹配导致的连接失败",
+      "type": "故障",
+      "intent": "列出协议字段、传输层与配置语法的版本差异。"
+    },
+    {
+      "slug": "clock-skew",
+      "title": "系统时间偏差引发的认证失败",
+      "type": "故障",
+      "intent": "解释时间戳校验与 NTP 校准的边界。"
+    }
+  ],
+  "subscription": [
+    {
+      "slug": "four-subscription-formats",
+      "title": "免费机场订阅的四种常见格式",
+      "type": "对比",
+      "intent": "对比 Base64 链接列表、Clash YAML、sing-box JSON 与纯文本。"
+    },
+    {
+      "slug": "base64-not-encryption",
+      "title": "订阅内容为什么要先 Base64 解码",
+      "type": "教程",
+      "intent": "说明编码与加密的区别并给出解码后的字段结构。"
+    },
+    {
+      "slug": "clash-yaml-fields",
+      "title": "Clash 订阅里的 proxies 与 rules 怎么读",
+      "type": "解释",
+      "intent": "逐字段解释 name、type、server、port、cipher 与 udp。"
+    },
+    {
+      "slug": "sing-box-outbounds",
+      "title": "sing-box 配置的 outbounds 与 route 结构",
+      "type": "解释",
+      "intent": "说明出站、路由与 DNS 三块的依赖关系。"
+    },
+    {
+      "slug": "token-leak-impact",
+      "title": "订阅链接里的令牌泄露后果",
+      "type": "核验",
+      "intent": "说明流量盗用、额度耗尽与账号被顶下线。"
+    },
+    {
+      "slug": "ua-format-switch",
+      "title": "用 User-Agent 获取对应格式的订阅",
+      "type": "教程",
+      "intent": "解释服务端按 UA 返回 YAML 或 JSON 的机制。"
+    },
+    {
+      "slug": "share-link-fields",
+      "title": "ss 与 vless 分享链接的字段含义",
+      "type": "解释",
+      "intent": "逐个解释加密方式、传输参数与 SNI 字段。"
+    },
+    {
+      "slug": "subscription-backup",
+      "title": "订阅链接与配置的备份清单",
+      "type": "清单",
+      "intent": "列出导出、离线保存、去令牌化与恢复验证四步。"
+    }
+  ],
+  "clients": [
+    {
+      "slug": "client-compatibility-matrix",
+      "title": "免费订阅在主流开源客户端的兼容差异",
+      "type": "对比",
+      "intent": "按协议、TUN、规则集与订阅格式比较 Mihomo、Xray 与 sing-box 系。"
+    },
+    {
+      "slug": "mihomo-import",
+      "title": "Mihomo 系客户端导入免费订阅的步骤",
+      "type": "教程",
+      "intent": "从链接导入、更新间隔到规则验证。"
+    },
+    {
+      "slug": "v2rayng-import",
+      "title": "v2rayNG 导入订阅与分应用代理",
+      "type": "教程",
+      "intent": "说明订阅设置、路由模式与 DNS 选项。"
+    },
+    {
+      "slug": "sing-box-json-import",
+      "title": "sing-box 客户端导入 JSON 配置",
+      "type": "教程",
+      "intent": "解释配置文件位置、校验与启动失败日志。"
+    },
+    {
+      "slug": "tun-permission",
+      "title": "TUN 模式需要什么权限",
+      "type": "解释",
+      "intent": "说明虚拟网卡、管理员权限与系统代理的差别。"
+    },
+    {
+      "slug": "ios-store-limit",
+      "title": "iOS 上免费客户端的商店限制",
+      "type": "解释",
+      "intent": "说明地区商店、TestFlight 与签名过期的影响。"
+    },
+    {
+      "slug": "version-pairing",
+      "title": "客户端与内核版本如何配对",
+      "type": "核验",
+      "intent": "给出 GUI 与内核版本对应关系的核对方法。"
+    }
+  ],
+  "privacy": [
+    {
+      "slug": "what-logs-remain",
+      "title": "免费机场可能记录哪些日志",
+      "type": "解释",
+      "intent": "按连接时间、源 IP、SNI、DNS 与流量统计分类。"
+    },
+    {
+      "slug": "traffic-analysis-limits",
+      "title": "流量分析能推断出什么",
+      "type": "解释",
+      "intent": "说明包长、时序与 SNI 的推断边界。"
+    },
+    {
+      "slug": "account-linkage",
+      "title": "账号绑定带来的关联风险",
+      "type": "核验",
+      "intent": "从邮箱、手机号、支付方式与设备指纹看关联。"
+    },
+    {
+      "slug": "subscription-leak-privacy",
+      "title": "订阅链接泄露后的隐私后果",
+      "type": "核验",
+      "intent": "说明他人使用你的额度与出口 IP 的连带影响。"
+    },
+    {
+      "slug": "malicious-client-capability",
+      "title": "恶意客户端能做什么",
+      "type": "核验",
+      "intent": "从证书安装、流量劫持与剪贴板权限说明。"
+    },
+    {
+      "slug": "dns-path",
+      "title": "免费方案的 DNS 请求经过谁",
+      "type": "解释",
+      "intent": "对比本地 DNS、代理解析与 DoH 三种路径。"
+    },
+    {
+      "slug": "anonymity-myth",
+      "title": "免费代理为什么不等于匿名",
+      "type": "解释",
+      "intent": "用账号层、流量层与行为层说明可关联性。"
+    },
+    {
+      "slug": "https-visible-metadata",
+      "title": "HTTPS 之下代理还能看到什么",
+      "type": "解释",
+      "intent": "说明 SNI、IP、包长与时序的可见性。"
+    }
+  ],
+  "payment": [
+    {
+      "slug": "card-required-criteria",
+      "title": "免费试用要求绑卡时的判断标准",
+      "type": "核验",
+      "intent": "列出预授权、自动续费与最低消费三类条款。"
+    },
+    {
+      "slug": "auto-charge-path",
+      "title": "免费额度到期后的自动扣费路径",
+      "type": "成本",
+      "intent": "说明续费日、扣费顺序与取消窗口。"
+    },
+    {
+      "slug": "refund-window-math",
+      "title": "免费转付费后的退款窗口怎么算",
+      "type": "核验",
+      "intent": "按自然日、已用流量与激活状态拆解条件。"
+    },
+    {
+      "slug": "crypto-refund-boundary",
+      "title": "只收加密货币的服务的退款边界",
+      "type": "解释",
+      "intent": "说明不可逆支付与客服协商的现实约束。"
+    },
+    {
+      "slug": "price-change-handling",
+      "title": "续费涨价与套餐下架的处理",
+      "type": "解释",
+      "intent": "给出价格变动通知、按比例折算与退出步骤。"
+    },
+    {
+      "slug": "payment-minimization",
+      "title": "支付信息最小化清单",
+      "type": "清单",
+      "intent": "列出虚拟卡、账单地址、币种与授权范围四项。"
+    },
+    {
+      "slug": "chargeback-conditions",
+      "title": "拒付与争议处理的适用条件",
+      "type": "解释",
+      "intent": "说明证据、时限与对账号的影响。"
+    }
+  ],
+  "low-cost": [
+    {
+      "slug": "free-vs-10-cost",
+      "title": "免费方案与 10 元档的单位成本对比",
+      "type": "成本",
+      "intent": "用现金、时间与风险三项折算每 GB 成本。"
+    },
+    {
+      "slug": "small-data-plans",
+      "title": "小流量套餐如何覆盖轻度使用",
+      "type": "成本",
+      "intent": "按 5 GB、20 GB、50 GB 三档测算适用场景。"
+    },
+    {
+      "slug": "monthly-vs-datapack",
+      "title": "月付与不限时流量包哪个更适合备用",
+      "type": "对比",
+      "intent": "用使用频率与有效期建立判断条件。"
+    },
+    {
+      "slug": "unit-cost-formula",
+      "title": "每 GB 成本的统一计算公式",
+      "type": "成本",
+      "intent": "给出含倍率、损耗与设备数的完整式子。"
+    },
+    {
+      "slug": "budget-paths",
+      "title": "低预算档位的四个可选方向",
+      "type": "清单",
+      "intent": "按小流量月付、流量包、短期套餐与自建列举条件。"
+    },
+    {
+      "slug": "self-host-floor",
+      "title": "自建节点的成本下限怎么算",
+      "type": "成本",
+      "intent": "用 VPS 价格、流量与维护时间建立测算。"
+    },
+    {
+      "slug": "commercial-vpn-diff",
+      "title": "商业 VPN 与机场的免费路径差异",
+      "type": "对比",
+      "intent": "从试用、退款与设备数比较。"
+    },
+    {
+      "slug": "alternative-matrix",
+      "title": "四条替代路径的适用条件矩阵",
+      "type": "对比",
+      "intent": "按预算、技术能力、设备数与稳定性要求打分。"
+    }
+  ],
+  "short-term": [
+    {
+      "slug": "travel-seven-days",
+      "title": "出国七天用什么方案最省事",
+      "type": "教程",
+      "intent": "按行程、设备与流量给出短期配置清单。"
+    },
+    {
+      "slug": "emergency-ten-minutes",
+      "title": "应急访问的十分钟处置流程",
+      "type": "教程",
+      "intent": "从备用订阅、手机热点到临时流量包排序。"
+    },
+    {
+      "slug": "one-time-pack-fit",
+      "title": "一次性流量包适合哪类短期需求",
+      "type": "成本",
+      "intent": "用有效期与用量分布判断。"
+    },
+    {
+      "slug": "weekly-plan-cost",
+      "title": "周付套餐的单位成本",
+      "type": "成本",
+      "intent": "对比周付与月付折算后的每日成本。"
+    },
+    {
+      "slug": "project-based-use",
+      "title": "项目制使用如何控制成本",
+      "type": "解释",
+      "intent": "按项目周期购买并在结束后清理配置。"
+    },
+    {
+      "slug": "trial-as-short-term",
+      "title": "把试用当短期方案的条件",
+      "type": "解释",
+      "intent": "说明额度、期限与重复注册的限制。"
+    },
+    {
+      "slug": "exit-cleanup",
+      "title": "短期方案结束后的清理清单",
+      "type": "清单",
+      "intent": "列出退订、删配置、撤授权与改密码四步。"
+    }
+  ],
+  "criteria": [
+    {
+      "slug": "five-dimensions",
+      "title": "免费机场评估的五个维度",
+      "type": "解释",
+      "intent": "可用性、透明度、条款、隐私与退出成本。"
+    },
+    {
+      "slug": "transparency-signals",
+      "title": "运营透明度看哪些公开信息",
+      "type": "核验",
+      "intent": "从主体、公告频率、状态页与客服响应判断。"
+    },
+    {
+      "slug": "availability-metrics",
+      "title": "可用性用什么指标衡量",
+      "type": "核验",
+      "intent": "用探测成功率、连续可用时长与恢复时间定义。"
+    },
+    {
+      "slug": "terms-scorecard",
+      "title": "条款可接受度的评分表",
+      "type": "清单",
+      "intent": "按日志、转售、终止权与退款四项打分。"
+    },
+    {
+      "slug": "privacy-scorecard",
+      "title": "隐私风险的评分方法",
+      "type": "清单",
+      "intent": "用收集字段、保留期限与共享对象建立矩阵。"
+    },
+    {
+      "slug": "exit-cost",
+      "title": "退出成本怎么计入评估",
+      "type": "成本",
+      "intent": "说明配置迁移、退款与数据清理的时间折算。"
+    },
+    {
+      "slug": "twelve-red-flags",
+      "title": "免费机场的十二个风险信号",
+      "type": "清单",
+      "intent": "按页面、支付、客户端与社群四类列出。"
+    },
+    {
+      "slug": "evaluation-template",
+      "title": "做一张可复核的评估表",
+      "type": "教程",
+      "intent": "给出字段、权重与复核周期的模板。"
+    }
+  ],
+  "conversion": [
+    {
+      "slug": "when-to-stop-free",
+      "title": "什么信号出现时应该停止用免费方案",
+      "type": "解释",
+      "intent": "用失效频率、时间成本与数据风险三条线判断。"
+    },
+    {
+      "slug": "break-even-math",
+      "title": "免费转付费的盈亏平衡点怎么算",
+      "type": "成本",
+      "intent": "建立现金节省与时间损失的等式。"
+    },
+    {
+      "slug": "lock-in-risk",
+      "title": "转付费后的锁定风险",
+      "type": "解释",
+      "intent": "说明年付、专用客户端与配置迁移的约束。"
+    },
+    {
+      "slug": "upgrade-path",
+      "title": "从免费到低价的迁移步骤",
+      "type": "教程",
+      "intent": "按备份、试用、并行运行与切换四步执行。"
+    },
+    {
+      "slug": "downgrade-path",
+      "title": "从付费退回免费或低价的可行性",
+      "type": "解释",
+      "intent": "说明数据、配置与账号状态的处理。"
+    },
+    {
+      "slug": "pre-payment-checklist",
+      "title": "付款前的九项确认",
+      "type": "清单",
+      "intent": "列出价格、期限、退款、设备数与条款变更条款。"
+    },
+    {
+      "slug": "waiting-cost",
+      "title": "继续等待免费资源的隐性成本",
+      "type": "成本",
+      "intent": "用时间、机会与风险三项折算。"
+    },
+    {
+      "slug": "decision-record",
+      "title": "把转付费决策写成可复核记录",
+      "type": "教程",
+      "intent": "给出决策日期、依据、预算与复盘时点模板。"
+    }
+  ]
+}

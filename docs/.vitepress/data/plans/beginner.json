@@ -1,0 +1,706 @@
+{
+  "terms": [
+    {
+      "slug": "four-roles-client-kernel-node-airport",
+      "title": "客户端、内核、节点与机场：四个角色各自负责哪一段",
+      "type": "解释",
+      "intent": "用对照表分清四个常被混用的词，知道出问题时该看哪一层。"
+    },
+    {
+      "slug": "subscription-link-contains-what",
+      "title": "订阅链接里装的是什么，为什么它不等于一个节点",
+      "type": "解释",
+      "intent": "说明订阅返回的是节点清单与配置片段，换链接等于换整份清单。"
+    },
+    {
+      "slug": "proxy-vpn-airport-difference",
+      "title": "代理、VPN 与机场三个词的区别，以及日常说法为何混乱",
+      "type": "解释",
+      "intent": "按工作层次与服务形态区分三个词，避免被宣传语带偏。"
+    },
+    {
+      "slug": "config-file-vs-profile",
+      "title": "配置文件与订阅配置：换客户端时哪些内容能带走",
+      "type": "解释",
+      "intent": "讲清本地规则、DNS 设置与订阅内容的所有权，迁移时不丢关键项。"
+    },
+    {
+      "slug": "protocol-and-transport-relation",
+      "title": "协议与传输方式的关系：同一节点为何能换不同组合",
+      "type": "解释",
+      "intent": "说明代理协议与底层传输是两个可独立选择的部分，排障时要分开看。"
+    },
+    {
+      "slug": "inbound-outbound-rule-terms",
+      "title": "入站、出站与规则：客户端里最容易被跳过的三个词",
+      "type": "解释",
+      "intent": "用数据方向解释三个术语，读懂配置文件和日志里的对应字段。"
+    },
+    {
+      "slug": "node-line-exit-ip",
+      "title": "节点、线路与出口 IP 不是同一件事，判断位置要看哪一层",
+      "type": "解释",
+      "intent": "区分入口、路径与落地三个位置概念，避免把延迟全部归因于节点。"
+    }
+  ],
+  "how-it-works": [
+    {
+      "slug": "request-path-five-stages",
+      "title": "一次网页请求经过的五个环节，从应用到目标站点",
+      "type": "解释",
+      "intent": "按顺序拆解请求路径，为后面的分层排查建立坐标。"
+    },
+    {
+      "slug": "system-proxy-vs-tun-path",
+      "title": "系统代理与 TUN 模式下，流量路径差在哪一步",
+      "type": "对比",
+      "intent": "对比两种接管方式的入口位置，解释应用覆盖差异的来源。"
+    },
+    {
+      "slug": "local-proxy-port-role",
+      "title": "本地代理端口是什么，为什么客户端要先在本机开一个入口",
+      "type": "解释",
+      "intent": "说明本机回环监听的作用，以及端口被占用时的典型表现。"
+    },
+    {
+      "slug": "dns-resolution-three-paths",
+      "title": "开代理后 DNS 由谁解析：三种路径与三种结果",
+      "type": "解释",
+      "intent": "比较本地解析、远端解析与加密解析，解释同一域名得到不同地址的原因。"
+    },
+    {
+      "slug": "tcp-handshake-vs-proxy-handshake",
+      "title": "TCP 握手与代理握手是两件事，失败时怎么区分",
+      "type": "解释",
+      "intent": "用时序说明两层握手，给出区分连接失败阶段的观察点。"
+    },
+    {
+      "slug": "encryption-boundary",
+      "title": "加密从哪一跳开始：本地代理到出口之间谁看得见什么",
+      "type": "解释",
+      "intent": "画清明文与密文的分界，说明本地网络、运营商与出口各自可见的范围。"
+    },
+    {
+      "slug": "traffic-accounting-layers",
+      "title": "流量在哪一层被计数，为什么客户端与账单对不上",
+      "type": "核验",
+      "intent": "说明计费点、倍率与双向统计的差异，给出核对用量的顺序。"
+    }
+  ],
+  "setup-client": [
+    {
+      "slug": "choose-client-by-platform",
+      "title": "按平台选客户端：五类设备各自能装什么",
+      "type": "教程",
+      "intent": "给出按操作系统筛选客户端的顺序，先排除不支持所需协议的选项。"
+    },
+    {
+      "slug": "gui-core-version-mismatch",
+      "title": "图形客户端与内核版本不匹配时会出现什么",
+      "type": "故障",
+      "intent": "列出常见的启动失败与配置不生效现象，给出核对版本的方法。"
+    },
+    {
+      "slug": "official-release-vs-mirror",
+      "title": "官方发布页、镜像站与网盘安装包的差别",
+      "type": "核验",
+      "intent": "给出下载前的三项核对，降低拿到被篡改安装包的概率。"
+    },
+    {
+      "slug": "portable-vs-installer",
+      "title": "便携版与安装版怎么选，卸载后残留会留在哪里",
+      "type": "对比",
+      "intent": "比较两种分发形式的权限、升级与清理成本，便于回退。"
+    },
+    {
+      "slug": "first-run-checklist",
+      "title": "客户端第一次启动的检查清单",
+      "type": "清单",
+      "intent": "用八项检查把首启状态固定下来，之后出问题才有对照基线。"
+    },
+    {
+      "slug": "migrate-client-config",
+      "title": "换客户端时如何迁移订阅与规则",
+      "type": "教程",
+      "intent": "说明哪些配置可以直接复制，哪些需要按新客户端格式重写。"
+    },
+    {
+      "slug": "client-permission-requests",
+      "title": "客户端索要管理员权限与 VPN 权限时，哪些属于正常工作需要",
+      "type": "解释",
+      "intent": "把权限请求对应到具体功能，帮助判断该给还是该拒。"
+    }
+  ],
+  "subscription": [
+    {
+      "slug": "import-subscription-methods",
+      "title": "订阅导入的三种方式：链接、二维码与本地文件",
+      "type": "教程",
+      "intent": "比较三种导入方式的适用场景与失败点，给出优先顺序。"
+    },
+    {
+      "slug": "subscription-formats",
+      "title": "Base64、Clash YAML 与 sing-box JSON 三种订阅格式怎么认",
+      "type": "解释",
+      "intent": "从返回内容判断格式，避免把不兼容的订阅硬塞进客户端。"
+    },
+    {
+      "slug": "subscription-update-behavior",
+      "title": "订阅更新做了什么，为什么节点数量会变",
+      "type": "解释",
+      "intent": "解释更新覆盖本地清单的机制，说明节点增减与规则被覆盖的原因。"
+    },
+    {
+      "slug": "user-agent-changes-response",
+      "title": "客户端 UA 为什么会改变订阅返回的内容",
+      "type": "解释",
+      "intent": "说明服务端按 UA 下发不同格式的做法，以及换客户端后订阅失效的原因。"
+    },
+    {
+      "slug": "rule-global-direct-modes",
+      "title": "规则、全局与直连三种模式的区别与使用场景",
+      "type": "对比",
+      "intent": "用流量分配方式解释三种模式，指出规则模式必须配置 DNS 的原因。"
+    },
+    {
+      "slug": "write-basic-routing-rule",
+      "title": "自己写一条分流规则：域名、IP 段与关键词的优先级",
+      "type": "教程",
+      "intent": "用最小例子说明规则匹配顺序，避免写出永远不生效的规则。"
+    },
+    {
+      "slug": "config-dns-section",
+      "title": "配置文件里的 DNS 段落该看哪几行，改错会怎样",
+      "type": "故障",
+      "intent": "指出 DNS 段落中影响最大的字段，说明改错后的典型症状。"
+    }
+  ],
+  "trust": [
+    {
+      "slug": "read-terms-three-sections",
+      "title": "注册前读服务条款，先看日志、退款与可接受使用三节",
+      "type": "核验",
+      "intent": "把长条款压缩成三个必读位置，快速判断服务边界。"
+    },
+    {
+      "slug": "who-operates-service",
+      "title": "判断服务由谁运营：主体、域名与联系方式能说明什么",
+      "type": "核验",
+      "intent": "给出可公开查证的运营线索，同时说明这些线索的局限。"
+    },
+    {
+      "slug": "privacy-policy-vague-words",
+      "title": "隐私政策里的五类模糊表述，遇到就该放慢",
+      "type": "清单",
+      "intent": "列出无法验证的承诺写法，帮助降低预期而不是被话术说服。"
+    },
+    {
+      "slug": "free-service-cost-shift",
+      "title": "免费服务的钱从哪来：四种成本转移方式",
+      "type": "解释",
+      "intent": "解释免费供给的可持续来源，说明额度与限制为何总在变。"
+    },
+    {
+      "slug": "read-community-feedback",
+      "title": "社区反馈怎么读：样本偏差、时间衰减与水军特征",
+      "type": "核验",
+      "intent": "教读者给反馈分层，避免用一条好评或一条差评做决定。"
+    },
+    {
+      "slug": "domain-certificate-history",
+      "title": "域名与证书历史能查出什么，查不到什么",
+      "type": "核验",
+      "intent": "说明公开记录能提供的证据强度，防止把查询结果当成安全保证。"
+    },
+    {
+      "slug": "signals-to-stop-using",
+      "title": "出现哪些信号应该立刻停用并改密码",
+      "type": "清单",
+      "intent": "给出可观察的停用条件，缩短从怀疑到处置的时间。"
+    }
+  ],
+  "permissions": [
+    {
+      "slug": "mobile-vpn-permission",
+      "title": "手机上的 VPN 权限授予了什么，能看见哪些流量",
+      "type": "解释",
+      "intent": "解释系统级 VPN 接口的能力边界，说明授权后的实际影响。"
+    },
+    {
+      "slug": "desktop-admin-and-tun",
+      "title": "桌面端装 TUN 为什么要管理员权限，拒绝后还能怎么用",
+      "type": "解释",
+      "intent": "说明虚拟网卡与路由表修改需要的权限，给出不提权的替代方案。"
+    },
+    {
+      "slug": "root-certificate-risk",
+      "title": "让你安装根证书的客户端，风险在哪里",
+      "type": "核验",
+      "intent": "解释根证书的信任范围，给出拒绝安装时的替代做法。"
+    },
+    {
+      "slug": "system-proxy-coverage",
+      "title": "系统代理能覆盖哪些应用，哪些程序会绕过它",
+      "type": "解释",
+      "intent": "按应用的代理支持情况分类，解释只有浏览器能上网的常见现象。"
+    },
+    {
+      "slug": "per-app-proxy-setup",
+      "title": "分应用代理怎么设，避免把银行与内网应用一起代理",
+      "type": "教程",
+      "intent": "给出分应用名单的制定方法，减少不必要的流量暴露。"
+    },
+    {
+      "slug": "account-isolation-basics",
+      "title": "账号隔离：邮箱别名、独立密码与不共用手机号",
+      "type": "清单",
+      "intent": "用最小成本把试用账号与主账号分开，降低连带风险。"
+    },
+    {
+      "slug": "revoke-after-trial",
+      "title": "试用结束后如何收回权限、删除配置与清理证书",
+      "type": "教程",
+      "intent": "给出退出清单，确保卸载后不留下后台服务与信任项。"
+    }
+  ],
+  "client-troubleshoot": [
+    {
+      "slug": "connected-but-no-internet",
+      "title": "客户端显示已连接但网页打不开，先查这五处",
+      "type": "故障",
+      "intent": "按可能性排序给出五个观察点，避免一上来就换节点。"
+    },
+    {
+      "slug": "read-client-logs",
+      "title": "客户端日志怎么看：时间戳、级别与关键字",
+      "type": "教程",
+      "intent": "教读者从日志里定位第一个错误，而不是被后续报错带偏。"
+    },
+    {
+      "slug": "tun-no-traffic",
+      "title": "TUN 模式开启后完全没网，路由与 DNS 怎么查",
+      "type": "故障",
+      "intent": "给出虚拟网卡、默认路由与 DNS 三处检查顺序。"
+    },
+    {
+      "slug": "subscription-import-errors",
+      "title": "订阅导入失败的五种报错与对应原因",
+      "type": "故障",
+      "intent": "把报错文本映射到具体原因，减少反复重试。"
+    },
+    {
+      "slug": "client-crash-on-start",
+      "title": "客户端启动即崩溃：依赖、权限与配置损坏的排查顺序",
+      "type": "故障",
+      "intent": "按依赖、权限、配置三步缩小范围，保留可回退状态。"
+    },
+    {
+      "slug": "browser-only-proxy",
+      "title": "只有浏览器能上网，其他应用不走代理怎么办",
+      "type": "故障",
+      "intent": "解释应用绕过系统代理的原因，给出两种接管方案。"
+    },
+    {
+      "slug": "rollback-bad-update",
+      "title": "更新后不能用，如何回滚到上一个可用版本",
+      "type": "教程",
+      "intent": "说明备份配置、替换内核与恢复旧版的顺序。"
+    }
+  ],
+  "network-troubleshoot": [
+    {
+      "slug": "dns-pollution-signs",
+      "title": "DNS 污染的表现与验证方法，别把它当成节点失效",
+      "type": "故障",
+      "intent": "用解析结果对比区分污染与节点故障，避免误换节点。"
+    },
+    {
+      "slug": "mtu-mismatch-symptoms",
+      "title": "MTU 不匹配的症状：网页能开但文件传不完",
+      "type": "故障",
+      "intent": "用包大小与失败位置判断 MTU 问题，给出逐步下调的验证法。"
+    },
+    {
+      "slug": "udp-blocked-symptoms",
+      "title": "UDP 被阻断时哪些功能先坏，怎么确认",
+      "type": "故障",
+      "intent": "列出依赖 UDP 的功能，给出不改协议的确认步骤。"
+    },
+    {
+      "slug": "certificate-error-sources",
+      "title": "证书错误的四种来源，逐一定位而不是关掉校验",
+      "type": "故障",
+      "intent": "区分时间、证书链、域名与中间人四类原因，强调不要关闭校验。"
+    },
+    {
+      "slug": "clock-skew-tls",
+      "title": "系统时间偏差为什么会让 TLS 握手失败",
+      "type": "解释",
+      "intent": "解释证书有效期校验与时间同步的关系，给出核对顺序。"
+    },
+    {
+      "slug": "peak-hour-slowdown",
+      "title": "晚高峰变慢：运营商、跨境链路与出口三段怎么分离",
+      "type": "核验",
+      "intent": "用不同时段的对照测试定位瓶颈所在段。"
+    },
+    {
+      "slug": "ipv6-leak-dual-stack",
+      "title": "双栈环境下的 IPv6 泄漏，怎么查与怎么关",
+      "type": "故障",
+      "intent": "说明 IPv6 绕过代理的机制，给出检查与关闭的取舍。"
+    }
+  ],
+  "cost": [
+    {
+      "slug": "unit-traffic-cost",
+      "title": "单位流量成本怎么算：价格、计费流量与倍率",
+      "type": "成本",
+      "intent": "给出可复算公式，把标价换成每 GB 成本。"
+    },
+    {
+      "slug": "monthly-annual-breakeven",
+      "title": "月付与年付的盈亏平衡点，用几个月才划算",
+      "type": "成本",
+      "intent": "用实际使用月数计算年付是否值得，纳入服务中断风险。"
+    },
+    {
+      "slug": "device-cost-allocation",
+      "title": "多设备场景的成本摊薄，按并发数还是按人头算",
+      "type": "成本",
+      "intent": "比较两种摊薄口径，指出并发限制对结果的影响。"
+    },
+    {
+      "slug": "time-cost-of-free",
+      "title": "把排障时间折成钱：免费方案的真实成本",
+      "type": "成本",
+      "intent": "用小时成本量化维护时间，给出判断是否继续使用的阈值方法。"
+    },
+    {
+      "slug": "data-pack-vs-monthly",
+      "title": "不限时流量包与月付的临界用量",
+      "type": "成本",
+      "intent": "推导两种计费方式的交点，帮助低频用户选型。"
+    },
+    {
+      "slug": "hidden-fees-checklist",
+      "title": "低价套餐的六项隐藏成本，付款前逐项核对",
+      "type": "清单",
+      "intent": "把手续费、设备费与续费涨价列入预算，避免只看标价。"
+    },
+    {
+      "slug": "budget-tiers",
+      "title": "每月 10 元、30 元、100 元三档分别能买到什么",
+      "type": "成本",
+      "intent": "用测算假设说明三档预算的能力边界，不写具体商家报价。"
+    }
+  ],
+  "value": [
+    {
+      "slug": "stability-value",
+      "title": "稳定性值多少钱：用中断次数与恢复时间折算",
+      "type": "成本",
+      "intent": "把可用率换成损失时间，给出可比较的价值估算。"
+    },
+    {
+      "slug": "privacy-premium",
+      "title": "为隐私多付费用的判断依据，哪些承诺无法验证",
+      "type": "解释",
+      "intent": "区分可审计的技术措施与无法验证的口头承诺。"
+    },
+    {
+      "slug": "support-response-test",
+      "title": "客服响应速度怎么在付款前测试",
+      "type": "核验",
+      "intent": "给出低成本测试方法，用响应质量推断运营水平。"
+    },
+    {
+      "slug": "exit-cost-comparison",
+      "title": "退出成本比较：订阅备份、退款窗口与迁移时间",
+      "type": "对比",
+      "intent": "把退出成本纳入选型，避免被长期套餐锁住。"
+    },
+    {
+      "slug": "free-until-first-outage",
+      "title": "免费用到第一次严重故障，该继续还是换",
+      "type": "解释",
+      "intent": "给出判断继续投入是否理性的条件。"
+    },
+    {
+      "slug": "when-free-is-rational",
+      "title": "哪些场景继续用免费方案是理性的",
+      "type": "解释",
+      "intent": "列出低风险、低依赖的使用场景，避免一刀切建议。"
+    },
+    {
+      "slug": "upgrade-trigger-list",
+      "title": "触发付费升级的七个具体条件",
+      "type": "清单",
+      "intent": "把模糊的“不够用”转成可观察的触发条件。"
+    }
+  ],
+  "mobile": [
+    {
+      "slug": "android-minimal-setup",
+      "title": "Android 最小配置：装客户端、导入订阅、开 VPN 权限",
+      "type": "教程",
+      "intent": "给出十步以内的配置路径，并标出每一步的验证点。"
+    },
+    {
+      "slug": "ios-install-region",
+      "title": "iOS 装客户端的地区限制与替代路径",
+      "type": "教程",
+      "intent": "说明 App Store 地区、账号与客户端可用性的关系，不引导绕过商店规则。"
+    },
+    {
+      "slug": "mobile-background-kill",
+      "title": "手机后台被杀导致断线，省电设置怎么调",
+      "type": "故障",
+      "intent": "解释系统省电策略对长连接的影响，给出逐项调整顺序。"
+    },
+    {
+      "slug": "mobile-battery-heat",
+      "title": "长时间开代理的耗电与发热，哪些设置能降下来",
+      "type": "解释",
+      "intent": "说明耗电来源与可调参数，避免用关闭安全功能换续航。"
+    },
+    {
+      "slug": "tablet-hotspot-sharing",
+      "title": "平板与热点共享：一台设备开代理，其他设备怎么走",
+      "type": "教程",
+      "intent": "比较热点共享与路由器方案的覆盖范围与限制。"
+    },
+    {
+      "slug": "mobile-per-app-routing",
+      "title": "手机分应用代理：只让需要的应用走隧道",
+      "type": "教程",
+      "intent": "给出分应用名单的确定方法，减少社交与银行应用的暴露。"
+    },
+    {
+      "slug": "network-switch-disconnect",
+      "title": "从 Wi-Fi 切到移动网络就断，重连逻辑怎么设",
+      "type": "故障",
+      "intent": "解释网络切换时的重连与 DNS 缓存问题，给出设置项。"
+    }
+  ],
+  "desktop": [
+    {
+      "slug": "windows-minimal-setup",
+      "title": "Windows 最小配置：从官方发布页到打开第一个网页",
+      "type": "教程",
+      "intent": "给出不含第三方打包站的安装与验证路径。"
+    },
+    {
+      "slug": "macos-minimal-setup",
+      "title": "macOS 最小配置：系统扩展授权与代理开关",
+      "type": "教程",
+      "intent": "说明扩展授权流程与系统代理的位置，避免装完不能用。"
+    },
+    {
+      "slug": "linux-cli-core",
+      "title": "Linux 命令行内核最小配置：配置文件、服务与日志",
+      "type": "教程",
+      "intent": "给出不依赖图形界面的配置路径与排障入口。"
+    },
+    {
+      "slug": "desktop-tun-vs-proxy",
+      "title": "桌面端选 TUN 还是系统代理，按应用覆盖需求决定",
+      "type": "对比",
+      "intent": "用应用清单决定接管方式，减少不必要的权限。"
+    },
+    {
+      "slug": "windows-service-autostart",
+      "title": "Windows 开机自启与服务模式，什么时候需要",
+      "type": "教程",
+      "intent": "说明自启项的权限差异与关闭方法，便于回退。"
+    },
+    {
+      "slug": "macos-extension-prompt",
+      "title": "macOS 反复弹出网络扩展授权，怎么处理",
+      "type": "故障",
+      "intent": "解释授权未生效的常见原因，给出核对顺序。"
+    },
+    {
+      "slug": "linux-systemd-resolved-dns",
+      "title": "Linux 上 systemd-resolved 与代理 DNS 冲突怎么解",
+      "type": "故障",
+      "intent": "说明本地解析器与代理 DNS 的优先级冲突，给出两种解决方向。"
+    }
+  ],
+  "network-terms": [
+    {
+      "slug": "rtt-jitter-loss",
+      "title": "RTT、抖动与丢包：三个指标各自描述什么",
+      "type": "解释",
+      "intent": "用测量对象区分三个指标，避免只看延迟数字。"
+    },
+    {
+      "slug": "bgp-transit-iplc",
+      "title": "BGP、中转与 IPLC 这些线路词的实际含义",
+      "type": "解释",
+      "intent": "把线路名称还原成路径结构，说明名称不能替代实测。"
+    },
+    {
+      "slug": "tls-quic-reality",
+      "title": "TLS、QUIC 与 REALITY 在握手层面的差别",
+      "type": "解释",
+      "intent": "比较三种机制的握手位置与可见特征，不评价优劣。"
+    },
+    {
+      "slug": "mtu-mss-fragmentation",
+      "title": "MTU 与 MSS：为什么差几个字节就会卡住",
+      "type": "解释",
+      "intent": "用封装开销解释分片与丢包的关系。"
+    },
+    {
+      "slug": "nat-port-restriction",
+      "title": "NAT 类型与端口限制，对 P2P 和游戏有什么影响",
+      "type": "解释",
+      "intent": "说明映射方式如何影响入站连接与联机体验。"
+    },
+    {
+      "slug": "asn-ip-reputation",
+      "title": "ASN 与 IP 信誉：同一个地区为什么表现不同",
+      "type": "解释",
+      "intent": "解释 IP 归属与信誉标签的来源，说明地区标签的局限。"
+    },
+    {
+      "slug": "bandwidth-units-throughput",
+      "title": "Mbps 与 MB/s 的换算，标称带宽与实测吞吐的差距",
+      "type": "解释",
+      "intent": "给出换算与测量口径，避免把两种单位混着比较。"
+    }
+  ],
+  "commercial": [
+    {
+      "slug": "traffic-multiplier",
+      "title": "流量倍率是什么，结算时怎么影响余额",
+      "type": "解释",
+      "intent": "用乘数与结算示例说明倍率对可用流量的影响。"
+    },
+    {
+      "slug": "reset-cycle-expiry",
+      "title": "流量重置日与有效期：两种计时叠在一起怎么算",
+      "type": "解释",
+      "intent": "说明自然月重置与固定有效期同时存在时的计算顺序。"
+    },
+    {
+      "slug": "concurrency-device-limits",
+      "title": "并发数与设备数限制的实际执行方式",
+      "type": "解释",
+      "intent": "解释按 IP、按连接与按设备计数的差异。"
+    },
+    {
+      "slug": "trial-vs-free-tier",
+      "title": "试用额度与免费档的区别，条款里看哪一句",
+      "type": "对比",
+      "intent": "指出两类供给在期限、资格与后续收费上的差别。"
+    },
+    {
+      "slug": "refund-window-terms",
+      "title": "退款窗口与已用流量扣减的常见写法",
+      "type": "核验",
+      "intent": "帮读者在付款前找到退款条件与例外。"
+    },
+    {
+      "slug": "auto-renewal-switches",
+      "title": "自动续费与到期提醒：付款前要关掉哪些开关",
+      "type": "清单",
+      "intent": "列出容易忽略的续费入口与关闭顺序。"
+    },
+    {
+      "slug": "downgrade-proration",
+      "title": "套餐降级、升级与按比例折算的计费规则",
+      "type": "解释",
+      "intent": "说明变更套餐时的折算方式与常见争议点。"
+    }
+  ],
+  "legal": [
+    {
+      "slug": "check-local-law",
+      "title": "使用前确认当地法律：需要查哪三类规定",
+      "type": "核验",
+      "intent": "给出自查范围，帮助判断自身使用是否越界。"
+    },
+    {
+      "slug": "acceptable-use-policy",
+      "title": "可接受使用政策里最容易踩线的四类行为",
+      "type": "解释",
+      "intent": "说明服务方禁止行为的边界与后果。"
+    },
+    {
+      "slug": "copyright-region-lock",
+      "title": "跨区访问流媒体与版权限制的边界",
+      "type": "解释",
+      "intent": "区分技术可行与条款允许，说明账号风险。"
+    },
+    {
+      "slug": "workplace-school-network",
+      "title": "公司或校园网络下的使用限制与后果",
+      "type": "解释",
+      "intent": "说明组织网络管理措施与可能的纪律后果。"
+    },
+    {
+      "slug": "real-name-requirements",
+      "title": "服务要求实名时，你能做的与不能做的",
+      "type": "核验",
+      "intent": "说明实名要求的常见形式与拒绝后的选项，不提供规避方法。"
+    },
+    {
+      "slug": "law-enforcement-requests",
+      "title": "服务方收到调取请求时会交出什么，条款怎么写",
+      "type": "解释",
+      "intent": "解释日志留存与配合调查的常见条款结构。"
+    },
+    {
+      "slug": "cross-border-data",
+      "title": "跨境传输个人数据的基本风险，哪些信息不要传",
+      "type": "解释",
+      "intent": "列出高敏感信息类型，给出传输前的自查。"
+    }
+  ],
+  "account": [
+    {
+      "slug": "minimal-signup-info",
+      "title": "注册时最少要交哪些信息，哪些可以不给",
+      "type": "清单",
+      "intent": "按字段区分必要与可替代信息，减少留痕。"
+    },
+    {
+      "slug": "email-alias-password",
+      "title": "邮箱别名与独立密码：账号隔离的最小做法",
+      "type": "教程",
+      "intent": "给出可执行的隔离步骤，不依赖额外付费工具。"
+    },
+    {
+      "slug": "payment-isolation",
+      "title": "支付隔离：虚拟卡、限额与账单信息最小化",
+      "type": "教程",
+      "intent": "说明隔离支付渠道的作用与限制，提醒保留退款路径。"
+    },
+    {
+      "slug": "backup-config-subscription",
+      "title": "订阅与配置备份：换设备前要导出什么",
+      "type": "教程",
+      "intent": "列出需要导出的文件与字段，确保换机后可恢复。"
+    },
+    {
+      "slug": "delete-account-steps",
+      "title": "注销账号前要做的四件事",
+      "type": "清单",
+      "intent": "给出撤销授权、清理支付与备份数据的顺序。"
+    },
+    {
+      "slug": "credential-leak-response",
+      "title": "订阅链接或密码泄漏后的应急处理顺序",
+      "type": "故障",
+      "intent": "按影响面排序给出处置步骤，减少连带损失。"
+    },
+    {
+      "slug": "multi-account-boundary",
+      "title": "多账号边界：同一设备登录多个服务会暴露什么",
+      "type": "解释",
+      "intent": "说明设备指纹与账号关联的基本机制，提醒隔离的必要性。"
+    }
+  ]
+}

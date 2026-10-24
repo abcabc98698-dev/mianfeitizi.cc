@@ -1,0 +1,28 @@
+{
+  "name": "mianfeitizi-cc",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "mianfeitizi.cc — 免费梯子与低预算机场的核验型知识库",
+  "scripts": {
+    "dev": "vitepress dev docs --host 127.0.0.1 --port 5173",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs --host 127.0.0.1 --port 4173",
+    "plan:merge": "node scripts/merge-plans.mjs",
+    "airports:parse": "node scripts/parse-airports.mjs",
+    "airports:merge": "node scripts/merge-airports.mjs",
+    "check:airports": "node scripts/check-airports.mjs",
+    "check:content": "node scripts/check-content.mjs",
+    "check:links": "node scripts/check-links.mjs",
+    "check:seo": "node scripts/check-seo.mjs",
+    "seo:enhance": "node scripts/enhance-seo.mjs",
+    "algolia:index": "node scripts/algolia-index.mjs",
+    "build:seo": "vitepress build docs && node scripts/enhance-seo.mjs",
+    "check": "node scripts/check-content.mjs && node scripts/check-links.mjs && node scripts/check-airports.mjs"
+  },
+  "devDependencies": {
+    "cheerio": "^1.0.0",
+    "vitepress": "^1.6.4",
+    "vue": "^3.5.13"
+  }
+}

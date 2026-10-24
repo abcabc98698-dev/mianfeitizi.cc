@@ -1,0 +1,318 @@
+{
+  "sogo": {
+    "speedtest": [
+      {
+        "src": "/airports/evidence/sogo-2026-08-11.webp",
+        "alt": "SOGO云 2026-08-11 节点测速截图，包含节点地区、协议、延迟和速度结果。",
+        "caption": "SOGO云节点测速截图。测试批次 2026-08-11，图内数值未改写；仅代表截图所示时间与线路，不代表长期表现。",
+        "date": "2026-08-11",
+        "dateNote": "图片内测试时间",
+        "source": "本站保留的 2026-08-11 测速截图",
+        "kind": "speedtest"
+      }
+    ],
+    "unlock": []
+  },
+  "u1s1": {
+    "speedtest": [
+      {
+        "src": "/airports/evidence/u1s1-2026-08-11.webp",
+        "alt": "U1S1 2026-08-11 节点测速截图，包含节点地区、协议、延迟和速度结果。",
+        "caption": "U1S1节点测速截图。测试批次 2026-08-11，图内数值未改写；仅代表截图所示时间与线路，不代表长期表现。",
+        "date": "2026-08-11",
+        "dateNote": "图片内测试时间",
+        "source": "本站保留的 2026-08-11 测速截图",
+        "kind": "speedtest"
+      }
+    ],
+    "unlock": []
+  },
+  "yifan": {
+    "speedtest": [
+      {
+        "src": "/airports/evidence/yifan-2026-08-11.webp",
+        "alt": "一翻云 2026-08-11 节点测速截图，包含节点地区、协议、延迟和速度结果。",
+        "caption": "一翻云节点测速截图。测试批次 2026-08-11，图内数值未改写；仅代表截图所示时间与线路，不代表长期表现。",
+        "date": "2026-08-11",
+        "dateNote": "图片内测试时间",
+        "source": "本站保留的 2026-08-11 测速截图",
+        "kind": "speedtest"
+      }
+    ],
+    "unlock": []
+  },
+  "ermao": {
+    "speedtest": [
+      {
+        "src": "/airports/evidence/ermao-2026-08-11.webp",
+        "alt": "二猫云 2026-08-11 节点测速截图，包含节点地区、协议、延迟和速度结果。",
+        "caption": "二猫云节点测速截图。测试批次 2026-08-11，图内数值未改写；仅代表截图所示时间与线路，不代表长期表现。",
+        "date": "2026-08-11",
+        "dateNote": "图片内测试时间",
+        "source": "本站保留的 2026-08-11 测速截图",
+        "kind": "speedtest"
+      }
+    ],
+    "unlock": []
+  },
+  "guangnian": {
+    "speedtest": [
+      {
+        "src": "/airports/evidence/guangnian-2026-08-11.webp",
+        "alt": "光年梯 2026-08-11 节点测速截图，包含节点地区、协议、延迟和速度结果。",
+        "caption": "光年梯节点测速截图。测试批次 2026-08-11，图内数值未改写；仅代表截图所示时间与线路，不代表长期表现。",
+        "date": "2026-08-11",
+        "dateNote": "图片内测试时间",
+        "source": "本站保留的 2026-08-11 测速截图",
+        "kind": "speedtest"
+      }
+    ],
+    "unlock": []
+  },
+  "guangsuyun": {
+    "speedtest": [
+      {
+        "src": "/airports/evidence/guangsuyun-2026-08-11.webp",
+        "alt": "光速云 2026-08-11 节点测速截图，包含节点地区、协议、延迟和速度结果。",
+        "caption": "光速云节点测速截图。测试批次 2026-08-11，图内数值未改写；仅代表截图所示时间与线路，不代表长期表现。",
+        "date": "2026-08-11",
+        "dateNote": "图片内测试时间",
+        "source": "本站保留的 2026-08-11 测速截图",
+        "kind": "speedtest"
+      },
+      {
+        "src": "/airports/evidence/guangsuyun-2026-08-19-01.webp",
+        "alt": "光速云 节点测速截图（一），图内测试时间以截图为准。",
+        "caption": "光速云节点测速截图（一）。文件批次 2026-08-19，图内测试时间与结果未改写；仅代表截图所示批次，不代表当前可用性或长期表现。",
+        "date": "2026-08-19",
+        "dateNote": "文件批次；图内测试时间以截图为准",
+        "source": "用户提供的原始截图",
+        "kind": "speedtest"
+      },
+      {
+        "src": "/airports/evidence/guangsuyun-2026-08-19-02.webp",
+        "alt": "光速云 节点测速截图（二），图内测试时间以截图为准。",
+        "caption": "光速云节点测速截图（二）。文件批次 2026-08-19，图内测试时间与结果未改写；仅代表截图所示批次，不代表当前可用性或长期表现。",
+        "date": "2026-08-19",
+        "dateNote": "文件批次；图内测试时间以截图为准",
+        "source": "用户提供的原始截图",
+        "kind": "speedtest"
+      },
+      {
+        "src": "/airports/evidence/guangsuyun-2026-08-19-03.webp",
+        "alt": "光速云 节点测速截图（三），图内测试时间以截图为准。",
+        "caption": "光速云节点测速截图（三）。文件批次 2026-08-19，图内测试时间与结果未改写；仅代表截图所示批次，不代表当前可用性或长期表现。",
+        "date": "2026-08-19",
+        "dateNote": "文件批次；图内测试时间以截图为准",
+        "source": "用户提供的原始截图",
+        "kind": "speedtest"
+      },
+      {
+        "src": "/airports/evidence/guangsuyun-2026-08-19-05.webp",
+        "alt": "光速云 节点测速截图（四），图内测试时间以截图为准。",
+        "caption": "光速云节点测速截图（四）。文件批次 2026-08-19，图内测试时间与结果未改写；仅代表截图所示批次，不代表当前可用性或长期表现。",
+        "date": "2026-08-19",
+        "dateNote": "文件批次；图内测试时间以截图为准",
+        "source": "用户提供的原始截图",
+        "kind": "speedtest"
+      }
+    ],
+    "unlock": [
+      {
+        "src": "/airports/evidence/guangsuyun-2026-08-19-04.webp",
+        "alt": "光速云 流媒体与 AI 解锁矩阵，图内测试时间以截图为准。",
+        "caption": "光速云流媒体与 AI 解锁矩阵。文件批次 2026-08-19，图内测试时间与结果未改写；仅代表截图所示批次，不代表当前可用性或长期表现。",
+        "date": "2026-08-19",
+        "dateNote": "文件批次；图内测试时间以截图为准",
+        "source": "用户提供的原始截图",
+        "kind": "unlock"
+      }
+    ]
+  },
+  "quanqiu": {
+    "speedtest": [
+      {
+        "src": "/airports/evidence/quanqiu-2026-08-11.webp",
+        "alt": "全球云 2026-08-11 节点测速截图，包含节点地区、协议、延迟和速度结果。",
+        "caption": "全球云节点测速截图。测试批次 2026-08-11，图内数值未改写；仅代表截图所示时间与线路，不代表长期表现。",
+        "date": "2026-08-11",
+        "dateNote": "图片内测试时间",
+        "source": "本站保留的 2026-08-11 测速截图",
+        "kind": "speedtest"
+      }
+    ],
+    "unlock": []
+  },
+  "kexin": {
+    "speedtest": [
+      {
+        "src": "/airports/evidence/kexin-2026-08-11.webp",
+        "alt": "可信云 2026-08-11 节点测速截图，包含节点地区、协议、延迟和速度结果。",
+        "caption": "可信云节点测速截图。测试批次 2026-08-11，图内数值未改写；仅代表截图所示时间与线路，不代表长期表现。",
+        "date": "2026-08-11",
+        "dateNote": "图片内测试时间",
+        "source": "本站保留的 2026-08-11 测速截图",
+        "kind": "speedtest"
+      }
+    ],
+    "unlock": []
+  },
+  "weitu": {
+    "speedtest": [
+      {
+        "src": "/airports/evidence/weitu-2026-08-11.webp",
+        "alt": "唯兔云 2026-08-11 节点测速截图，包含节点地区、协议、延迟和速度结果。",
+        "caption": "唯兔云节点测速截图。测试批次 2026-08-11，图内数值未改写；仅代表截图所示时间与线路，不代表长期表现。",
+        "date": "2026-08-11",
+        "dateNote": "图片内测试时间",
+        "source": "本站保留的 2026-08-11 测速截图",
+        "kind": "speedtest"
+      }
+    ],
+    "unlock": []
+  },
+  "yuzhou": {
+    "speedtest": [
+      {
+        "src": "/airports/evidence/yuzhou-2026-08-11.webp",
+        "alt": "宇宙云 2026-08-11 节点测速截图，包含节点地区、协议、延迟和速度结果。",
+        "caption": "宇宙云节点测速截图。测试批次 2026-08-11，图内数值未改写；仅代表截图所示时间与线路，不代表长期表现。",
+        "date": "2026-08-11",
+        "dateNote": "图片内测试时间",
+        "source": "本站保留的 2026-08-11 测速截图",
+        "kind": "speedtest"
+      }
+    ],
+    "unlock": []
+  },
+  "muguang": {
+    "speedtest": [
+      {
+        "src": "/airports/evidence/muguang-2026-08-11.webp",
+        "alt": "幕光加速 2026-08-11 节点测速截图，包含节点地区、协议、延迟和速度结果。",
+        "caption": "幕光加速节点测速截图。测试批次 2026-08-11，图内数值未改写；仅代表截图所示时间与线路，不代表长期表现。",
+        "date": "2026-08-11",
+        "dateNote": "图片内测试时间；部分品牌日期为批次记录",
+        "source": "本站保留的 2026-08-11 测速截图",
+        "kind": "speedtest"
+      }
+    ],
+    "unlock": []
+  },
+  "weifeng": {
+    "speedtest": [
+      {
+        "src": "/airports/evidence/weifeng-2026-08-11.webp",
+        "alt": "微风网络 2026-08-11 节点测速截图，包含节点地区、协议、延迟和速度结果。",
+        "caption": "微风网络节点测速截图。测试批次 2026-08-11，图内数值未改写；仅代表截图所示时间与线路，不代表长期表现。",
+        "date": "2026-08-11",
+        "dateNote": "图片内测试时间；部分品牌日期为批次记录",
+        "source": "本站保留的 2026-08-11 测速截图",
+        "kind": "speedtest"
+      }
+    ],
+    "unlock": []
+  },
+  "xingdaomeng": {
+    "speedtest": [
+      {
+        "src": "/airports/evidence/xingdaomeng-2026-08-11.webp",
+        "alt": "星岛梦 2026-08-11 节点测速截图，包含节点地区、协议、延迟和速度结果。",
+        "caption": "星岛梦节点测速截图。测试批次 2026-08-11，图内数值未改写；仅代表截图所示时间与线路，不代表长期表现。",
+        "date": "2026-08-11",
+        "dateNote": "图片内测试时间",
+        "source": "本站保留的 2026-08-11 测速截图",
+        "kind": "speedtest"
+      }
+    ],
+    "unlock": []
+  },
+  "jilian": {
+    "speedtest": [
+      {
+        "src": "/airports/evidence/jilian-2026-08-11.webp",
+        "alt": "极连云 2026-08-11 节点测速截图，包含节点地区、协议、延迟和速度结果。",
+        "caption": "极连云节点测速截图。测试批次 2026-08-11，图内数值未改写；仅代表截图所示时间与线路，不代表长期表现。",
+        "date": "2026-08-11",
+        "dateNote": "图片内测试时间",
+        "source": "本站保留的 2026-08-11 测速截图",
+        "kind": "speedtest"
+      }
+    ],
+    "unlock": []
+  },
+  "lingmao": {
+    "speedtest": [
+      {
+        "src": "/airports/evidence/lingmao-2026-08-11.webp",
+        "alt": "灵猫网络 2026-08-11 节点测速截图，包含节点地区、协议、延迟和速度结果。",
+        "caption": "灵猫网络节点测速截图。测试批次 2026-08-11，图内数值未改写；仅代表截图所示时间与线路，不代表长期表现。",
+        "date": "2026-08-11",
+        "dateNote": "图片内测试时间",
+        "source": "本站保留的 2026-08-11 测速截图",
+        "kind": "speedtest"
+      }
+    ],
+    "unlock": []
+  },
+  "sujie": {
+    "speedtest": [
+      {
+        "src": "/airports/evidence/sujie-2026-08-11.webp",
+        "alt": "速界 2026-08-11 节点测速截图，包含节点地区、协议、延迟和速度结果。",
+        "caption": "速界节点测速截图。测试批次 2026-08-11，图内数值未改写；仅代表截图所示时间与线路，不代表长期表现。",
+        "date": "2026-08-11",
+        "dateNote": "图片内测试时间",
+        "source": "本站保留的 2026-08-11 测速截图",
+        "kind": "speedtest"
+      }
+    ],
+    "unlock": []
+  },
+  "feimao": {
+    "speedtest": [
+      {
+        "src": "/airports/evidence/feimao-2026-08-11.webp",
+        "alt": "飞猫云 2026-08-11 节点测速截图，包含节点地区、协议、延迟和速度结果。",
+        "caption": "飞猫云节点测速截图。测试批次 2026-08-11，图内数值未改写；仅代表截图所示时间与线路，不代表长期表现。",
+        "date": "2026-08-11",
+        "dateNote": "图片内测试时间",
+        "source": "本站保留的 2026-08-11 测速截图",
+        "kind": "speedtest"
+      }
+    ],
+    "unlock": []
+  },
+  "tiziyun": {
+    "speedtest": [],
+    "unlock": []
+  },
+  "lingdongyun": {
+    "speedtest": [],
+    "unlock": []
+  },
+  "yinxingren": {
+    "speedtest": [],
+    "unlock": []
+  },
+  "longmaoyun": {
+    "speedtest": [],
+    "unlock": []
+  },
+  "qingyunti": {
+    "speedtest": [],
+    "unlock": []
+  },
+  "tntcloud": {
+    "speedtest": [],
+    "unlock": []
+  },
+  "edgenova": {
+    "speedtest": [],
+    "unlock": []
+  },
+  "flyingbird": {
+    "speedtest": [],
+    "unlock": []
+  }
+}
